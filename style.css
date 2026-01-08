@@ -9,6 +9,26 @@ body {
   overflow-x: hidden;
 }
 
+/* Dynamic Padding Class */
+.dynamic-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+  .dynamic-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .dynamic-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -38,6 +58,12 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 1199px) {
+  .header-gradient {
+    opacity: 0;
+  }
+}
+
 .header.scrolled .header-gradient,
 .header.menu-open .header-gradient {
   opacity: 0;
@@ -49,6 +75,12 @@ body {
   background: white;
   transition: opacity 0.3s ease;
   opacity: 0;
+}
+
+@media (max-width: 1199px) {
+  .header-white {
+    opacity: 1;
+  }
 }
 
 .header.scrolled .header-white,
@@ -114,6 +146,12 @@ body {
 
 .mobile-menu-btn svg line {
   transition: stroke 0.3s ease;
+}
+
+@media (max-width: 1199px) {
+  .mobile-menu-btn svg line {
+    stroke: #292929;
+  }
 }
 
 .header.scrolled .mobile-menu-btn svg line,
@@ -529,4 +567,533 @@ body {
 
 .mobile-submenu a:hover {
   color: #e9510e;
+}
+
+/* Hero Workwear Section */
+.hero-workwear {
+  width: 100%;
+  height: 128px;
+  margin: 90px auto 0;
+  background-image: url("public/images/workwear-rental-page-template.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .hero-workwear {
+    height: 380px;
+    margin-top: 0;
+    align-items: flex-end;
+  }
+}
+
+.hero-workwear-content {
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media (min-width: 1200px) {
+  .hero-workwear-content {
+    padding: 0 20px 62px;
+  }
+}
+
+.hero-workwear h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .hero-workwear h1 {
+    font-size: 48px;
+  }
+}
+
+/* Breadcrumb Section */
+.breadcrumb-section {
+  border-bottom-color: #e1dddd;
+  border-bottom-width: 0.5px;
+}
+
+.breadcrumb-container {
+  max-width: 1720px;
+  height: 49px;
+}
+
+.breadcrumb-section .breadcrumb {
+  height: 49px;
+  align-items: center;
+  display: flex;
+}
+
+.breadcrumb-section .breadcrumb-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.breadcrumb-section .breadcrumb-item a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.breadcrumb-section .breadcrumb-item a {
+  color: #b7b6b6;
+  text-decoration: none;
+}
+
+.breadcrumb-section .breadcrumb-item a:hover {
+  color: #4b4949;
+}
+
+.breadcrumb-section .breadcrumb-item.active {
+  color: #4b4949;
+}
+
+.breadcrumb-section .breadcrumb-item + .breadcrumb-item::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  margin: 0 16px;
+  vertical-align: middle;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M-4.0868e-07 0.650481L4.60827 4.99313L-2.82332e-08 9.3541L0.686131 10L5.99513 5.00229L0.686131 -2.99918e-08L-4.08881e-07 0.6459L-4.0868e-07 0.650481Z" fill="%23B7B6B6"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Content Section */
+@media (min-width: 1200px) {
+  .content-section {
+    padding-top: 50px !important;
+  }
+}
+
+.content-container {
+  max-width: 1720px;
+}
+
+.content-section .row,
+.content-section-2 .row {
+  --bs-gutter-y: 54px;
+}
+
+@media (min-width: 1200px) {
+  .content-section .row,
+  .content-section-2 .row {
+    --bs-gutter-x: 50px;
+    --bs-gutter-y: 50px;
+  }
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 353 / 246;
+  object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .content-image {
+    aspect-ratio: 835 / 580;
+  }
+}
+
+.content-text-col,
+.content-text-col-2,
+.content-image-col {
+  justify-content: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .content-text-col,
+  .content-image-col {
+    justify-content: center;
+  }
+}
+
+.content-text {
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .content-text {
+    max-width: 532px;
+  }
+}
+
+.content-bar {
+  width: 55px;
+  height: 3.71px;
+  background: #e9510e;
+}
+
+@media (min-width: 1200px) {
+  .content-bar {
+    width: 100px;
+    height: 6px;
+  }
+}
+
+.content-text p {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+@media (min-width: 1200px) {
+  .content-text p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/* Content Section 2 */
+@media (min-width: 1200px) {
+  .content-section-2 {
+    padding: 60px 0 !important;
+  }
+}
+
+.content-text-2 {
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .content-text-2 {
+    max-width: 532px;
+  }
+}
+
+.content-text-2 p {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+@media (min-width: 1200px) {
+  .content-text-2 p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.content-text-2 .btn-cta {
+  margin-top: 56px;
+}
+
+@media (min-width: 1200px) {
+  .content-text-2 .btn-cta {
+    margin-top: 67px;
+  }
+}
+
+.btn-cta {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  padding: 8px 16px;
+  border-radius: 27px;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+}
+
+@media (min-width: 1200px) {
+  .btn-cta {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.btn-cta:hover {
+  background: black;
+  color: white;
+}
+
+/* Full Width Section */
+.full-width-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.full-width-image {
+  width: 100%;
+  height: 307px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.orange-section .full-width-image {
+  height: 307px;
+}
+
+@media (min-width: 1200px) {
+  .full-width-image,
+  .orange-section .full-width-image {
+    height: 748px;
+  }
+}
+
+.full-width-content-bg {
+  background: #312f2f;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .full-width-content-bg {
+    min-height: 748px;
+    height: 748px;
+    justify-content: flex-start;
+  }
+}
+
+.full-width-content-wrapper {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 68px 50px;
+}
+
+@media (min-width: 1200px) {
+  .full-width-content-wrapper {
+    max-width: 960px;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+}
+
+.full-width-text {
+  width: 100%;
+  max-width: none;
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .full-width-text {
+    max-width: 608px;
+  }
+}
+
+.content-bar-white {
+  width: 60px;
+  height: 4px;
+  background: #e9510e;
+}
+
+@media (min-width: 1200px) {
+  .content-bar-white {
+    width: 100px;
+    height: 6px;
+  }
+}
+
+.full-width-text p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (min-width: 1200px) {
+  .full-width-text p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
+
+/* Orange Section with Accordion */
+.orange-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.orange-content-bg {
+  background: #e9510e;
+  min-height: 382px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .orange-content-bg {
+    min-height: 748px;
+    height: 748px;
+    justify-content: flex-end;
+  }
+}
+
+.orange-content-wrapper {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 23px 20px 43px;
+  height: 100%;
+  gap: 30px;
+}
+
+@media (min-width: 1200px) {
+  .orange-content-wrapper {
+    max-width: 960px;
+    padding: 70px 78px 70px 100px;
+  }
+}
+
+.orange-content {
+  width: 100%;
+  max-width: none;
+  align-self: flex-end;
+}
+
+@media (min-width: 1200px) {
+  .orange-content {
+    max-width: none;
+  }
+}
+
+.orange-title {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 38px;
+  align-self: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .orange-title {
+    font-size: 28px;
+  }
+}
+
+/* Accordion Styles */
+.accordion-custom {
+  width: 100%;
+}
+
+.accordion-item-custom {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.accordion-item-custom + .accordion-item-custom {
+  border-top: none;
+}
+
+.accordion-button-custom {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .accordion-button-custom {
+    font-size: 28px;
+  }
+}
+
+.accordion-button-custom:hover {
+  opacity: 0.9;
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 1200px) {
+  .accordion-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.accordion-button-custom.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content-custom {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.accordion-content-custom.active {
+  opacity: 1;
+}
+
+.accordion-content-wrapper {
+  padding: 8px 0 54px 0;
+}
+
+.accordion-content-custom p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+  max-width: 670px;
+}
+
+@media (min-width: 1200px) {
+  .accordion-content-custom p {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }

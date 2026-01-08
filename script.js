@@ -100,4 +100,31 @@ $(document).ready(function() {
             $parent.addClass('active');
         }
     });
+    
+    // Custom accordion - completely rewritten
+    $('.accordion-button-custom').on('click', function() {
+        const accordionId = $(this).data('accordion');
+        const $button = $(this);
+        const $content = $('#' + accordionId);
+        const $wrapper = $content.find('.accordion-content-wrapper');
+        const wasActive = $button.hasClass('active');
+        
+        // Close all other accordions
+        $('.accordion-button-custom').not($button).removeClass('active');
+        $('.accordion-content-custom').not($content).each(function() {
+            $(this).css('max-height', '0').removeClass('active');
+        });
+        
+        // Toggle clicked accordion
+        if (wasActive) {
+            // Close it
+            $button.removeClass('active');
+            $content.css('max-height', '0').removeClass('active');
+        } else {
+            // Open it
+            $button.addClass('active');
+            const wrapperHeight = $wrapper.outerHeight(true);
+            $content.css('max-height', wrapperHeight + 'px').addClass('active');
+        }
+    });
 });

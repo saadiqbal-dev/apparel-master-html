@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Industry Workwear - Apparel Master</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Gradient background layer -->
+      <div class="header-gradient"></div>
+
+      <!-- White background layer -->
+      <div class="header-white"></div>
+
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <a href="/" class="header-logo">
+            <img
+              src="public/images/apparel-master-logo.png"
+              alt="Apparel Master Logo"
+            />
+          </a>
+
+          <!-- Mobile Menu Icon -->
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="16"
+              viewBox="0 0 21 16"
+              fill="none"
+            >
+              <line
+                x1="0.75"
+                y1="0.75"
+                x2="20.25"
+                y2="0.75"
+                stroke="#fff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <line
+                x1="0.75"
+                y1="15.0071"
+                x2="20.25"
+                y2="15.0071"
+                stroke="#fff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <line
+                x1="0.75"
+                y1="7.87853"
+                x2="20.25"
+                y2="7.87853"
+                stroke="#fff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <!-- Desktop Navigation -->
+          <nav class="header-nav">
+            <ul class="nav-list">
+              <li>
+                <button class="nav-btn" data-megamenu="services">
+                  Services
+                  <span class="nav-underline"></span>
+                </button>
+              </li>
+              <li>
+                <a href="/outlets" class="nav-link">
+                  Find an Outlet
+                  <span class="nav-underline"></span>
+                </a>
+              </li>
+              <li>
+                <button class="nav-btn" data-megamenu="about">
+                  About
+                  <span class="nav-underline"></span>
+                </button>
+              </li>
+              <li>
+                <a href="/client-tools" class="nav-link">
+                  Client Tools
+                  <span class="nav-underline"></span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav-actions">
+              <a href="/get-a-quote" class="cta-btn">Get a Quote</a>
+              <button class="phone-btn">Click for 0800 Number</button>
+              <a
+                href="tel:0800808820"
+                class="phone-btn phone-revealed"
+                style="display: none"
+                >0800 808 820</a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mega Menu - Services -->
+    <div class="megamenu" id="megamenu-services">
+      <div class="container">
+        <div class="megamenu-grid">
+          <div class="megamenu-column">
+            <h3>WORKWEAR</h3>
+            <ul>
+              <li><a href="/services/workwear/overalls">Overalls</a></li>
+              <li>
+                <a href="/services/workwear/workshirts-trousers"
+                  >Workshirts & Trousers</a
+                >
+              </li>
+              <li>
+                <a href="/services/workwear/protective-clothing"
+                  >Protective Clothing</a
+                >
+              </li>
+              <li>
+                <a href="/services/workwear/corporate-uniforms"
+                  >Corporate Uniforms</a
+                >
+              </li>
+              <li>
+                <a href="/services/workwear/embroidery-emblems"
+                  >Embroidery & Emblems</a
+                >
+              </li>
+              <li><a href="/services/workwear/repairs">Repairs</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h3>WORKPLACE</h3>
+            <ul>
+              <li><a href="/services/workplace/floor-mats">Floor Mats</a></li>
+              <li><a href="/services/workplace/towels">Towels</a></li>
+              <li><a href="/services/workplace/first-aid">First Aid</a></li>
+              <li><a href="/services/workplace/lockers">Lockers</a></li>
+              <li>
+                <a href="/services/workplace/washroom-supplies"
+                  >Washroom Supplies</a
+                >
+              </li>
+              <li>
+                <a href="/services/workplace/microfibres-cloths"
+                  >Microfibres & Cloths</a
+                >
+              </li>
+              <li><a href="/services/workplace/linen">Linen</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h3>FOOD INDUSTRY</h3>
+            <ul>
+              <li>
+                <a href="/services/food-industry/workwear"
+                  >Food Industry Workwear</a
+                >
+              </li>
+              <li>
+                <a href="/services/food-industry/floor-mats">Floor Mats</a>
+              </li>
+              <li><a href="/services/food-industry/ppe">PPE</a></li>
+              <li><a href="/services/food-industry/first-aid">First Aid</a></li>
+              <li>
+                <a href="/services/food-industry/towels-cloths"
+                  >Towels & Cloths</a
+                >
+              </li>
+              <li><a href="/services/food-industry/mops">Mops</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h3>HOSPITALITY</h3>
+            <ul>
+              <li><a href="/services/hospitality/tea-towels">Tea Towels</a></li>
+              <li>
+                <a href="/services/hospitality/cafe-bar-wipes"
+                  >Café & Bar Wipes</a
+                >
+              </li>
+              <li>
+                <a href="/services/hospitality/kitchen-wipes">Kitchen Wipes</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/glass-cloths">Glass Cloths</a>
+              </li>
+              <li><a href="/services/hospitality/floor-care">Floor Care</a></li>
+              <li>
+                <a href="/services/hospitality/table-linen">Table Linen</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/washroom-supplies"
+                  >Washroom Supplies</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h3>PPE</h3>
+            <ul>
+              <li>
+                <a href="/services/ppe">Personal Protective Equipment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="megamenu-cta">
+          <a href="/get-a-quote" class="cta-card cta-card-black">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="14"
+                viewBox="0 0 19 14"
+                fill="none"
+              >
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </a>
+          <a href="/contact" class="cta-card cta-card-orange">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="14"
+                viewBox="0 0 19 14"
+                fill="none"
+              >
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu - About -->
+    <div class="megamenu" id="megamenu-about">
+      <div class="container">
+        <div class="megamenu-grid">
+          <div class="megamenu-column"></div>
+          <div class="megamenu-column"></div>
+          <div class="megamenu-column"></div>
+          <div class="megamenu-column">
+            <h3>ABOUT US</h3>
+            <ul>
+              <li><a href="/about/locations">Locations</a></li>
+              <li><a href="/contact">Contact us</a></li>
+              <li><a href="/services">Our Services</a></li>
+              <li><a href="/about/news">News</a></li>
+              <li>
+                <a href="/about/asurequality-accreditations"
+                  >AsureQuality & Accreditations</a
+                >
+              </li>
+              <li><a href="/about/community">Community</a></li>
+              <li><a href="/about/sustainability">Sustainability</a></li>
+              <li><a href="/about/policies">Policies</a></li>
+              <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h3>CLIENT TOOLS</h3>
+            <ul>
+              <li><a href="/client-tools/linen-order">Linen Order</a></li>
+              <li><a href="/client-tools/jobs">Jobs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="megamenu-cta">
+          <a href="/get-a-quote" class="cta-card cta-card-black">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="14"
+                viewBox="0 0 19 14"
+                fill="none"
+              >
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </a>
+          <a href="/contact" class="cta-card cta-card-orange">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="14"
+                viewBox="0 0 19 14"
+                fill="none"
+              >
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="/">
+          <img
+            src="public/images/apparel-master-logo.png"
+            alt="Apparel Master Logo"
+          />
+        </a>
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu-divider"></div>
+
+      <div class="mobile-menu-items">
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>WORKWEAR</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/services/workwear/overalls">Overalls</a></li>
+            <li>
+              <a href="/services/workwear/workshirts-trousers"
+                >Workshirts & Trousers</a
+              >
+            </li>
+            <li>
+              <a href="/services/workwear/protective-clothing"
+                >Protective Clothing</a
+              >
+            </li>
+            <li>
+              <a href="/services/workwear/corporate-uniforms"
+                >Corporate Uniforms</a
+              >
+            </li>
+            <li>
+              <a href="/services/workwear/embroidery-emblems"
+                >Embroidery & Emblems</a
+              >
+            </li>
+            <li><a href="/services/workwear/repairs">Repairs</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>WORKPLACE</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/services/workplace/floor-mats">Floor Mats</a></li>
+            <li><a href="/services/workplace/towels">Towels</a></li>
+            <li><a href="/services/workplace/first-aid">First Aid</a></li>
+            <li><a href="/services/workplace/lockers">Lockers</a></li>
+            <li>
+              <a href="/services/workplace/washroom-supplies"
+                >Washroom Supplies</a
+              >
+            </li>
+            <li>
+              <a href="/services/workplace/microfibres-cloths"
+                >Microfibres & Cloths</a
+              >
+            </li>
+            <li><a href="/services/workplace/linen">Linen</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>FOOD INDUSTRY</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li>
+              <a href="/services/food-industry/workwear"
+                >Food Industry Workwear</a
+              >
+            </li>
+            <li><a href="/services/food-industry/floor-mats">Floor Mats</a></li>
+            <li><a href="/services/food-industry/ppe">PPE</a></li>
+            <li><a href="/services/food-industry/first-aid">First Aid</a></li>
+            <li>
+              <a href="/services/food-industry/towels-cloths"
+                >Towels & Cloths</a
+              >
+            </li>
+            <li><a href="/services/food-industry/mops">Mops</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>HOSPITALITY</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/services/hospitality/tea-towels">Tea Towels</a></li>
+            <li>
+              <a href="/services/hospitality/cafe-bar-wipes"
+                >Café & Bar Wipes</a
+              >
+            </li>
+            <li>
+              <a href="/services/hospitality/kitchen-wipes">Kitchen Wipes</a>
+            </li>
+            <li>
+              <a href="/services/hospitality/glass-cloths">Glass Cloths</a>
+            </li>
+            <li><a href="/services/hospitality/floor-care">Floor Care</a></li>
+            <li><a href="/services/hospitality/table-linen">Table Linen</a></li>
+            <li>
+              <a href="/services/hospitality/washroom-supplies"
+                >Washroom Supplies</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>PPE</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li>
+              <a href="/services/ppe">Personal Protective Equipment</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>ABOUT US</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/about/locations">Locations</a></li>
+            <li><a href="/contact">Contact us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/about/news">News</a></li>
+            <li>
+              <a href="/about/asurequality-accreditations"
+                >AsureQuality & Accreditations</a
+              >
+            </li>
+            <li><a href="/about/community">Community</a></li>
+            <li><a href="/about/sustainability">Sustainability</a></li>
+            <li><a href="/about/policies">Policies</a></li>
+            <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>CONTACT US</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/contact">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-toggle">
+            <h3>CLIENT TOOLS</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="8"
+              viewBox="0 0 14 8"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/client-tools/linen-order">Linen Order</a></li>
+            <li><a href="/client-tools/jobs">Jobs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-workwear">
+      <div class="hero-workwear-content">
+        <h1>Food Industry Workwear</h1>
+      </div>
+    </section>
+
+    <!-- Breadcrumb Section -->
+    <nav class="breadcrumb-section d-none d-xl-block bg-white border-bottom">
+      <div class="container breadcrumb-container mx-auto dynamic-padding">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/food-industry">Food Industry</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Food Industry Workwear
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content-section py-5">
+      <div class="container content-container dynamic-padding">
+        <div class="row">
+          <div
+            class="col-12 col-xl-6 d-flex align-items-center content-image-col order-1 order-xl-0"
+          >
+            <img
+              src="public/images/workwear-image-2.png"
+              alt="Food Industry Workwear"
+              class="img-fluid content-image rounded-3"
+            />
+          </div>
+          <div
+            class="col-12 col-xl-6 d-flex align-items-center content-text-col order-0 order-xl-1"
+          >
+            <div class="content-text">
+              <div class="content-bar mb-4"></div>
+              <p class="mb-0">
+                Apparelmaster offers a wide range of food industry workwear,
+                which when integrated with a garment-cleaning programme, helps
+                businesses meet and exceed hygiene requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section 2 -->
+    <section class="content-section-2 py-5">
+      <div class="container content-container dynamic-padding">
+        <div class="row">
+          <div
+            class="col-12 col-xl-6 d-flex align-items-center content-text-col-2 order-0 order-xl-0"
+          >
+            <div class="content-text-2">
+              <div class="content-bar mb-4"></div>
+              <p class="mb-3">
+                Businesses in the food and hospitality industries must meet
+                increasingly strict standards for cleanliness and hygiene. As
+                specialists in supplying and maintaining workwear for food and
+                seafood processing, Pryor's Apparelmaster recognises the
+                importance of complying with food safety policies and using
+                MAF-approved cleaning products.
+              </p>
+              <p class="mb-0">
+                Our workwear range is designed for food handling and
+                preparation, including dust coats, trousers, jerkins, and
+                overalls. We also offer specialist clothing for hospitality
+                roles, such as chefs' uniforms and aprons.
+              </p>
+              <a href="/get-a-quote" class="btn btn-cta">Submit an enquiry</a>
+            </div>
+          </div>
+          <div
+            class="col-12 col-xl-6 d-flex align-items-center content-image-col order-1 order-xl-1"
+          >
+            <img
+              src="public/images/workwear-image-3.jpg"
+              alt="Food Industry Standards"
+              class="img-fluid content-image rounded-3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Width Section -->
+    <section class="full-width-section">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div
+            class="col-12 col-xl-6 full-width-content-bg p-0 order-0 order-xl-1"
+          >
+            <div class="full-width-content-wrapper">
+              <div class="full-width-text">
+                <div class="content-bar-white mb-4"></div>
+                <p class="mb-0">
+                  Apparelmaster delivers certified workwear solutions and expert
+                  laundering to help food and hospitality businesses meet the
+                  highest hygiene standards.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 p-0 order-1 order-xl-0">
+            <img
+              src="public/images/workwear-image-4.png"
+              alt="Workwear Solutions"
+              class="full-width-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orange Section with Accordion -->
+    <section class="orange-section">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div class="col-12 col-xl-6 orange-content-bg p-0 order-0 order-xl-0">
+            <div class="orange-content-wrapper">
+              <h2 class="mb-0 orange-title">Workwear Rental</h2>
+
+              <div class="orange-content">
+                <div class="accordion-custom">
+                  <div class="accordion-item-custom">
+                    <button
+                      class="accordion-button-custom"
+                      data-accordion="accordion1"
+                    >
+                      <span>Our Food Industry Workwear Range</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        class="accordion-icon"
+                      >
+                        <rect
+                          class="icon-vertical"
+                          x="13.5656"
+                          width="1.94067"
+                          height="30"
+                          fill="white"
+                        />
+                        <rect
+                          class="icon-horizontal"
+                          x="0.000213623"
+                          y="16"
+                          width="2"
+                          height="29.11"
+                          transform="rotate(-90 0.000213623 16)"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                    <div class="accordion-content-custom" id="accordion1">
+                      <div class="accordion-content-wrapper">
+                        <p>
+                          Our total workwear and workplace rental service
+                          provides a cost effective way to supply uniforms,
+                          company apparel, and equipment. With a fully managed
+                          solution that includes laundering, dry cleaning,
+                          personalisation, branding, repairs, and alterations,
+                          your team is always professionally presented. Tailored
+                          to your business needs, our all-in-one rental service
+                          delivers convenience with no capital outlay.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item-custom">
+                    <button
+                      class="accordion-button-custom"
+                      data-accordion="accordion2"
+                    >
+                      <span>Name title</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        class="accordion-icon"
+                      >
+                        <rect
+                          class="icon-vertical"
+                          x="13.5656"
+                          width="1.94067"
+                          height="30"
+                          fill="white"
+                        />
+                        <rect
+                          class="icon-horizontal"
+                          x="0.000213623"
+                          y="16"
+                          width="2"
+                          height="29.11"
+                          transform="rotate(-90 0.000213623 16)"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                    <div class="accordion-content-custom" id="accordion2">
+                      <div class="accordion-content-wrapper">
+                        <p>
+                          Our total workwear and workplace rental service
+                          provides a cost effective way to supply uniforms,
+                          company apparel, and equipment. With a fully managed
+                          solution that includes laundering, dry cleaning,
+                          personalisation, branding, repairs, and alterations,
+                          your team is always professionally presented. Tailored
+                          to your business needs, our all-in-one rental service
+                          delivers convenience with no capital outlay.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 p-0 order-1 order-xl-1">
+            <img
+              src="public/images/workwear-image-5.jpg"
+              alt="Workwear Rental"
+              class="full-width-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery 3.7 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
