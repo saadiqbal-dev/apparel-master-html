@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 90px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    height: 165px;
+  }
+}
+
+.header-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 11, 11, 0.4) 0%,
+    rgba(114, 112, 112, 0) 100%
+  );
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.header.scrolled .header-gradient,
+.header.menu-open .header-gradient {
+  opacity: 0;
+}
+
+.header-white {
+  position: absolute;
+  inset: 0;
+  background: white;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.header.scrolled .header-white,
+.header.menu-open .header-white {
+  opacity: 1;
+}
+
+.header .container {
+  max-width: 1752px;
+  height: 100%;
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 11px 43px 11px 28px;
+  gap: 8px;
+}
+
+@media (min-width: 1200px) {
+  .header-content {
+    padding: 0 16px;
+    gap: 0;
+  }
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  width: 137px;
+  height: 68px;
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .header-logo img {
+    width: 242px;
+    height: 119.67px;
+  }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+.mobile-menu-btn svg line {
+  transition: stroke 0.3s ease;
+}
+
+.header.scrolled .mobile-menu-btn svg line,
+.header.menu-open .mobile-menu-btn svg line {
+  stroke: #292929;
+}
+
+/* Desktop Navigation */
+.header-nav {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .header-nav {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1400px) {
+  .nav-list {
+    gap: 65px;
+  }
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-link,
+.nav-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.header.scrolled .nav-link,
+.header.scrolled .nav-btn,
+.header.menu-open .nav-link,
+.header.menu-open .nav-btn {
+  color: #374151;
+}
+
+.nav-link:hover,
+.nav-btn:hover {
+  color: inherit;
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e9510e;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-underline,
+.nav-btn:hover .nav-underline,
+.nav-btn.active .nav-underline {
+  width: 100%;
+}
+
+/* Nav Actions */
+.nav-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+@media (min-width: 1200px) {
+  .nav-actions {
+    margin-left: 58px;
+    gap: 0;
+  }
+}
+
+.cta-btn,
+.phone-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  padding: 8px 16px;
+  border-radius: 27px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .cta-btn,
+  .phone-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+.cta-btn {
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+}
+
+.header.scrolled .cta-btn,
+.header.menu-open .cta-btn {
+  border-color: black;
+  color: black;
+}
+
+.cta-btn:hover {
+  background: white;
+  color: black;
+}
+
+.header.scrolled .cta-btn:hover,
+.header.menu-open .cta-btn:hover {
+  background: black;
+  color: white;
+}
+
+.phone-btn {
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .phone-btn,
+  .phone-revealed {
+    margin-left: 70px;
+  }
+}
+
+.header.scrolled .phone-btn,
+.header.menu-open .phone-btn {
+  border-color: black;
+  color: black;
+}
+
+.phone-btn:hover {
+  background: white;
+  color: black;
+}
+
+.header.scrolled .phone-btn:hover,
+.header.menu-open .phone-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* Mega Menu */
+.megamenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #f5f4f4;
+  z-index: 999;
+  display: none;
+  animation: slideDown 0.3s ease;
+}
+
+.megamenu.active {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.megamenu .container {
+  max-width: 1752px;
+  padding: 48px 16px 50px;
+}
+
+.megamenu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 130px;
+}
+
+.megamenu-column h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.megamenu-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.megamenu-column ul li {
+  margin-bottom: 8px;
+}
+
+.megamenu-column ul a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.megamenu-column ul a:hover {
+  color: #e9510e;
+}
+
+/* Mega Menu CTA Cards */
+.megamenu-cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 45px;
+}
+
+.cta-card {
+  height: 93px;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 25px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.cta-card:hover {
+  opacity: 0.9;
+}
+
+.cta-card p {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+
+.cta-card-black {
+  background: #000;
+}
+
+.cta-card-orange {
+  background: #e9510e;
+}
+
+.cta-arrow {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 1050;
+  overflow-y: auto;
+  transform: translateY(-16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 21.5px 11px 20px;
+}
+
+.mobile-menu-header img {
+  width: 137px;
+  height: 68px;
+  margin-left: 8px;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-divider {
+  height: 1px;
+  background: #dcd9d9;
+  margin-bottom: 8px;
+}
+
+.mobile-menu-items {
+  padding: 0 20px 40px;
+}
+
+.mobile-menu-item {
+  border-bottom: 1px solid transparent;
+}
+
+.mobile-menu-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+.mobile-menu-toggle h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  margin: 0;
+  color: #000;
+}
+
+.mobile-menu-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-item.active .mobile-menu-toggle svg {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-item.active .mobile-submenu {
+  max-height: 500px;
+  opacity: 1;
+  padding-bottom: 16px;
+}
+
+.mobile-submenu li {
+  margin-bottom: 0;
+}
+
+.mobile-submenu a {
+  display: block;
+  font-size: 16px;
+  line-height: 36px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-submenu a:hover {
+  color: #e9510e;
+}
