@@ -1,3 +1,7 @@
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Dynamic Padding Class */
+/* Dynamic Padding Utility */
 .dynamic-padding {
   padding-left: 20px;
   padding-right: 20px;
@@ -29,7 +33,11 @@ body {
   }
 }
 
-/* Header */
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+/* Header Container */
 .header {
   position: fixed;
   top: 0;
@@ -46,6 +54,7 @@ body {
   }
 }
 
+/* Header Backgrounds */
 .header-gradient {
   position: absolute;
   inset: 0;
@@ -88,6 +97,7 @@ body {
   opacity: 1;
 }
 
+/* Header Content */
 .header .container {
   max-width: 1752px;
   height: 100%;
@@ -110,6 +120,7 @@ body {
   }
 }
 
+/* Header Logo */
 .header-logo {
   flex-shrink: 0;
 }
@@ -237,7 +248,7 @@ body {
   width: 100%;
 }
 
-/* Nav Actions */
+/* Navigation Actions */
 .nav-actions {
   display: flex;
   flex-direction: row;
@@ -331,7 +342,10 @@ body {
   color: white;
 }
 
-/* Mega Menu */
+/* ========================================
+   MEGA MENU
+   ======================================== */
+
 .megamenu {
   position: absolute;
   top: 100%;
@@ -447,7 +461,10 @@ body {
   flex-shrink: 0;
 }
 
-/* Mobile Menu */
+/* ========================================
+   MOBILE MENU
+   ======================================== */
+
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -569,7 +586,10 @@ body {
   color: #e9510e;
 }
 
-/* Hero Workwear Section */
+/* ========================================
+   HERO SECTIONS
+   ======================================== */
+
 .hero-workwear {
   width: 100%;
   height: 128px;
@@ -619,7 +639,10 @@ body {
   }
 }
 
-/* Breadcrumb Section */
+/* ========================================
+   BREADCRUMB
+   ======================================== */
+
 .breadcrumb-section {
   border-bottom-color: #e1dddd;
   border-bottom-width: 0.5px;
@@ -648,9 +671,6 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
-}
-
-.breadcrumb-section .breadcrumb-item a {
   color: #b7b6b6;
   text-decoration: none;
 }
@@ -675,7 +695,11 @@ body {
   background-position: center;
 }
 
-/* Content Section */
+/* ========================================
+   CONTENT SECTIONS
+   ======================================== */
+
+/* Content Section 1 */
 @media (min-width: 1200px) {
   .content-section {
     padding-top: 50px !important;
@@ -811,6 +835,7 @@ body {
   }
 }
 
+/* CTA Button */
 .btn-cta {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -845,7 +870,10 @@ body {
   color: white;
 }
 
-/* Testimonial Section */
+/* ========================================
+   TESTIMONIAL SECTION
+   ======================================== */
+
 .testimonial-section {
   background: white;
   width: 100%;
@@ -1018,7 +1046,10 @@ body {
   }
 }
 
-/* AsureQuality Section */
+/* ========================================
+   ASUREQUALITY SECTION
+   ======================================== */
+
 .asurequality-section {
   background: #f5f4f4;
 }
@@ -1115,7 +1146,10 @@ body {
   }
 }
 
-/* Full Width Section */
+/* ========================================
+   FULL WIDTH SECTION
+   ======================================== */
+
 .full-width-section {
   width: 100%;
   margin: 0;
@@ -1215,7 +1249,10 @@ body {
   }
 }
 
-/* Orange Section with Accordion */
+/* ========================================
+   ORANGE SECTION WITH ACCORDION
+   ======================================== */
+
 .orange-section {
   width: 100%;
   margin: 0;
@@ -1376,14 +1413,17 @@ body {
   }
 }
 
-/* Footer Styles */
+/* ========================================
+   FOOTER
+   ======================================== */
+
 .footer {
   background: white;
   position: relative;
   overflow: hidden;
 }
 
-/* Mobile Footer Layout */
+/* Mobile Footer */
 .footer-mobile {
   padding: 36px 20px 140px;
   position: relative;
@@ -1409,7 +1449,7 @@ body {
   margin: 40px 0;
 }
 
-/* Footer Menu Items (Mobile) */
+/* Footer Menu (Mobile) */
 .footer-menu-item {
   border-bottom: none;
 }
@@ -1457,7 +1497,7 @@ body {
   max-height: 500px;
 }
 
-/* Find Us Section */
+/* Footer Find Us */
 .footer-find-us {
   margin-bottom: 40px;
 }
@@ -1483,7 +1523,7 @@ body {
   margin: 0;
 }
 
-/* Submit Enquiry Section */
+/* Footer Enquiry */
 .footer-enquiry-title {
   color: black;
   font-family: "Inter", sans-serif;
@@ -1493,7 +1533,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* Phone Button - Footer variant */
+/* Footer Phone Button */
 .footer-phone-btn {
   display: inline-flex;
   align-items: center;
@@ -1529,7 +1569,7 @@ body {
   display: inline-flex;
 }
 
-/* Social Icons */
+/* Footer Social Icons */
 .footer-social {
   display: flex;
   align-items: center;
@@ -1546,7 +1586,7 @@ body {
   opacity: 0.7;
 }
 
-/* Copyright */
+/* Footer Copyright */
 .footer-copyright {
   font-size: 14px;
   font-weight: 300;
@@ -1556,7 +1596,7 @@ body {
   margin: 0;
 }
 
-/* Leaf Image */
+/* Footer Leaf Image */
 .footer-leaf {
   position: absolute;
   bottom: 0;
@@ -1570,7 +1610,7 @@ body {
   height: auto;
 }
 
-/* Desktop Footer Layout */
+/* Desktop Footer */
 .footer-desktop {
   display: none;
   padding: 48px 20px;
