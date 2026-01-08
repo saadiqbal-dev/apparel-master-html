@@ -18,6 +18,7 @@ This is a recreation of the React header component using vanilla HTML, CSS, jQue
 ## Features
 
 ### Desktop Header
+
 - Fixed position header that changes from transparent gradient to white on scroll
 - Logo that links to homepage
 - Navigation with:
@@ -28,6 +29,7 @@ This is a recreation of the React header component using vanilla HTML, CSS, jQue
 - Phone button that reveals number on click
 
 ### Mega Menus
+
 - Services mega menu with 5 columns (Workwear, Workplace, Food Industry, Hospitality, PPE)
 - About mega menu with About Us and Client Tools sections
 - CTA cards at the bottom of each mega menu
@@ -35,6 +37,7 @@ This is a recreation of the React header component using vanilla HTML, CSS, jQue
 - Smooth slide-down animation
 
 ### Mobile Menu
+
 - Hamburger menu button
 - Full-screen mobile menu overlay
 - Accordion-style navigation items
@@ -44,6 +47,7 @@ This is a recreation of the React header component using vanilla HTML, CSS, jQue
 ## CSS Approach
 
 As requested, I used:
+
 - **Simple class names** (e.g., `.header`, `.nav-list`, `.megamenu`) instead of BEM notation
 - **Nested selectors** to style child elements (e.g., `.nav-list li`, `.megamenu-column ul`)
 - **Bootstrap classes** where possible to minimize custom CSS
@@ -60,6 +64,7 @@ As requested, I used:
 ## Image Path
 
 Make sure the logo image exists at:
+
 ```
 public/images/apparel-master-logo.png
 ```

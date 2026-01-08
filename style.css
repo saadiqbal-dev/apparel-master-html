@@ -839,6 +839,279 @@ body {
   color: white;
 }
 
+/* Testimonial Section */
+.testimonial-section {
+  background: white;
+  width: 100%;
+  padding: 0 20px 50px;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-section {
+    padding: 127px 40px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1920px) {
+  .testimonial-section {
+    padding: 127px 0;
+  }
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  gap: 50px;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    max-width: 1752px;
+    padding-left: 0;
+  }
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px 0;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-content {
+    position: relative;
+    z-index: 10;
+    width: 720px;
+    flex-shrink: 0;
+    padding: 52px 73px 65px;
+    border-radius: 6px;
+    background: #f5f4f4;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1400px) {
+  .testimonial-content {
+    transform: translateX(75px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .testimonial-content {
+    transform: translateX(125px);
+  }
+}
+
+.testimonial-quote-icon {
+  width: 48px;
+  height: 33px;
+}
+
+.testimonial-text {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  padding-top: 18px;
+  padding-bottom: 25px;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-text {
+    font-size: 28px;
+    line-height: 38px;
+    padding-top: 18px;
+    padding-bottom: 24px;
+    hyphens: none;
+  }
+}
+
+.testimonial-author {
+  display: flex;
+  gap: 20px;
+}
+
+.testimonial-bar {
+  width: 6px;
+  align-self: stretch;
+  background: #e9510e;
+  flex-shrink: 0;
+}
+
+.testimonial-info {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-info {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.testimonial-info p {
+  margin: 0;
+}
+
+.testimonial-info .name {
+  font-weight: 600;
+}
+
+.testimonial-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-image {
+    position: relative;
+    width: auto;
+    height: 673px;
+    max-width: 891px;
+    aspect-ratio: 891/673;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-left: -150px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .testimonial-image {
+    width: 891px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .testimonial-image {
+    margin-left: -100px;
+  }
+}
+
+/* AsureQuality Section */
+.asurequality-section {
+  background: #f5f4f4;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-section {
+    padding: 60px 0 !important;
+  }
+}
+
+.asurequality-section .content-image-col {
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-section .content-image-col {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.asurequality-section .content-text-col-2 {
+  justify-content: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-section .content-text-col-2 {
+    justify-content: center;
+  }
+}
+
+.asurequality-text {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-text {
+    max-width: 532px;
+    text-align: left;
+  }
+}
+
+.asurequality-logo {
+  width: 100%;
+  max-width: 433.688px;
+  height: auto;
+  max-height: 72px;
+  aspect-ratio: 263/72;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-logo {
+    width: 433.688px;
+    height: 118px;
+    max-height: 118px;
+    object-fit: contain;
+    aspect-ratio: 433.69 / 118;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.asurequality-text p {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-top: 16px;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-text p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 0;
+  }
+}
+
+.asurequality-text .btn-cta {
+  margin-top: 56px;
+}
+
+@media (min-width: 1200px) {
+  .asurequality-text .btn-cta {
+    margin-top: 40px;
+  }
+}
+
 /* Full Width Section */
 .full-width-section {
   width: 100%;
@@ -1096,4 +1369,309 @@ body {
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+/* Footer Styles */
+.footer {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile Footer Layout */
+.footer-mobile {
+  padding: 36px 20px 140px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 992px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+
+.footer-mobile .footer-logo {
+  width: 231px;
+  height: auto;
+  aspect-ratio: 77/38;
+  max-width: 100%;
+}
+
+.footer-mobile .footer-divider {
+  height: 1px;
+  background: black;
+  margin: 40px 0;
+}
+
+/* Footer Menu Items (Mobile) */
+.footer-menu-item {
+  border-bottom: none;
+}
+
+.footer-menu-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.footer-menu-toggle h3 {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+  margin: 0;
+}
+
+.footer-menu-toggle svg {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.footer-menu-item.active .footer-menu-toggle svg {
+  transform: rotate(45deg);
+}
+
+.footer-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu-item.active .footer-submenu {
+  max-height: 500px;
+}
+
+/* Find Us Section */
+.footer-find-us {
+  margin-bottom: 40px;
+}
+
+.footer-find-us h3 {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+.footer-find-us .address {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.footer-find-us .address div {
+  margin: 0;
+}
+
+/* Submit Enquiry Section */
+.footer-enquiry-title {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+/* Phone Button - Footer variant */
+.footer-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+  border-radius: 27px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  padding: 8px 32px;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 36px;
+  width: fit-content;
+}
+
+.footer-phone-btn:hover {
+  background: black;
+  color: white;
+}
+
+.footer-phone-btn.revealed {
+  display: none;
+}
+
+.footer-phone-btn.revealed.active {
+  display: inline-flex;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 140px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+/* Copyright */
+.footer-copyright {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: black;
+  margin: 0;
+}
+
+/* Leaf Image */
+.footer-leaf {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.footer-mobile .footer-leaf {
+  left: 0;
+  transform: translateY(33.33%);
+  width: 394px;
+  height: auto;
+}
+
+/* Desktop Footer Layout */
+.footer-desktop {
+  display: none;
+  padding: 48px 20px;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .footer-desktop {
+    display: block;
+    padding: 48px 100px;
+  }
+}
+
+.footer-desktop-content {
+  display: flex;
+  justify-content: space-between;
+  min-height: 354px;
+  position: relative;
+  z-index: 10;
+  max-width: 1752px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-desktop .footer-logo {
+  aspect-ratio: 69/34;
+  max-height: 136px;
+  width: auto;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 47px;
+  width: fit-content;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-column.services {
+  margin-right: 87px;
+}
+
+.footer-column.find-us {
+  max-width: 170px;
+}
+
+.footer-column h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: black;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-column ul li {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  color: black;
+}
+
+.footer-column ul li a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #e9510e;
+}
+
+.footer-desktop .footer-copyright {
+  text-align: left;
+  min-width: 627px;
+}
+
+.footer-desktop .footer-leaf {
+  right: 85px;
+  bottom: 0;
+  width: 394px;
+  height: auto;
 }
