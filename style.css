@@ -1744,3 +1744,26 @@ body {
   width: 394px;
   height: auto;
 }
+
+/* Video Section Mobile Styling */
+.video-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .video-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1720px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .video-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
