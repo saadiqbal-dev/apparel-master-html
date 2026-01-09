@@ -347,8 +347,8 @@ body {
    ======================================== */
 
 .megamenu {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 90px;
   left: 0;
   right: 0;
   width: 100%;
@@ -356,6 +356,12 @@ body {
   z-index: 999;
   display: none;
   animation: slideDown 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .megamenu {
+    top: 165px;
+  }
 }
 
 .megamenu.active {
