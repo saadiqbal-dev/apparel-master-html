@@ -1,0 +1,77 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+.mobile-hidden {
+  display: block;
+}
+
+.bg-grey {
+  background: #f5f4f4;
+}
+
+.padding-section {
+  padding: 155px 100px;
+}
+
+.get-in-touch {
+  max-width: 835px;
+  margin: 0 auto;
+}
+
+.get-in-touch h4 {
+  color: #000;
+  font-size: 44px;
+}
+
+.get-in-touch p {
+  color: #000;
+  font-size: 20px;
+  line-height: 37px;
+}
+
+.submit-btn {
+  width: 191px;
+  height: 50px;
+  border-radius: 27px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  border: none;
+}
+
+.contact-form .form-control {
+  border-radius: 5px;
+  background: #fff;
+  border: none;
+  min-height: 39px;
+}
+
+.contact-form .form-control::placeholder {
+  color: #000;
+  font-size: 15px;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .padding-section {
+    padding: 60px 20px;
+  }
+
+  .get-in-touch h4 {
+    font-size: 22px;
+  }
+
+  .get-in-touch p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+}
