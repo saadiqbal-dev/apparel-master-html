@@ -1200,10 +1200,14 @@ body {
 
 .full-width-content-bg {
   background: #312f2f;
-  min-height: auto;
+  min-height: 382px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.full-width-content-bg.reverse {
+  justify-content: flex-end;
 }
 
 @media (min-width: 1200px) {
@@ -1243,17 +1247,25 @@ body {
   }
 }
 
-.content-bar-white {
+.content-bar {
   width: 60px;
   height: 4px;
   background: #e9510e;
 }
 
+.content-bar.white {
+  background: #fff;
+}
+
 @media (min-width: 1200px) {
-  .content-bar-white {
+  .content-bar {
     width: 100px;
     height: 6px;
   }
+}
+
+.full-width-text p:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 .full-width-text p {
@@ -1296,6 +1308,10 @@ body {
     min-height: 748px;
     height: 748px;
     justify-content: flex-end;
+  }
+
+  .orange-content-bg.reverse {
+    justify-content: flex-start;
   }
 }
 
@@ -1875,5 +1891,205 @@ body {
 @media (min-width: 1200px) {
   .content-section-last {
     padding-bottom: 114px !important;
+  }
+}
+
+/* About Section Heading */
+.about-section-heading {
+  color: #fff;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .about-section-heading {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+/* About Section Heading 2 */
+.about-section-heading-2 {
+  color: #000;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0 0 1rem 0;
+}
+
+/* About Section Text */
+.about-section-text {
+  color: #000;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0;
+}
+
+/* About Section 2 - Center text container, left align text */
+.about-section-2 .content-text-2 {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 590px;
+}
+
+/* About Section 3 - Left align text container */
+.about-section-3 .content-text-col {
+  justify-content: flex-start !important;
+}
+
+.about-section-3 .content-text {
+  text-align: left !important;
+  max-width: 688px;
+}
+
+.about-section-3 .about-section-text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* Partners Marquee Section */
+.partners-section {
+  padding-top: 138px;
+  padding-bottom: 138px;
+}
+
+.partners-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 111px;
+}
+
+.partners-text-wrapper {
+  margin-bottom: 111px;
+}
+
+.partners-text {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  max-width: none;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 151px;
+  animation: marquee-scroll 150s linear infinite;
+  width: fit-content;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo {
+  width: auto;
+  object-fit: contain;
+}
+
+/* Made in NZ */
+.partner-logo-made {
+  width: 201.614px;
+  height: 101px;
+  aspect-ratio: 201.61 / 101;
+}
+
+/* Linen Master */
+.partner-logo-linen {
+  width: 249.617px;
+  height: 58px;
+  aspect-ratio: 249.62 / 58;
+}
+
+/* Life Education Trust */
+.partner-logo-life {
+  width: 192.827px;
+  height: 113px;
+  aspect-ratio: 192.83 / 113;
+}
+
+/* Instep */
+.partner-logo-instep {
+  width: 183.42px;
+  height: 113px;
+  aspect-ratio: 183.42 / 113;
+}
+
+/* Asure Quality */
+.partner-logo-asure {
+  width: 268.299px;
+  height: 73px;
+  aspect-ratio: 268.3 / 73;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1199px) {
+  .partners-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .partners-heading {
+    color: #1a1a1a;
+    text-align: center;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px; /* 121.429% */
+    margin-bottom: 60px;
+  }
+
+  .partners-text-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .partners-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .marquee-track {
+    gap: 80px;
+  }
+
+  .partner-logo {
+    max-height: 80px;
   }
 }
