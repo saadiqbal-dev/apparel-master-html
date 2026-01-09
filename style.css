@@ -1903,7 +1903,7 @@ body {
 /* About Section Heading */
 .about-section-heading {
   color: #fff;
-  font-family: "Mona Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1921,7 +1921,7 @@ body {
 /* About Section Heading 2 */
 .about-section-heading-2 {
   color: #000;
-  font-family: "Mona Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1932,7 +1932,7 @@ body {
 /* About Section Text */
 .about-section-text {
   color: #000;
-  font-family: "Mona Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
