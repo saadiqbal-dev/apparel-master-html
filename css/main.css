@@ -1,4 +1,10 @@
 /* ========================================
+   GOOGLE FONTS
+   ======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap");
+
+/* ========================================
    GLOBAL STYLES
    ======================================== */
 
@@ -34,8 +40,8 @@ body {
 }
 
 /* ========================================
-   HEADER & NAVIGATION
-   ======================================== */
+     HEADER & NAVIGATION
+     ======================================== */
 
 /* Header Container */
 .header {
@@ -46,6 +52,11 @@ body {
   z-index: 1000;
   height: 90px;
   transition: all 0.3s ease;
+}
+
+.header .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (min-width: 1200px) {
@@ -260,8 +271,14 @@ body {
 
 @media (min-width: 1200px) {
   .nav-actions {
-    margin-left: 58px;
+    margin-left: 18px;
     gap: 0;
+  }
+}
+
+@media (min-width: 1260px) {
+  .nav-actions {
+    margin-left: 58px;
   }
 }
 
@@ -318,10 +335,17 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .phone-btn,
   .phone-revealed {
     margin-left: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .phone-btn,
+  .phone-revealed {
+    margin-left: 45px;
   }
 }
 
@@ -343,8 +367,8 @@ body {
 }
 
 /* ========================================
-   MEGA MENU
-   ======================================== */
+     MEGA MENU
+     ======================================== */
 
 .megamenu {
   position: fixed;
@@ -468,8 +492,8 @@ body {
 }
 
 /* ========================================
-   MOBILE MENU
-   ======================================== */
+     MOBILE MENU
+     ======================================== */
 
 .mobile-menu {
   position: fixed;
@@ -499,7 +523,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 11px 21.5px 11px 20px;
+  padding: 11px 21.5px 54px 18px;
 }
 
 .mobile-menu-header img {
@@ -521,7 +545,8 @@ body {
 .mobile-menu-divider {
   height: 1px;
   background: #dcd9d9;
-  margin-bottom: 8px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
 }
 
 .mobile-menu-items {
@@ -572,7 +597,7 @@ body {
 .mobile-menu-item.active .mobile-submenu {
   max-height: 500px;
   opacity: 1;
-  padding-bottom: 16px;
+  margin-top: -16px;
 }
 
 .mobile-submenu li {
@@ -593,8 +618,8 @@ body {
 }
 
 /* ========================================
-   HERO SECTIONS
-   ======================================== */
+     HERO SECTIONS
+     ======================================== */
 
 .hero-workwear {
   width: 100%;
@@ -646,8 +671,8 @@ body {
 }
 
 /* ========================================
-   BREADCRUMB
-   ======================================== */
+     BREADCRUMB
+     ======================================== */
 
 .breadcrumb-section {
   border-bottom-color: #e1dddd;
@@ -702,8 +727,8 @@ body {
 }
 
 /* ========================================
-   CONTENT SECTIONS
-   ======================================== */
+     CONTENT SECTIONS
+     ======================================== */
 
 /* Content Section 1 */
 @media (min-width: 1200px) {
@@ -797,7 +822,8 @@ body {
 /* Content Section 2 */
 @media (min-width: 1200px) {
   .content-section-2 {
-    padding: 60px 0 !important;
+    padding-top: 60px !important;
+    padding-bottom: 144px !important;
   }
 }
 
@@ -877,8 +903,8 @@ body {
 }
 
 /* ========================================
-   TESTIMONIAL SECTION
-   ======================================== */
+     TESTIMONIAL SECTION
+     ======================================== */
 
 .testimonial-section {
   background: white;
@@ -1053,8 +1079,8 @@ body {
 }
 
 /* ========================================
-   ASUREQUALITY SECTION
-   ======================================== */
+     ASUREQUALITY SECTION
+     ======================================== */
 
 .asurequality-section {
   background: #f5f4f4;
@@ -1094,7 +1120,13 @@ body {
 
 @media (min-width: 1200px) {
   .asurequality-section .asurequality-text {
-    max-width: 532px;
+    width: 586px;
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
     text-align: left;
   }
 }
@@ -1153,15 +1185,20 @@ body {
   color: #000;
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 400;
   line-height: 26px;
   margin: 16px 0 0 0;
 }
 
 @media (min-width: 1200px) {
   .asurequality-section p {
+    color: #000;
+    font-family: "Inter", sans-serif;
     font-size: 20px;
-    line-height: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
     margin-top: 0;
   }
 }
@@ -1177,8 +1214,8 @@ body {
 }
 
 /* ========================================
-   FULL WIDTH SECTION
-   ======================================== */
+     FULL WIDTH SECTION
+     ======================================== */
 
 .full-width-section {
   width: 100%;
@@ -1292,8 +1329,8 @@ body {
 }
 
 /* ========================================
-   ORANGE SECTION WITH ACCORDION
-   ======================================== */
+     ORANGE SECTION WITH ACCORDION
+     ======================================== */
 
 .orange-section {
   width: 100%;
@@ -1460,8 +1497,8 @@ body {
 }
 
 /* ========================================
-   FOOTER
-   ======================================== */
+     FOOTER
+     ======================================== */
 
 .footer {
   background: white;
