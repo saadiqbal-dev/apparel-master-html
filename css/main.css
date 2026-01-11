@@ -50,7 +50,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 90px;
+  height: 94px;
   transition: all 0.3s ease;
 }
 
@@ -240,7 +240,14 @@ body {
 
 .nav-link:hover,
 .nav-btn:hover {
-  color: inherit;
+  color: white;
+}
+
+.header.scrolled .nav-link:hover,
+.header.scrolled .nav-btn:hover,
+.header.menu-open .nav-link:hover,
+.header.menu-open .nav-btn:hover {
+  color: #374151;
 }
 
 .nav-underline {
@@ -372,7 +379,7 @@ body {
 
 .megamenu {
   position: fixed;
-  top: 90px;
+  top: 94px;
   left: 0;
   right: 0;
   width: 100%;
@@ -624,8 +631,8 @@ body {
 .hero-workwear {
   width: 100%;
   height: 128px;
-  margin: 90px auto 0;
-  background-image: url("public/images/workwear-rental-page-template.png");
+  margin: 94px auto 0;
+  background-image: url("/public/images/workwear-rental-page-template.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -909,7 +916,7 @@ body {
 .testimonial-section {
   background: white;
   width: 100%;
-  padding: 0 20px 50px;
+  padding: 0;
 }
 
 @media (min-width: 1200px) {
@@ -1115,7 +1122,7 @@ body {
 }
 
 .asurequality-section .asurequality-text {
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: 1200px) {
@@ -1270,6 +1277,18 @@ body {
   padding: 68px 50px;
 }
 
+.about-full-width .full-width-content-wrapper {
+  padding: 54px 20px;
+}
+
+.about-gray-full-width .full-width-content-wrapper {
+  padding: 54px 20px;
+}
+
+.about-orange-first .full-width-content-wrapper {
+  padding: 34px 20px;
+}
+
 @media (min-width: 1200px) {
   .full-width-content-wrapper {
     max-width: 960px;
@@ -1320,11 +1339,28 @@ body {
   margin: 0;
 }
 
+.about-full-width .full-width-text p {
+  font-size: 20px;
+}
+
+.about-gray-full-width .full-width-text p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.about-orange-first .full-width-text p {
+  line-height: 28px;
+}
+
 @media (min-width: 1200px) {
   .full-width-text p {
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
+  }
+
+  .about-full-width .full-width-text p {
+    font-weight: 400;
   }
 }
 
@@ -1529,7 +1565,13 @@ body {
 .footer-mobile .footer-divider {
   height: 1px;
   background: black;
-  margin: 40px 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-mobile .footer-divider.reverse-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Footer Menu (Mobile) */
@@ -1561,6 +1603,8 @@ body {
 .footer-menu-toggle svg {
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
 }
 
 .footer-menu-item.active .footer-menu-toggle svg {
@@ -1635,8 +1679,14 @@ body {
   padding: 8px 32px;
   text-decoration: none;
   font-family: "Inter", sans-serif;
-  margin-bottom: 36px;
+  margin-bottom: 56px;
   width: fit-content;
+}
+
+@media (min-width: 1200px) {
+  .footer-phone-btn {
+    margin-bottom: 18px;
+  }
 }
 
 .footer-phone-btn:hover {
@@ -1657,7 +1707,13 @@ body {
   display: flex;
   align-items: center;
   gap: 36px;
-  margin-bottom: 140px;
+  margin-bottom: 56px;
+}
+
+@media (min-width: 1200px) {
+  .footer-social {
+    margin-bottom: 140px;
+  }
 }
 
 .footer-social a {
@@ -1673,7 +1729,7 @@ body {
 .footer-copyright {
   font-size: 14px;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
   font-family: "Inter", sans-serif;
   color: black;
   margin: 0;
@@ -1688,7 +1744,7 @@ body {
 
 .footer-mobile .footer-leaf {
   left: 0;
-  transform: translateY(33.33%);
+  transform: translateY(40%) translateX(-25%);
   width: 394px;
   height: auto;
 }
@@ -1935,6 +1991,10 @@ body {
   .content-section-last {
     padding-bottom: 114px !important;
   }
+
+  .about-section-1.content-section-last {
+    padding-bottom: 80px !important;
+  }
 }
 
 /* About Section Heading */
@@ -1984,6 +2044,11 @@ body {
   max-width: 590px;
 }
 
+.about-section-2 .content-text-2 p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
 /* About Section 3 - Left align text container */
 .about-section-3 .content-text-col {
   justify-content: flex-start !important;
@@ -1996,6 +2061,18 @@ body {
 
 .about-section-3 .about-section-text:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+.about-section-3 .content-text p,
+.about-section-3 .about-section-text {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media (min-width: 1200px) {
+  .about-section-3 {
+    padding-bottom: 161px !important;
+  }
 }
 
 /* Partners Marquee Section */
