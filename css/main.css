@@ -2482,7 +2482,7 @@ body {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 38px 100px;
+  padding-top: 38px;
 }
 
 .locations-section h2 {
@@ -2571,22 +2571,10 @@ body {
 
 @media (max-width: 1200px) {
   .locations-section {
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 42px 20px;
-  }
-  .locations-section p {
-    line-height: 34px;
-  }
-}
-
-@media (max-width: 768px) {
-  .locations-section {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 42px 20px;
+    padding-top: 42px;
   }
 
   .locations-section h2 {
