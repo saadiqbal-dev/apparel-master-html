@@ -118,6 +118,29 @@ body {
   line-height: 38px; /* 135.714% */
 }
 
+.text-20-white,
+.text-20-white p,
+.text-20-white h1,
+.text-20-white h2,
+.text-20-white h3 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+}
+
+.text-20-mona,
+.text-20-mona p {
+  color: #000;
+  font-family: "Mona Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
+}
+
 /* ========================================
      HEADER & NAVIGATION
      ======================================== */
@@ -2202,7 +2225,7 @@ body {
 
 @media (min-width: 1200px) {
   .btn-cta-floor-mats {
-    margin-top: 94px;
+    margin-top: 79px;
   }
 }
 

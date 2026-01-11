@@ -21,13 +21,19 @@ $(document).ready(function () {
    * Header scroll behavior
    * Adds 'scrolled' class when page is scrolled
    */
-  $(window).on("scroll", function () {
+  function updateHeaderScroll() {
     if ($(window).scrollTop() > 0) {
       $(".header").addClass("scrolled");
     } else {
       $(".header").removeClass("scrolled");
     }
-  });
+  }
+
+  // Check scroll position on page load
+  updateHeaderScroll();
+
+  // Update on scroll
+  $(window).on("scroll", updateHeaderScroll);
 
   /**
    * Phone button reveal (Header)
