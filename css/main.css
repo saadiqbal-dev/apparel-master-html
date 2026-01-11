@@ -848,7 +848,7 @@ body {
   color: #000;
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 26px;
   margin: 0 0 1rem 0;
 }
@@ -1354,9 +1354,9 @@ body {
 
 @media (min-width: 1200px) {
   .full-width-text p {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
   }
 
   .about-full-width .full-width-text p {
@@ -2211,5 +2211,157 @@ body {
 
   .partner-logo {
     max-height: 80px;
+  }
+}
+
+/* ========================================
+   INDEX PAGE LINKS SECTION
+   ======================================== */
+
+.hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-5px);
+}
+
+.hover-shadow {
+  cursor: pointer;
+}
+
+/* ========================================
+   LOCATIONS SECTION
+   ======================================== */
+
+.locations-section {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 38px 100px;
+}
+
+.locations-section h2 {
+  color: #1a1a1a;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 58px;
+  margin: 0;
+  padding: 0;
+}
+
+.locations-section p {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+  padding: 0;
+  margin: 0;
+}
+
+.locations-section .divider {
+  width: 100px;
+  height: 6px;
+  background: #e9510e;
+}
+
+.locations-section .store-item h4 {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.locations-section .store-item a {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.locations-section .store-item a:hover {
+  text-decoration: none;
+  color: #e9510e;
+}
+
+.locations-section .store-item {
+  gap: 17px;
+}
+
+.locations-section .map-area {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  aspect-ratio: 540 / 695;
+}
+
+.locations-section .map-header-image {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  aspect-ratio: 540 / 695;
+}
+
+.locations-section .row-gap-30 {
+  margin-top: 30px;
+}
+
+.locations-section .min-h-207 {
+  min-height: 207px;
+}
+
+.locations-section .g-46 {
+  --bs-gutter-y: 46px;
+}
+
+@media (max-width: 1200px) {
+  .locations-section {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 42px 20px;
+  }
+  .locations-section p {
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations-section {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 42px 20px;
+  }
+
+  .locations-section h2 {
+    font-size: 28px;
+    line-height: 58px;
+  }
+
+  .locations-section p {
+    display: none;
+  }
+
+  .locations-section .store-item h4 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .locations-section .store-item a {
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .locations-section .map-area {
+    display: none;
   }
 }
