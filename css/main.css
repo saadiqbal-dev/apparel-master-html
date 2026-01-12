@@ -2244,30 +2244,22 @@ body {
   }
 }
 
-/* About Section Heading */
-.about-section-heading {
+/* h2 in full-width sections - white text */
+.full-width-text h2 {
   color: #fff;
   font-family: "Mona Sans", sans-serif;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 36px;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
-@media (min-width: 1200px) {
-  .about-section-heading {
-    font-size: 24px;
-    line-height: 36px;
-  }
-}
-
-/* About Section Heading 2 */
-.about-section-heading-2 {
+/* h2 in content sections - black text */
+.content-text h2,
+.content-text-2 h2 {
   color: #000;
   font-family: "Mona Sans", sans-serif;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 36px;
   margin: 0 0 1rem 0;
@@ -2284,43 +2276,101 @@ body {
   margin: 0;
 }
 
-/* About Section 2 - Center text container, left align text */
-.about-section-2 .content-text-2 {
+/* Image Left - Image on left, text on right */
+.content-section.image-left .content-image-col {
+  order: 0;
+}
+
+.content-section.image-left .content-text-col,
+.content-section.image-left .content-text-col-2 {
+  order: 1;
+}
+
+@media (min-width: 1200px) {
+  .content-section.image-left .content-image-col {
+    order: 0;
+  }
+
+  .content-section.image-left .content-text-col,
+  .content-section.image-left .content-text-col-2 {
+    order: 1;
+  }
+}
+
+/* Image Right - Image on right, text on left */
+.content-section.image-right .content-image-col {
+  order: 0;
+}
+
+.content-section.image-right .content-text-col,
+.content-section.image-right .content-text-col-2 {
+  order: 1;
+}
+
+@media (min-width: 1200px) {
+  .content-section.image-right .content-image-col {
+    order: 1;
+  }
+
+  .content-section.image-right .content-text-col,
+  .content-section.image-right .content-text-col-2 {
+    order: 0;
+  }
+}
+
+/* Max Width 590 - Centered text */
+.content-section.max-width-590 .content-text-2 {
   text-align: left;
   margin: 0 auto;
   max-width: 590px;
 }
 
-.about-section-2 .content-text-2 p {
+.content-section.max-width-590 .content-text-2 p {
   font-size: 20px;
   line-height: 28px;
 }
 
-/* About Section 3 - Left align text container */
-.about-section-3 .content-text-col {
+/* Max Width 688 - Left aligned text */
+.content-section.max-width-688 .content-text-col {
   justify-content: flex-start !important;
 }
 
-.about-section-3 .content-text {
+.content-section.max-width-688 .content-text {
   text-align: left !important;
   max-width: 688px;
 }
 
-.about-section-3 .about-section-text:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-.about-section-3 .content-text p,
-.about-section-3 .about-section-text {
+.content-section.max-width-688 .content-text p {
   font-size: 20px;
   line-height: 28px;
 }
 
+.content-section.max-width-688 .about-section-text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* Extra bottom padding for last content section */
+.content-section.extra-padding {
+  padding-bottom: 0;
+}
+
 @media (min-width: 1200px) {
-  .about-section-3 {
+  .content-section.extra-padding {
     padding-bottom: 161px !important;
   }
 }
+
+/* Background colors for full-width sections */
+.full-width-section.bg-orange .orange-content-bg,
+.full-width-section.bg-orange .content-bg {
+  background: #e9510e;
+}
+
+.full-width-section.bg-gray .full-width-content-bg,
+.full-width-section.bg-gray .content-bg {
+  background: #312f2f;
+}
+
 
 /* Partners Marquee Section */
 .partners-section {
