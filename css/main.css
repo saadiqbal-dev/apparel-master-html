@@ -853,13 +853,13 @@ body {
 }
 
 .content-section .row,
-.content-section-2 .row {
+.content-section--alternate .row {
   --bs-gutter-y: 54px;
 }
 
 @media (min-width: 1200px) {
   .content-section .row,
-  .content-section-2 .row {
+  .content-section--alternate .row {
     --bs-gutter-x: 50px;
     --bs-gutter-y: 50px;
   }
@@ -934,11 +934,16 @@ body {
   margin: 0;
 }
 
-/* Content Section 2 */
+/* Content Section Alternate */
 @media (min-width: 1200px) {
-  .content-section-2 {
+  .content-section--alternate {
     padding-top: 60px !important;
     padding-bottom: 144px !important;
+  }
+
+  /* Reduce gap between content-section--alternate and content-section-last to match gap between section 1 and 2 */
+  .content-section--alternate:has(+ .content-section-last) {
+    padding-bottom: 58px !important;
   }
 }
 
@@ -1393,14 +1398,32 @@ body {
 }
 
 .about-orange-first .full-width-content-wrapper {
-  padding: 34px 20px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: 1200px) {
   .full-width-content-wrapper {
-    max-width: 960px;
+    max-width: 850px;
     justify-content: center;
     padding: 60px 20px;
+  }
+
+  .about-orange-first .full-width-content-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about-orange-first .full-width-content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -2239,38 +2262,47 @@ body {
     padding-bottom: 114px !important;
   }
 
+  /* Only apply padding-left when preceded by content-section--alternate (floor mats page) */
+  .content-section--alternate + .content-section-last p {
+    max-width: 681px;
+    padding-left: 74px;
+  }
+
+  .content-section--alternate + .content-section-last .btn-cta-floor-mats {
+    margin-left: 74px;
+  }
+
   .about-section-1.content-section-last {
     padding-bottom: 80px !important;
   }
 }
 
-/* About Section Heading */
-.about-section-heading {
+/* h2 in full-width sections - white text */
+.full-width-text h2 {
   color: #fff;
   font-family: "Mona Sans", sans-serif;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 36px;
-  margin: 0;
-}
-
-@media (min-width: 1200px) {
-  .about-section-heading {
-    font-size: 24px;
-    line-height: 36px;
-  }
-}
-
-/* About Section Heading 2 */
-.about-section-heading-2 {
-  color: #000;
-  font-family: "Mona Sans", sans-serif;
-  font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 36px;
   margin: 0 0 1rem 0;
+}
+
+/* h2 in content sections - black text */
+.content-text h2,
+.content-text-2 h2 {
+  color: #000;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 1200px) {
+  .max-width-590 .text-20-mona h2,
+  .max-width-590 .text-20-mona p {
+    padding-left: 30px;
+  }
 }
 
 /* About Section Text */
@@ -2284,42 +2316,99 @@ body {
   margin: 0;
 }
 
-/* About Section 2 - Center text container, left align text */
-.about-section-2 .content-text-2 {
+/* Image Left - Image on left, text on right */
+.content-section.image-left .content-image-col {
+  order: 0;
+}
+
+.content-section.image-left .content-text-col,
+.content-section.image-left .content-text-col-2 {
+  order: 1;
+}
+
+@media (min-width: 1200px) {
+  .content-section.image-left .content-image-col {
+    order: 0;
+  }
+
+  .content-section.image-left .content-text-col,
+  .content-section.image-left .content-text-col-2 {
+    order: 1;
+  }
+}
+
+/* Image Right - Image on right, text on left */
+.content-section.image-right .content-image-col {
+  order: 0;
+}
+
+.content-section.image-right .content-text-col,
+.content-section.image-right .content-text-col-2 {
+  order: 1;
+}
+
+@media (min-width: 1200px) {
+  .content-section.image-right .content-image-col {
+    order: 1;
+  }
+
+  .content-section.image-right .content-text-col,
+  .content-section.image-right .content-text-col-2 {
+    order: 0;
+  }
+}
+
+/* Max Width 590 - Centered text */
+.content-section.max-width-590 .content-text-2 {
   text-align: left;
   margin: 0 auto;
   max-width: 590px;
 }
 
-.about-section-2 .content-text-2 p {
+.content-section.max-width-590 .content-text-2 p {
   font-size: 20px;
   line-height: 28px;
 }
 
-/* About Section 3 - Left align text container */
-.about-section-3 .content-text-col {
+/* Max Width 688 - Left aligned text */
+.content-section.max-width-688 .content-text-col {
   justify-content: flex-start !important;
 }
 
-.about-section-3 .content-text {
+.content-section.max-width-688 .content-text {
   text-align: left !important;
   max-width: 688px;
 }
 
-.about-section-3 .about-section-text:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-.about-section-3 .content-text p,
-.about-section-3 .about-section-text {
+.content-section.max-width-688 .content-text p {
   font-size: 20px;
   line-height: 28px;
 }
 
+.content-section.max-width-688 .about-section-text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* Extra bottom padding for last content section */
+.content-section.extra-padding {
+  padding-bottom: 0;
+}
+
 @media (min-width: 1200px) {
-  .about-section-3 {
+  .content-section.extra-padding {
     padding-bottom: 161px !important;
   }
+}
+
+/* Background colors for full-width sections */
+.full-width-section.bg-orange .orange-content-bg,
+.full-width-section.bg-orange .content-bg {
+  background: #e9510e;
+}
+
+.full-width-section.bg-gray .full-width-content-bg,
+.full-width-section.bg-gray .content-bg {
+  background: #312f2f;
 }
 
 /* Partners Marquee Section */
