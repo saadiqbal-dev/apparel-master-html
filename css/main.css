@@ -853,13 +853,13 @@ body {
 }
 
 .content-section .row,
-.content-section-2 .row {
+.content-section--alternate .row {
   --bs-gutter-y: 54px;
 }
 
 @media (min-width: 1200px) {
   .content-section .row,
-  .content-section-2 .row {
+  .content-section--alternate .row {
     --bs-gutter-x: 50px;
     --bs-gutter-y: 50px;
   }
@@ -934,11 +934,16 @@ body {
   margin: 0;
 }
 
-/* Content Section 2 */
+/* Content Section Alternate */
 @media (min-width: 1200px) {
-  .content-section-2 {
+  .content-section--alternate {
     padding-top: 60px !important;
     padding-bottom: 144px !important;
+  }
+
+  /* Reduce gap between content-section--alternate and content-section-last to match gap between section 1 and 2 */
+  .content-section--alternate:has(+ .content-section-last) {
+    padding-bottom: 58px !important;
   }
 }
 
@@ -2255,10 +2260,16 @@ body {
 @media (min-width: 1200px) {
   .content-section-last {
     padding-bottom: 114px !important;
+  }
 
-    p {
-      max-width: 681px;
-    }
+  /* Only apply padding-left when preceded by content-section--alternate (floor mats page) */
+  .content-section--alternate + .content-section-last p {
+    max-width: 681px;
+    padding-left: 74px;
+  }
+
+  .content-section--alternate + .content-section-last .btn-cta-floor-mats {
+    margin-left: 74px;
   }
 
   .about-section-1.content-section-last {
