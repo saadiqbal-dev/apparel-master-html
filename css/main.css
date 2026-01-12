@@ -1393,14 +1393,32 @@ body {
 }
 
 .about-orange-first .full-width-content-wrapper {
-  padding: 34px 20px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: 1200px) {
   .full-width-content-wrapper {
-    max-width: 960px;
+    max-width: 850px;
     justify-content: center;
     padding: 60px 20px;
+  }
+
+  .about-orange-first .full-width-content-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about-orange-first .full-width-content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -2237,6 +2255,10 @@ body {
 @media (min-width: 1200px) {
   .content-section-last {
     padding-bottom: 114px !important;
+
+    p {
+      max-width: 681px;
+    }
   }
 
   .about-section-1.content-section-last {
@@ -2263,6 +2285,13 @@ body {
   font-weight: 600;
   line-height: 36px;
   margin: 0 0 1rem 0;
+}
+
+@media (min-width: 1200px) {
+  .max-width-590 .text-20-mona h2,
+  .max-width-590 .text-20-mona p {
+    padding-left: 30px;
+  }
 }
 
 /* About Section Text */
@@ -2370,7 +2399,6 @@ body {
 .full-width-section.bg-gray .content-bg {
   background: #312f2f;
 }
-
 
 /* Partners Marquee Section */
 .partners-section {
