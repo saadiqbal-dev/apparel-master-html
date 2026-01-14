@@ -775,6 +775,11 @@ body {
   max-width: 1720px;
   height: 49px;
 }
+@media (max-width: 1700px) {
+  .breadcrumb-container {
+    padding: 0 40px 0 40px;
+  }
+}
 
 .breadcrumb-section .breadcrumb {
   height: 49px;
