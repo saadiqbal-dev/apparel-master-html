@@ -1709,8 +1709,14 @@ body {
   height: 100%;
   gap: 30px;
 }
-
 @media (min-width: 1200px) {
+  .gray-content-wrapper {
+    max-width: 960px;
+    padding: 70px 78px 70px 40px;
+  }
+}
+
+@media (min-width: 1700px) {
   .gray-content-wrapper {
     max-width: 960px;
     padding: 70px 78px 70px 100px;
