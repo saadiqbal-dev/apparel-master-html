@@ -34,6 +34,9 @@ body {
   .d-none-mobile {
     display: block !important;
   }
+  .testimonial-section .testimonial-container > img {
+    border-radius: 6px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -996,7 +999,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 32px;
+  /* line-height: 32px; */
   padding: 8px 16px;
   border-radius: 27px;
   border: 1px solid black;
@@ -1064,6 +1067,7 @@ body {
   margin: 0 auto;
   max-width: 100%;
   gap: 50px;
+  padding: 0px 20px 0 20px;
 }
 
 @media (min-width: 1200px) {
@@ -1073,13 +1077,14 @@ body {
     justify-content: center;
     gap: 0;
     max-width: 1752px;
+    padding: 40px;
   }
 }
 
 .testimonial-section .testimonial-content {
   display: flex;
   flex-direction: column;
-  padding: 50px 40px 0;
+  padding: 0px 20px 0;
   width: 100%;
   max-width: 100%;
   border-radius: 0;
