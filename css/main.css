@@ -19,12 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Dynamic Padding Utility */
-.dynamic-padding {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 /* Hide on Mobile Utility */
 .d-none-mobile {
   display: none !important;
@@ -36,20 +30,6 @@ body {
   }
   .testimonial-section .testimonial-container > img {
     border-radius: 6px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .dynamic-padding {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .dynamic-padding {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -853,6 +833,22 @@ body {
   max-width: 1720px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .content-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .content-section .row,
