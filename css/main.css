@@ -2382,6 +2382,7 @@ body {
 /* Image Right - Image on right, text on left */
 .content-section.image-right .content-image-col {
   order: 0;
+  margin-top: 0;
 }
 
 .content-section.image-right .content-text-col,
@@ -2392,6 +2393,7 @@ body {
 @media (min-width: 1200px) {
   .content-section.image-right .content-image-col {
     order: 1;
+    margin-top: 50px;
   }
 
   .content-section.image-right .content-text-col,
@@ -2425,6 +2427,7 @@ body {
 .content-section.max-width-688 .content-text p {
   font-size: 20px;
   line-height: 28px;
+  font-weight: 400;
 }
 
 .content-section.max-width-688 .about-section-text:not(:last-child) {
