@@ -2442,6 +2442,143 @@ body {
   }
 }
 
+/* ========================================
+   UNIFIED CLASSES - FIRST CONTENT SECTION
+   Single class structure merging:
+   - content-section + py-5 + content-section-last
+   And all inner classes unified
+   ======================================== */
+
+/* First Content Section - Unified wrapper */
+.fc-section {
+  padding-top: 1.5rem;
+  padding-bottom: 56px;
+}
+
+@media (min-width: 1200px) {
+  .fc-section {
+    padding-top: 50px;
+    padding-bottom: 56px;
+  }
+}
+
+/* First Content Container - Unified container */
+.fc-container {
+  max-width: 1720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+  .fc-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .fc-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* First Content Row - Unified row gutters */
+.fc-section .row {
+  --bs-gutter-y: 54px;
+}
+
+@media (min-width: 1200px) {
+  .fc-section .row {
+    --bs-gutter-x: 50px;
+    --bs-gutter-y: 50px;
+  }
+}
+
+/* First Content Image Column */
+.fc-img-col {
+  justify-content: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .fc-img-col {
+    justify-content: center;
+  }
+}
+
+/* First Content Image */
+.fc-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 353 / 246;
+  object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .fc-img {
+    aspect-ratio: 835 / 580;
+  }
+}
+
+/* First Content Text Column */
+.fc-text-col {
+  justify-content: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .fc-text-col {
+    justify-content: center;
+  }
+}
+
+/* First Content Text Wrapper */
+.fc-text {
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .fc-text {
+    max-width: 532px;
+  }
+}
+
+/* First Content Text Paragraphs */
+.fc-text p:not([class*="text-"]) {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .fc-text p:not([class*="text-"]) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.fc-text p {
+  margin: 0;
+}
+
+/* First Content Bar - Orange bar */
+.fc-bar {
+  width: 55px;
+  height: 3.71px;
+  background: #e9510e;
+}
+
+@media (min-width: 1200px) {
+  .fc-bar {
+    width: 100px;
+    height: 6px;
+  }
+}
+
 /* Background colors for full-width sections */
 .full-width-section.bg-orange .orange-content-bg,
 .full-width-section.bg-orange .content-bg {
