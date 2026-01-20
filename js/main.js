@@ -79,7 +79,7 @@ $(document).ready(function () {
     if (activeMegaMenu) {
       $("#megamenu-" + activeMegaMenu).removeClass("active");
       $('.nav-btn[data-megamenu="' + activeMegaMenu + '"]').removeClass(
-        "active"
+        "active",
       );
       activeMegaMenu = null;
       $(".header").removeClass("menu-open");
@@ -139,7 +139,7 @@ $(document).ready(function () {
     function () {
       $(".mobile-menu").removeClass("active");
       $("body").css("overflow", "");
-    }
+    },
   );
 
   /**
