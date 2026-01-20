@@ -1879,6 +1879,23 @@ body {
   margin: 0;
 }
 
+.footer-submenu li {
+  padding: 8px 0;
+}
+
+.footer-submenu li a {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footer-submenu li a:hover {
+  text-decoration: underline;
+}
+
 .footer-menu-item.active .footer-submenu {
   max-height: 500px;
 }
