@@ -2872,3 +2872,327 @@ body {
 .mb-36px {
   margin-bottom: 36px;
 }
+
+/* ========================================
+   JOBS PAGE STYLES
+   ======================================== */
+
+.jobs-search-section {
+  background-color: #f5f4f4;
+  padding-top: 88px;
+  padding-bottom: 84px;
+}
+
+.jobs-search-container {
+  max-width: calc(1920px - 370px - 370px);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.jobs-search-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 26px;
+  flex: 1;
+  max-width: 409px;
+}
+
+.jobs-search-field + .jobs-search-field {
+  margin-left: calc(36px - 36px);
+}
+
+.jobs-search-field label {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.jobs-search-select-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.jobs-search-select {
+  flex: 0 0 auto;
+  height: 100%;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.jobs-search-chevron {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.jobs-search-btn {
+  width: 122px;
+  height: 40px;
+  border-radius: 27px;
+  border: 1.5px solid #000;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  cursor: pointer;
+  margin-left: -6px;
+}
+
+.jobs-search-btn:hover {
+  background: #333;
+}
+
+@media (max-width: 1199px) {
+  .jobs-search-container {
+    padding: 0 20px;
+    gap: 24px;
+  }
+
+  .jobs-search-select-wrapper {
+    width: 100%;
+    max-width: 409px;
+  }
+
+  .jobs-search-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .jobs-search-section {
+    padding-top: 34px;
+    padding-bottom: 40px;
+  }
+
+  .jobs-search-container {
+    flex-direction: column;
+    gap: 27px;
+  }
+
+  .jobs-search-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .jobs-search-field label {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .jobs-search-select-wrapper {
+    width: 100%;
+    max-width: none;
+  }
+
+  .jobs-search-select {
+    flex: 0 0 auto;
+    width: auto;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .jobs-search-btn {
+    width: 122px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+}
+
+/* Jobs Listing Section */
+.jobs-listing-section {
+  padding-top: 62px;
+  padding-bottom: 114px;
+}
+
+.jobs-listing-container {
+  max-width: calc(1920px - 600px);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+@media (max-width: 1199px) {
+  .jobs-listing-container {
+    padding: 0 20px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jobs-listing-section {
+    padding-top: 38px;
+    padding-bottom: 48px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .job-card {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .job-card > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 20px 36px !important;
+  }
+
+  .job-card > div:last-child > p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  .job-card > div:last-child > div > a {
+    width: 256.629px;
+    height: 45.079px;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+}
+
+/* Job Card */
+.job-card {
+  border-radius: 12px;
+  overflow: hidden;
+  color: #312f2f;
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card > div:first-child {
+  border-radius: 12px 12px 0 0;
+  background: #312f2f;
+  color: #fff;
+  font-weight: 600;
+  padding: 16px 20px;
+}
+
+.job-card:nth-child(even) > div:first-child {
+  background: #e9510e;
+}
+
+.job-card > div:last-child {
+  border-radius: 0 0 12px 12px;
+  background: #f5f4f4;
+  padding: 26px 32px 50px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  flex: 1;
+}
+
+.job-card > div:last-child > p {
+  margin: 0;
+}
+
+.job-card > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.job-card > div:last-child > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-card > div:last-child > div > div > span:first-child {
+  font-weight: 600;
+}
+
+.job-card > div:last-child > div > a {
+  width: 256px;
+  height: 45px;
+  border-radius: 27px;
+  background: #e9510e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.job-card > div:last-child > div > a:hover {
+  background: #d4480c;
+  color: #fff;
+}
+
+.job-card > div:last-child > div > a > span {
+  flex: 1;
+  text-align: center;
+}
