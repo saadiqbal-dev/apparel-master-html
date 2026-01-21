@@ -3202,6 +3202,7 @@ body {
   justify-content: space-between;
   padding: 0 20px;
   text-decoration: none;
+  margin-top: 18px;
 }
 
 .job-card > div:last-child > div > a:hover {
