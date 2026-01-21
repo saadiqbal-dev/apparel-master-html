@@ -3067,7 +3067,7 @@ body {
 }
 
 .jobs-listing-container {
-  max-width: calc(1920px - 600px);
+  max-width: calc(1920px - 520px);
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -3205,7 +3205,7 @@ body {
 }
 
 .job-card > div:last-child > div > a:hover {
-  background: #d4480c;
+  background: #000;
   color: #fff;
 }
 
