@@ -227,7 +227,7 @@ $(document).ready(function () {
    * Positions chevron right after the selected text content
    */
   function positionChevron($select) {
-    const $wrapper = $select.closest(".jobs-search-select-wrapper");
+    const $wrapper = $select.closest(".jobs-search-select-wrapper, .form-select-wrapper");
     const $chevron = $wrapper.find(".jobs-search-chevron");
 
     // Create a temporary element to measure text width
@@ -262,6 +262,16 @@ $(document).ready(function () {
 
   // Reposition chevron on change
   $(".jobs-search-select").on("change", function () {
+    positionChevron($(this));
+  });
+
+  // Position form select chevrons on load
+  $(".form-select-wrapper select").each(function () {
+    positionChevron($(this));
+  });
+
+  // Reposition form select chevron on change
+  $(".form-select-wrapper select").on("change", function () {
     positionChevron($(this));
   });
 });
