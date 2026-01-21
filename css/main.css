@@ -3148,17 +3148,19 @@ body {
   height: 40px;
   border-radius: 5px;
   background: #fff;
-  padding: 0 16px;
-  gap: 8px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
 }
 
 .jobs-search-select {
-  flex: 0 0 auto;
+  flex: 1;
+  min-width: 0;
   height: 100%;
   border-radius: 5px;
   background: transparent;
   border: none;
-  padding: 0;
+  padding: 0 16px;
   color: #000;
   font-family: Inter;
   font-size: 15px;
@@ -3171,8 +3173,12 @@ body {
   cursor: pointer;
 }
 
+
+
 .jobs-search-chevron {
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
 }
 
@@ -3243,11 +3249,11 @@ body {
   .jobs-search-select-wrapper {
     width: 100%;
     max-width: none;
-  }
+  } 
 
   .jobs-search-select {
-    flex: 0 0 auto;
-    width: auto;
+    flex: 1;
+    width: 100%;
     color: #000;
     font-family: Inter;
     font-size: 15px;
@@ -3421,4 +3427,30 @@ body {
 .job-card > div:last-child > div > a > span {
   flex: 1;
   text-align: center;
+}
+
+/* New Employee Form Section */
+.bg-F5F4F4 {
+  background: #F5F4F4;
+}
+
+.form-container-custom {
+  max-width: 614px;
+  margin: 0 auto;
+  padding: 90px 20px 110px 20px;
+}
+
+@media (min-width: 1200px) {
+  .form-container-custom {
+    padding: 90px 40px 110px 40px;
+  }
+}
+
+.form-intro-text {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
 }

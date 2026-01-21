@@ -221,4 +221,47 @@ $(document).ready(function () {
    * Set current year in footer
    */
   $(".current-year").text(new Date().getFullYear());
+
+  /**
+   * Jobs select chevron positioning
+   * Positions chevron right after the selected text content
+   */
+  function positionChevron($select) {
+    const $wrapper = $select.closest(".jobs-search-select-wrapper");
+    const $chevron = $wrapper.find(".jobs-search-chevron");
+
+    // Create a temporary element to measure text width
+    const $temp = $("<span>")
+      .css({
+        visibility: "hidden",
+        position: "absolute",
+        whiteSpace: "nowrap",
+        fontFamily: $select.css("font-family"),
+        fontSize: $select.css("font-size"),
+        fontWeight: $select.css("font-weight"),
+      })
+      .text($select.val() || $select.find("option:first").text())
+      .appendTo("body");
+
+    const textWidth = $temp.outerWidth();
+    $temp.remove();
+
+    // Get select's actual left padding dynamically
+    const selectPadding = parseInt($select.css("padding-left"), 10) || 0;
+    const chevronLeft = selectPadding + textWidth + 8; // padding + text + gap
+    $chevron.css({
+      position: "absolute",
+      left: chevronLeft + "px",
+    });
+  }
+
+  // Position chevrons on load
+  $(".jobs-search-select").each(function () {
+    positionChevron($(this));
+  });
+
+  // Reposition chevron on change
+  $(".jobs-search-select").on("change", function () {
+    positionChevron($(this));
+  });
 });
