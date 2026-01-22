@@ -1598,6 +1598,24 @@ body {
   }
 }
 
+/* Orange content wrapper - h2 inherits from parent */
+.orange-content-wrapper h2 {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 38px;
+  align-self: flex-start;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .orange-content-wrapper h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
 /* Accordion Styles */
 .accordion-custom {
   width: 100%;
