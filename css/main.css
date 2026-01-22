@@ -2869,10 +2869,23 @@ h6 {
 .marquee-track {
   display: flex;
   gap: 151px;
-  animation: marquee-scroll 150s linear infinite;
   width: fit-content;
   justify-content: flex-start;
   margin: 0;
+  /* Improve animation performance */
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  /* Animation will be added when marquee-active class is applied */
+}
+
+.marquee-track.marquee-active {
+  animation: marquee-scroll 150s linear infinite;
+}
+
+/* Pause animation on hover for better UX */
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 
 .marquee-item {
@@ -2880,6 +2893,9 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Prevent blur during animation */
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
 }
 
 .partner-logo {
@@ -2924,10 +2940,29 @@ h6 {
 
 @keyframes marquee-scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(0);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+  }
+  .marquee-track.marquee-active {
+    animation: marquee-scroll-slow 300s linear infinite;
+  }
+}
+
+@keyframes marquee-scroll-slow {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0);
   }
 }
 
@@ -2959,6 +2994,11 @@ h6 {
 
   .marquee-track {
     gap: 80px;
+  }
+
+  .marquee-track.marquee-active {
+    /* Faster animation on mobile for better visual experience */
+    animation: marquee-scroll 100s linear infinite;
   }
 
   .partner-logo {

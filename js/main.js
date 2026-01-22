@@ -277,14 +277,74 @@ $(document).ready(function () {
     positionChevron($(this));
   });
 
-  // Jquery for marquee
+  // Robust Marquee Implementation
+  function initializeMarquee() {
+    var $marqueeTrack = $(".marquee-track");
 
-  // Clone all marquee items for seamless loop
-  var $marqueeTrack = $(".marquee-track");
-  var $marqueeItems = $marqueeTrack.find(".marquee-item");
+    // Check if marquee exists on this page
+    if ($marqueeTrack.length === 0) {
+      return;
+    }
 
-  // Clone all items and append to track for seamless scrolling
-  for (let i = 0; i < 10; i++) {
-    $marqueeItems.clone().appendTo($marqueeTrack);
+    // Get original items (only direct children that haven't been cloned)
+    var $marqueeItems = $marqueeTrack.find(".marquee-item");
+
+    // Verify we have items to clone
+    if ($marqueeItems.length === 0) {
+      console.warn("No marquee items found to clone");
+      return;
+    }
+
+    // Check if already initialized (items already cloned)
+    if ($marqueeTrack.data("marquee-initialized")) {
+      return;
+    }
+
+    // Clone items multiple times for seamless infinite scrolling
+    // We need enough clones to ensure smooth continuous animation
+    var cloneCount = 10;
+
+    // Store the original items
+    var originalItems = $marqueeItems.clone();
+
+    // Clone and append items
+    for (let i = 0; i < cloneCount; i++) {
+      originalItems.clone().appendTo($marqueeTrack);
+    }
+
+    // Mark as initialized
+    $marqueeTrack.data("marquee-initialized", true);
+
+    // Force reflow to ensure animation starts properly
+    $marqueeTrack[0].offsetHeight;
+
+    // Add class to start animation
+    $marqueeTrack.addClass("marquee-active");
   }
+
+  // Initialize marquee on page load
+  initializeMarquee();
+
+  // Re-initialize if window is resized (handles orientation changes on mobile)
+  var resizeTimer;
+  $(window).on("resize", function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      // Check if marquee needs re-initialization
+      var $marqueeTrack = $(".marquee-track");
+      if ($marqueeTrack.length > 0 && !$marqueeTrack.data("marquee-initialized")) {
+        initializeMarquee();
+      }
+    }, 250);
+  });
+
+  // Handle visibility change - pause animation when page is hidden
+  document.addEventListener("visibilitychange", function() {
+    var $marqueeTrack = $(".marquee-track");
+    if (document.hidden) {
+      $marqueeTrack.css("animation-play-state", "paused");
+    } else {
+      $marqueeTrack.css("animation-play-state", "running");
+    }
+  });
 });
