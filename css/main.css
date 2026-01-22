@@ -136,7 +136,7 @@ h6 {
   line-height: 26px;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #000;
 }
 
 @media (min-width: 1200px) {
@@ -1979,22 +1979,10 @@ h6 {
   }
 }
 
-/* Gray info - h4 inherits from parent */
-.gray-info-item h4 {
+/* Gray info - h6 inherits from parent */
+.gray-info-item h6 {
   color: #fff;
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 26px;
-  margin: 0 0 8px 0;
-}
-
-@media (min-width: 1200px) {
-  .gray-info-item h4 {
-    font-size: 18px;
-    line-height: 28px;
-  }
 }
 
 /* Gray info - p tags inherit from parent */
@@ -3081,8 +3069,7 @@ h6 {
   padding-bottom: 0 !important;
 }
 
-.diamond-content-section h5 {
-  color: #000;
+.diamond-content-section h6 {
   margin-bottom: 45px;
 }
 
