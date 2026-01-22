@@ -75,6 +75,26 @@ h2 {
    GLOBAL H3 DEFAULTS
    ======================================== */
 h3 {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+/* ========================================
+   GLOBAL H4 DEFAULTS (formerly h3)
+   ======================================== */
+h4 {
   font-family: "Inter", sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -85,20 +105,20 @@ h3 {
 }
 
 @media (min-width: 1200px) {
-  h3 {
+  h4 {
     color: #fff;
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     font-size: 26px;
     font-style: normal;
     font-weight: 600;
-    line-height: 36px; /* 172.727% */
+    line-height: 36px;
   }
 }
 
 /* ========================================
-   GLOBAL H4 DEFAULTS
+   GLOBAL H5 DEFAULTS (formerly h4)
    ======================================== */
-h4 {
+h5 {
   font-family: "Mona Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -108,7 +128,10 @@ h4 {
   color: #000;
 }
 
-h5 {
+/* ========================================
+   GLOBAL H6 DEFAULTS (formerly h5)
+   ======================================== */
+h6 {
   font-size: 18px;
   line-height: 26px;
   margin: 0;
@@ -117,12 +140,12 @@ h5 {
 }
 
 @media (min-width: 1200px) {
-  h5 {
-    font-family: Inter;
+  h6 {
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 28px; /* 140% */
+    line-height: 28px;
   }
 }
 
@@ -545,7 +568,7 @@ h5 {
   gap: 100px;
 }
 
-.megamenu-column h3 {
+.megamenu-column h4 {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -700,7 +723,7 @@ h5 {
   padding: 12px 0;
 }
 
-.mobile-menu-toggle h3 {
+.mobile-menu-toggle h4 {
   font-size: 18px;
   font-weight: 600;
   line-height: 50px;
@@ -970,7 +993,10 @@ h5 {
   .content-text-2 {
     max-width: 590px;
   }
-  .content-text-2 h4 {
+  .content-text-2 h5 {
+    padding-left: 30px;
+  }
+  .content-text-2 p {
     padding-left: 30px;
   }
 }
@@ -1448,6 +1474,20 @@ h5 {
   text-align: left;
 }
 
+.mobile-asurequality-img {
+  width: 100%;
+  max-width: 263px;
+  height: 72px;
+  aspect-ratio: 263/72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 65px;
+}
+
 @media (min-width: 1200px) {
   .asurequality-section .asurequality-text {
     width: 586px;
@@ -1631,7 +1671,7 @@ h5 {
   max-width: none;
   text-align: left;
 }
-.full-width-text h3 {
+.full-width-text h4 {
   font-weight: 400;
   line-height: 32px;
 }
@@ -1639,6 +1679,7 @@ h5 {
 @media (min-width: 1200px) {
   .full-width-text {
     max-width: 608px;
+    padding-left: 50px;
   }
 }
 
@@ -1764,7 +1805,7 @@ h5 {
   }
 }
 
-/* Orange content wrapper - h3 inherits from global h3 */
+/* Orange content wrapper - h4 inherits from global h4 */
 
 /* Accordion Styles */
 .accordion-custom {
@@ -1941,8 +1982,8 @@ h5 {
   }
 }
 
-/* Gray info - h3 inherits from parent */
-.gray-info-item h3 {
+/* Gray info - h4 inherits from parent */
+.gray-info-item h4 {
   color: #fff;
   font-family: Inter, sans-serif;
   font-size: 18px;
@@ -1953,7 +1994,7 @@ h5 {
 }
 
 @media (min-width: 1200px) {
-  .gray-info-item h3 {
+  .gray-info-item h4 {
     font-size: 18px;
     line-height: 28px;
   }
@@ -2024,7 +2065,7 @@ h5 {
   text-align: left;
 }
 
-.footer-menu-toggle h3 {
+.footer-menu-toggle h4 {
   color: black;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2098,7 +2139,7 @@ h5 {
   margin-bottom: 40px;
 }
 
-.footer-find-us h3 {
+.footer-find-us h4 {
   color: black;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2119,8 +2160,8 @@ h5 {
   margin: 0;
 }
 
-/* Footer Enquiry - h3 inherits from parent */
-.footer-mobile > div > h3 {
+/* Footer Enquiry - h4 inherits from parent */
+.footer-mobile > div > h4 {
   color: black;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2130,7 +2171,7 @@ h5 {
 }
 
 @media (min-width: 1200px) {
-  .footer-mobile > div > h3 {
+  .footer-mobile > div > h4 {
     margin-bottom: 16px;
   }
 }
@@ -2289,7 +2330,7 @@ h5 {
   max-width: 170px;
 }
 
-.footer-column h3 {
+.footer-column h4 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -2518,15 +2559,15 @@ h5 {
 }
 
 /* h2 in full-width sections - white text */
-/* h4 in full-width sections - white text, inherits from global h4 */
-.full-width-text h4 {
+/* h5 in full-width sections - white text, inherits from global h5 */
+.full-width-text h5 {
   color: #fff;
   margin: 0 0 1rem 0;
 }
 
-/* h4 in content sections - black text, inherits from global h4 */
-.content-text h4,
-.content-text-2 h4 {
+/* h5 in content sections - black text, inherits from global h5 */
+.content-text h5,
+.content-text-2 h5 {
   margin: 0 0 1rem 0;
 }
 
@@ -3020,7 +3061,7 @@ h5 {
     display: none;
   }
 
-  .locations-section .store-item h4 {
+  .locations-section .store-item h5 {
     font-size: 18px;
     line-height: 40px;
   }
