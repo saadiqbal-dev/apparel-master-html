@@ -995,6 +995,8 @@ h6 {
 .content-text p {
   font-weight: 500;
   margin: 0;
+  font-size: 26px;
+  line-height: 36px;
 }
 
 .content-text h4 {
