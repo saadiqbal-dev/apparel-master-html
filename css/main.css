@@ -2647,7 +2647,7 @@ body {
   padding-bottom: 138px;
 }
 
-.partners-heading {
+.partners-section h2 {
   font-family: "Inter", sans-serif;
   font-size: 44px;
   font-weight: 600;
@@ -2751,7 +2751,7 @@ body {
     padding-bottom: 60px;
   }
 
-  .partners-heading {
+  .partners-section h2 {
     color: #1a1a1a;
     text-align: center;
     font-family: Inter;
