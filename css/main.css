@@ -108,6 +108,24 @@ h4 {
   color: #000;
 }
 
+h5 {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  h5 {
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+  }
+}
+
 /* Hide on Mobile Utility */
 .d-none-mobile {
   display: none !important;
@@ -2997,7 +3015,7 @@ h4 {
 
   .locations-section h2 {
     font-size: 28px;
-    line-height: 58px;
+    line-height: 34px;
   }
 
   .locations-section p {
