@@ -19,6 +19,36 @@ body {
   overflow-x: hidden;
 }
 
+/* ========================================
+   GLOBAL PARAGRAPH DEFAULTS
+   ======================================== */
+p {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* ========================================
+   GLOBAL H1 DEFAULTS
+   ======================================== */
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0;
+}
+
 /* Hide on Mobile Utility */
 .d-none-mobile {
   display: none !important;
@@ -73,7 +103,7 @@ body {
   .content-text.text-20-medium p,
   .content-text-2.text-20-medium p {
     font-size: 18px;
-    line-height: 30px; /* 150% */
+    line-height: 28px; /* 150% */
   }
 
   .text-20-regular,
@@ -761,12 +791,8 @@ body {
 .hero-workwear h1 {
   color: #fff;
   text-align: center;
-  font-family: "Inter", sans-serif;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  margin: 0;
 }
 
 @media (min-width: 1200px) {
@@ -932,23 +958,8 @@ body {
   }
 }
 
-.content-text p:not([class*="text-"]) {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 26px;
-  margin: 0;
-}
-
-@media (min-width: 1200px) {
-  .content-text p:not([class*="text-"]) {
-    font-size: 18px;
-    line-height: 28px;
-  }
-}
-
 .content-text p {
+  font-weight: 500;
   margin: 0;
 }
 
@@ -971,17 +982,8 @@ body {
 
 @media (min-width: 1200px) {
   .content-text-2 {
-    max-width: 532px;
+    max-width: 590px;
   }
-}
-
-.content-text-2 p:not([class*="text-"]) {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-  margin: 0 0 1rem 0;
 }
 
 .content-text-2 p {
@@ -990,13 +992,6 @@ body {
 
 .content-text-2 p:last-of-type {
   margin-bottom: 0;
-}
-
-@media (min-width: 1200px) {
-  .content-text-2 p:not([class*="text-"]) {
-    font-size: 18px;
-    line-height: 28px;
-  }
 }
 
 .content-text-2 .btn-cta {
@@ -1047,6 +1042,208 @@ body {
 .btn-cta:hover {
   background: black;
   color: white;
+}
+
+/* ========================================
+   UNIFIED CONTENT SECTIONS
+   Single class: .content with .image-left or .image-right modifier
+   Backend-loop friendly with parent selectors
+   ======================================== */
+
+/* Base Content Section */
+.content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/* Container */
+.content .container {
+  max-width: 1720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+  .content .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .content .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Row gutters */
+.content .row {
+  --bs-gutter-y: 54px;
+}
+
+@media (min-width: 1200px) {
+  .content .row {
+    --bs-gutter-x: 50px;
+    --bs-gutter-y: 50px;
+  }
+}
+
+/* Image styling */
+.content img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 353 / 246;
+  object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .content img {
+    aspect-ratio: 835 / 580;
+  }
+}
+
+/* Column alignment - default center on desktop */
+.content .col-xl-6 {
+  justify-content: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .content .col-xl-6 {
+    justify-content: center;
+  }
+}
+
+/* When image is on right (content on left), left-align the text column on desktop */
+@media (min-width: 1200px) {
+  .content.image-right .col-xl-6:first-child {
+    justify-content: flex-start;
+  }
+}
+
+/* Content wrapper - direct child of column (no class needed!) */
+.content .col-xl-6 > div:not(.img-fluid) {
+  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .content .col-xl-6 > div:not(.img-fluid) {
+    max-width: 532px;
+  }
+}
+
+/* Orange bar styling (if present) */
+.content .content-bar {
+  width: 55px;
+  height: 3.71px;
+  background: #e9510e;
+}
+
+@media (min-width: 1200px) {
+  .content .content-bar {
+    width: 100px;
+    height: 6px;
+  }
+}
+
+/* Paragraph styling - font-size/line-height inherited from global p defaults */
+.content p {
+  margin: 0 0 1rem 0;
+}
+
+.content p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Button styling (if present) */
+.content .btn-cta {
+  margin-top: 56px;
+}
+
+@media (min-width: 1200px) {
+  .content .btn-cta {
+    margin-top: 67px;
+  }
+}
+
+/* Layout-specific column ordering */
+/* image-left: Image left (order 0), Content right (order 1) on desktop */
+.content.image-left .col-xl-6:first-child {
+  order: 1; /* Mobile: content first */
+}
+
+.content.image-left .col-xl-6:last-child {
+  order: 0; /* Mobile: image second */
+}
+
+@media (min-width: 1200px) {
+  .content.image-left .col-xl-6:first-child {
+    order: 0; /* Desktop: image first (left) */
+  }
+
+  .content.image-left .col-xl-6:last-child {
+    order: 1; /* Desktop: content second (right) */
+  }
+}
+
+/* image-right: Content left (order 0), Image right (order 1) on desktop */
+.content.image-right .col-xl-6:first-child {
+  order: 0; /* Mobile: content first */
+}
+
+.content.image-right .col-xl-6:last-child {
+  order: 1; /* Mobile: image second */
+}
+
+@media (min-width: 1200px) {
+  .content.image-right .col-xl-6:first-child {
+    order: 0; /* Desktop: content first (left) */
+  }
+
+  .content.image-right .col-xl-6:last-child {
+    order: 1; /* Desktop: image second (right) */
+  }
+}
+
+/* Text weight modifiers (optional) */
+.content.text-medium p {
+  font-weight: 500;
+}
+
+.content.text-regular p {
+  font-weight: 400;
+}
+
+/* Padding modifiers (optional) */
+.content.padding-large {
+  padding-top: 1.5rem;
+  padding-bottom: 56px;
+}
+
+@media (min-width: 1200px) {
+  .content.padding-large {
+    padding-top: 60px;
+    padding-bottom: 114px;
+  }
+}
+
+.content.padding-extra {
+  padding-bottom: 56px;
+}
+
+@media (min-width: 1200px) {
+  .content.padding-extra {
+    padding-bottom: 161px;
+  }
 }
 
 /* ========================================
@@ -1150,8 +1347,8 @@ body {
 
 @media (min-width: 1200px) {
   .testimonial-section .testimonial-content p {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 26px;
+    line-height: 36px;
     margin: 18px 0 24px 0;
     hyphens: none;
   }
@@ -1326,23 +1523,11 @@ body {
 }
 
 .asurequality-section p {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
   margin: 16px 0 0 0;
 }
 
 @media (min-width: 1200px) {
   .asurequality-section p {
-    color: #000;
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
     margin-top: 0;
   }
 }
@@ -1488,19 +1673,9 @@ body {
 .full-width-text p {
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-size: 22px;
   font-weight: 400;
-  line-height: 32px;
+
   margin: 0;
-}
-
-.about-full-width .full-width-text p {
-  font-size: 18px;
-}
-
-.about-gray-full-width .full-width-text p {
-  font-size: 18px;
-  line-height: 28px;
 }
 
 .about-orange-first .full-width-text p {
@@ -1509,9 +1684,7 @@ body {
 
 @media (min-width: 1200px) {
   .full-width-text p {
-    font-size: 26px;
     font-weight: 400;
-    line-height: 36px;
   }
 
   .about-full-width .full-width-text p {
@@ -1696,19 +1869,8 @@ body {
 
 .accordion-content-custom p {
   color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
   margin: 0;
   max-width: 670px;
-}
-
-@media (min-width: 1200px) {
-  .accordion-content-custom p {
-    font-size: 18px;
-    line-height: 28px;
-  }
 }
 
 /* ========================================
@@ -1823,19 +1985,7 @@ body {
 /* Gray info - p tags inherit from parent */
 .gray-info-item p {
   color: #fff;
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
   margin: 0;
-}
-
-@media (min-width: 1200px) {
-  .gray-info-item p {
-    font-size: 18px;
-    line-height: 28px;
-  }
 }
 
 /* ========================================
@@ -2281,14 +2431,12 @@ body {
 
 @media (min-width: 1200px) {
   .get-in-touch h4 {
-    font-size: 44px;
+    font-size: 40px;
   }
 }
 
 .get-in-touch p {
   color: #000;
-  font-size: 18px;
-  line-height: 28px;
   margin-bottom: 1.5rem; /* mb-4 equivalent */
 }
 
@@ -2422,12 +2570,7 @@ body {
 
 /* About Section Text */
 .about-section-text {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 28px;
   margin: 0;
 }
 
@@ -2482,11 +2625,6 @@ body {
   max-width: 590px;
 }
 
-.content-section.max-width-590 .content-text-2 p {
-  font-size: 18px;
-  line-height: 28px;
-}
-
 /* Max Width 688 - Left aligned text */
 .content-section.max-width-688 .content-text-col {
   justify-content: flex-start !important;
@@ -2498,8 +2636,6 @@ body {
 }
 
 .content-section.max-width-688 .content-text p {
-  font-size: 18px;
-  line-height: 28px;
   font-weight: 400;
 }
 
@@ -2620,21 +2756,10 @@ body {
   }
 }
 
-/* First Content Text Paragraphs */
+/* First Content Text Paragraphs - font-size/line-height inherited from global p defaults */
 .fc-text p:not([class*="text-"]) {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
-  line-height: 26px;
   margin: 0;
-}
-
-@media (min-width: 1200px) {
-  .fc-text p:not([class*="text-"]) {
-    font-size: 18px;
-    line-height: 30px;
-  }
 }
 
 .fc-text p {
@@ -2674,9 +2799,9 @@ body {
 
 .partners-section h2 {
   font-family: "Inter", sans-serif;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 600;
-  line-height: 52px;
+  line-height: 50px;
   color: #000;
   text-align: center;
   margin-bottom: 111px;
@@ -2833,10 +2958,10 @@ body {
 .locations-section h2 {
   color: #1a1a1a;
   font-family: Inter;
-  font-size: 44px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 58px;
+  line-height: 50px;
   margin: 0;
   padding: 0;
 }
@@ -2844,7 +2969,7 @@ body {
 .locations-section p {
   color: #000;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 56px;
@@ -2863,19 +2988,19 @@ body {
   padding: 0;
   color: #000;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 28px;
 }
 
 .locations-section .store-item a {
   color: #000;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 28px;
   text-decoration: none;
 }
 
