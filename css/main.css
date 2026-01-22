@@ -68,7 +68,7 @@ h2 {
   font-weight: 500;
   line-height: 50px;
   margin: 0;
-  color: #000;
+  color: #1a1a1a;
 }
 
 /* ========================================
@@ -2948,15 +2948,8 @@ h5 {
   background: #e9510e;
 }
 
-.locations-section .store-item h4 {
-  margin: 0;
-  padding: 0;
+.locations-section .store-item h5 {
   color: #000;
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
 }
 
 .locations-section .store-item a {
