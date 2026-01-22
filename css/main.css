@@ -173,6 +173,10 @@ h6 {
   line-height: 28px; /* 140% */
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 /* ========================================
      HEADER & NAVIGATION
      ======================================== */
@@ -2633,16 +2637,19 @@ h6 {
 }
 
 /* Max Width 688 - Left aligned text */
-.content-section.max-width-688 .content-text-col {
+.content-section.max-width-688 .content-text-col,
+.content-section.max-width-688 .content-text-col-2 {
   justify-content: flex-start !important;
 }
 
-.content-section.max-width-688 .content-text {
+.content-section.max-width-688 .content-text,
+.content-section.max-width-688 .content-text-2 {
   text-align: left !important;
   max-width: 688px;
 }
 
-.content-section.max-width-688 .content-text p {
+.content-section.max-width-688 .content-text p,
+.content-section.max-width-688 .content-text-2 p {
   font-weight: 400;
 }
 
