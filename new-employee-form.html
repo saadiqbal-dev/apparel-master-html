@@ -1138,19 +1138,5 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
-
-    <!-- Marquee Duplication Script -->
-    <script>
-      $(document).ready(function () {
-        // Clone all marquee items for seamless loop
-        var $marqueeTrack = $(".marquee-track");
-        var $marqueeItems = $marqueeTrack.find(".marquee-item");
-
-        // Clone all items and append to track for seamless scrolling
-        for (let i = 0; i < 10; i++) {
-          $marqueeItems.clone().appendTo($marqueeTrack);
-        }
-      });
-    </script>
   </body>
 </html>
