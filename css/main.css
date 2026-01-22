@@ -1580,7 +1580,8 @@ body {
   }
 }
 
-.orange-title {
+/* Orange content - h2 inherits from parent */
+.full-width-content-wrapper h2 {
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 22px;
@@ -1591,7 +1592,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .orange-title {
+  .full-width-content-wrapper h2 {
     font-size: 26px;
     line-height: 36px;
   }
@@ -1751,7 +1752,8 @@ body {
   max-width: 670px;
 }
 
-.gray-title {
+/* Gray section - h2 inherits from parent */
+.gray-content-wrapper h2 {
   color: #fff;
   font-family: Inter, sans-serif;
   font-size: 22px;
@@ -1763,7 +1765,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .gray-title {
+  .gray-content-wrapper h2 {
     font-size: 28px;
   }
 }
@@ -1782,7 +1784,8 @@ body {
   }
 }
 
-.gray-info-heading {
+/* Gray info - h3 inherits from parent */
+.gray-info-item h3 {
   color: #fff;
   font-family: Inter, sans-serif;
   font-size: 18px;
@@ -1793,7 +1796,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .gray-info-heading {
+  .gray-info-item h3 {
     font-size: 18px;
     line-height: 28px;
   }
@@ -2254,6 +2257,7 @@ body {
   color: #000;
   font-size: 22px;
   font-weight: 500;
+  margin-bottom: 1rem; /* mb-3 equivalent */
 }
 
 @media (min-width: 1200px) {
