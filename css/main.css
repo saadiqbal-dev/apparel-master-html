@@ -42,11 +42,20 @@ p {
    ======================================== */
 h1 {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 50px;
+  line-height: normal;
   margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 /* Hide on Mobile Utility */
@@ -788,19 +797,7 @@ h1 {
   }
 }
 
-.hero-workwear h1 {
-  color: #fff;
-  text-align: center;
-  font-size: 24px;
-  line-height: normal;
-}
-
-@media (min-width: 1200px) {
-  .hero-workwear h1 {
-    font-size: 40px;
-    line-height: 50px;
-  }
-}
+/* h1 styles inherited from global h1 defaults */
 
 /* ========================================
      BREADCRUMB
