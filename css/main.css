@@ -967,6 +967,10 @@ h6 {
   .svg-width {
     justify-content: start;
   }
+
+  .padding-left-50 {
+    padding-left: 50px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1710,7 +1714,6 @@ h6 {
 @media (min-width: 1200px) {
   .full-width-text {
     max-width: 608px;
-    padding-left: 50px;
   }
 }
 
