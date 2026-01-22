@@ -1992,8 +1992,8 @@ body {
   margin: 0;
 }
 
-/* Footer Enquiry */
-.footer-enquiry-title {
+/* Footer Enquiry - h3 inherits from parent */
+.footer-mobile > div > h3 {
   color: black;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2003,7 +2003,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .footer-enquiry-title {
+  .footer-mobile > div > h3 {
     margin-bottom: 16px;
   }
 }
@@ -2073,8 +2073,9 @@ body {
   opacity: 0.7;
 }
 
-/* Footer Copyright */
-.footer-copyright {
+/* Footer Copyright - p inherits from parent */
+.footer-mobile p,
+.footer-right p {
   font-size: 14px;
   font-weight: 300;
   text-align: left;
@@ -2196,7 +2197,7 @@ body {
   color: #e9510e;
 }
 
-.footer-desktop .footer-copyright {
+.footer-desktop .footer-right p {
   text-align: left;
   min-width: 627px;
 }
