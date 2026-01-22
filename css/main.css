@@ -1120,7 +1120,7 @@ h5 {
 }
 
 /* Content wrapper - direct child of column (no class needed!) */
-.content .col-xl-6 > div:not(.) {
+/* .content .col-xl-6 > div:not(.) {
   text-align: left;
 }
 
@@ -1128,7 +1128,7 @@ h5 {
   .content .col-xl-6 > div:not(.) {
     max-width: 532px;
   }
-}
+} */
 
 /* Orange bar styling (if present) */
 .content .content-bar {
