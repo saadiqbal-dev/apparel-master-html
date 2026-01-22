@@ -1799,7 +1799,8 @@ body {
   }
 }
 
-.gray-info-text {
+/* Gray info - p tags inherit from parent */
+.gray-info-item p {
   color: #fff;
   font-family: Inter, sans-serif;
   font-size: 18px;
@@ -1810,7 +1811,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .gray-info-text {
+  .gray-info-item p {
     font-size: 18px;
     line-height: 28px;
   }
@@ -2265,6 +2266,7 @@ body {
   color: #000;
   font-size: 18px;
   line-height: 28px;
+  margin-bottom: 1.5rem; /* mb-4 equivalent */
 }
 
 @media (min-width: 1200px) {
@@ -2967,16 +2969,8 @@ body {
   font-weight: 400 !important;
 }
 
-.diamond-content-section .content-text .diamond-welcome-text {
-  margin-bottom: 20px !important;
-  margin-top: 0 !important;
-}
-
-.diamond-content-section .content-text .diamond-welcome-text:last-of-type {
-  margin-bottom: 53px !important;
-}
-
-.diamond-content-section .content-text .diamond-welcome-title {
+/* Diamond page - p tags inherit from parent */
+.diamond-content-section .content-text p:first-of-type {
   color: #000;
   font-family: Inter, sans-serif;
   font-size: 18px;
@@ -2984,12 +2978,35 @@ body {
   font-weight: 600 !important;
   line-height: 28px;
   margin-bottom: 0 !important;
+  margin-top: 0;
 }
 
 @media (min-width: 1200px) {
-  .diamond-content-section .content-text .diamond-welcome-title {
+  .diamond-content-section .content-text p:first-of-type {
     margin-bottom: 45px !important;
   }
+}
+
+.diamond-content-section .content-text p:not(:first-of-type) {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 20px !important;
+  margin-top: 0 !important;
+}
+
+@media (min-width: 1200px) {
+  .diamond-content-section .content-text p:not(:first-of-type) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.diamond-content-section .content-text p:last-of-type {
+  margin-bottom: 53px !important;
 }
 
 .diamond-yellow-bar {
@@ -3466,17 +3483,20 @@ body {
   }
 }
 
-.form-intro-text {
+/* Form intro text - p tags inherit from parent */
+.form-container-custom > p:first-of-type {
   color: #000;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 140% */
+  line-height: 28px;
+  margin-bottom: 55px;
+  margin-top: 0;
 }
 
 @media (max-width: 767px) {
-  .form-intro-text {
+  .form-container-custom > p:first-of-type {
     font-size: 18px;
     line-height: 26px;
   }
