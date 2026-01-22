@@ -3295,7 +3295,7 @@ body {
 }
 
 .jobs-listing-container {
-  max-width: calc(1920px - 600px);
+  max-width: calc(1920px - 520px);
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -3337,7 +3337,7 @@ body {
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    padding: 20px 36px !important;
+    padding: 19px 32px;
   }
 
   .job-card > div:last-child > p {
@@ -3376,7 +3376,7 @@ body {
   background: #312f2f;
   color: #fff;
   font-weight: 600;
-  padding: 16px 20px;
+  padding: 19px 32px;
 }
 
 .job-card:nth-child(even) > div:first-child {
@@ -3430,10 +3430,11 @@ body {
   justify-content: space-between;
   padding: 0 20px;
   text-decoration: none;
+  margin-top: 18px;
 }
 
 .job-card > div:last-child > div > a:hover {
-  background: #d4480c;
+  background: #000;
   color: #fff;
 }
 
