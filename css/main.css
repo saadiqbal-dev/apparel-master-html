@@ -899,6 +899,7 @@ h5 {
   height: auto;
   aspect-ratio: 353 / 246;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 @media (min-width: 1200px) {
@@ -1119,12 +1120,12 @@ h5 {
 }
 
 /* Content wrapper - direct child of column (no class needed!) */
-.content .col-xl-6 > div:not(.img-fluid) {
+.content .col-xl-6 > div:not(.) {
   text-align: left;
 }
 
 @media (min-width: 1200px) {
-  .content .col-xl-6 > div:not(.img-fluid) {
+  .content .col-xl-6 > div:not(.) {
     max-width: 532px;
   }
 }
@@ -2622,6 +2623,10 @@ h5 {
   }
 }
 
+.max-width-620 {
+  max-width: 620px;
+}
+
 /* ========================================
    UNIFIED CLASSES - FIRST CONTENT SECTION
    Single class structure merging:
@@ -3038,6 +3043,16 @@ h5 {
   padding-bottom: 0 !important;
 }
 
+.diamond-content-section h5 {
+  color: #000;
+  margin-bottom: 45px;
+}
+
+.diamon-content-section p {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 1200px) {
   .diamond-content-section {
     padding-top: 36px !important;
@@ -3071,28 +3086,6 @@ h5 {
   }
 }
 
-.diamond-content-section .content-text p {
-  font-weight: 400 !important;
-}
-
-/* Diamond page - p tags inherit from parent */
-.diamond-content-section .content-text p:first-of-type {
-  color: #000;
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600 !important;
-  line-height: 28px;
-  margin-bottom: 0 !important;
-  margin-top: 0;
-}
-
-@media (min-width: 1200px) {
-  .diamond-content-section .content-text p:first-of-type {
-    margin-bottom: 45px !important;
-  }
-}
-
 .diamond-content-section .content-text p:not(:first-of-type) {
   color: #000;
   font-family: Inter, sans-serif;
@@ -3108,10 +3101,11 @@ h5 {
   .diamond-content-section .content-text p:not(:first-of-type) {
     font-size: 18px;
     line-height: 28px;
+    font-weight: normal;
   }
 }
 
-.diamond-content-section .content-text p:last-of-type {
+.diamond-content-section p:last-of-type {
   margin-bottom: 53px !important;
 }
 
@@ -3216,7 +3210,7 @@ h5 {
   border: 1px solid #000;
 }
 
-.diamond-content-image {
+/* .diamond-content-image {
   width: 100%;
   height: auto;
   aspect-ratio: 835 / 580;
@@ -3227,7 +3221,7 @@ h5 {
   .diamond-content-image {
     aspect-ratio: 835 / 580;
   }
-}
+} */
 
 .mb-36px {
   margin-bottom: 28px;
