@@ -227,7 +227,9 @@ $(document).ready(function () {
    * Positions chevron right after the selected text content
    */
   function positionChevron($select) {
-    const $wrapper = $select.closest(".jobs-search-select-wrapper, .form-select-wrapper");
+    const $wrapper = $select.closest(
+      ".jobs-search-select-wrapper, .form-select-wrapper",
+    );
     const $chevron = $wrapper.find(".jobs-search-chevron");
 
     // Create a temporary element to measure text width
@@ -274,4 +276,15 @@ $(document).ready(function () {
   $(".form-select-wrapper select").on("change", function () {
     positionChevron($(this));
   });
+
+  // Jquery for marquee
+
+  // Clone all marquee items for seamless loop
+  var $marqueeTrack = $(".marquee-track");
+  var $marqueeItems = $marqueeTrack.find(".marquee-item");
+
+  // Clone all items and append to track for seamless scrolling
+  for (let i = 0; i < 10; i++) {
+    $marqueeItems.clone().appendTo($marqueeTrack);
+  }
 });

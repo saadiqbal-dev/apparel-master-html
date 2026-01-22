@@ -972,11 +972,16 @@ h6 {
   margin: 0;
 }
 
+.content-text h4 {
+  color: #000;
+  margin-bottom: 17px;
+}
+
 /* Content Section Alternate */
 @media (min-width: 1200px) {
   .content-section--alternate {
     padding-top: 60px !important;
-    padding-bottom: 144px !important;
+    /* padding-bottom: 144px !important; */
   }
 
   /* Reduce gap between content-section--alternate and content-section-last to match gap between section 1 and 2 */
@@ -987,6 +992,10 @@ h6 {
 
 .content-text-2 {
   text-align: left;
+}
+.content-text-2 h4 {
+  color: #000;
+  margin-bottom: 17px;
 }
 
 @media (min-width: 1200px) {
@@ -1593,6 +1602,9 @@ h6 {
   .full-width-image,
   .orange-section .full-width-image {
     height: 748px;
+  }
+  .full-width-section {
+    padding-top: 123px !important;
   }
 }
 
