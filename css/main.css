@@ -2699,6 +2699,24 @@ h6 {
   max-width: 620px;
 }
 
+.max-width-471 {
+  max-width: 471px;
+}
+
+.content-bar-width-152 {
+  width: 152px;
+}
+
+.mb-62 {
+  margin-bottom: 26px;
+}
+
+@media (min-width: 1200px) {
+  .mb-62 {
+    margin-bottom: 62px;
+  }
+}
+
 /* ========================================
    UNIFIED CLASSES - FIRST CONTENT SECTION
    Single class structure merging:
@@ -4285,5 +4303,81 @@ h6 {
     line-height: 58px;
     font-weight: 600;
     margin-bottom: 36px;
+  }
+}
+
+/* Contact Info Section */
+.contact-info-section p {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 1200px) {
+  .contact-info-section p {
+    font-size: 20px;
+    line-height: 28px; /* 140% */
+  }
+}
+
+.contact-info-section p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.contact-info-section > div:last-child p:first-child {
+  margin-bottom: 1.5rem; /* Space between PO Box and Main Office */
+}
+
+.contact-info-section > div:last-child p:not(:first-child) {
+  margin-bottom: 0; /* No space between items - they're part of one paragraph */
+}
+
+.contact-info-section strong {
+  font-weight: 700;
+}
+
+.contact-info-section a {
+  display: inline-flex;
+  height: 50px;
+  border-radius: 27px;
+  border: 1.5px solid #e9510e;
+  background: #e9510e;
+  align-items: center;
+  justify-content: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 28px;
+  padding-left: 31px;
+  gap: 13px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 36px;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  max-width: fit-content;
+}
+
+.contact-info-section a:hover {
+  background: black;
+  border: 1.5px solid black;
+  color: white;
+}
+
+.contact-info-section a svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1200px) {
+  .contact-info-section a svg {
+    width: 24px;
+    height: 24px;
   }
 }
