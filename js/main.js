@@ -327,19 +327,22 @@ $(document).ready(function () {
 
   // Re-initialize if window is resized (handles orientation changes on mobile)
   var resizeTimer;
-  $(window).on("resize", function() {
+  $(window).on("resize", function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
+    resizeTimer = setTimeout(function () {
       // Check if marquee needs re-initialization
       var $marqueeTrack = $(".marquee-track");
-      if ($marqueeTrack.length > 0 && !$marqueeTrack.data("marquee-initialized")) {
+      if (
+        $marqueeTrack.length > 0 &&
+        !$marqueeTrack.data("marquee-initialized")
+      ) {
         initializeMarquee();
       }
     }, 250);
   });
 
   // Handle visibility change - pause animation when page is hidden
-  document.addEventListener("visibilitychange", function() {
+  document.addEventListener("visibilitychange", function () {
     var $marqueeTrack = $(".marquee-track");
     if (document.hidden) {
       $marqueeTrack.css("animation-play-state", "paused");
