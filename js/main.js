@@ -127,17 +127,17 @@ $(document).ready(function () {
    * Mobile menu open
    */
   $(".mobile-menu-btn").on("click", function () {
-    $(".mobile-menu").addClass("active");
+    $(".mobile-nav-overlay").addClass("active");
     $("body").css("overflow", "hidden");
   });
 
   /**
    * Mobile menu close
    */
-  $(".mobile-menu-close, .mobile-menu-header a, .mobile-submenu a").on(
+  $(".mobile-nav-close, .mobile-nav-header a, .mobile-nav-submenu a").on(
     "click",
     function () {
-      $(".mobile-menu").removeClass("active");
+      $(".mobile-nav-overlay").removeClass("active");
       $("body").css("overflow", "");
     },
   );
@@ -145,11 +145,11 @@ $(document).ready(function () {
   /**
    * Mobile menu accordion
    */
-  $(".mobile-menu-toggle").on("click", function () {
-    const $parent = $(this).closest(".mobile-menu-item");
+  $(".mobile-nav-toggle").on("click", function () {
+    const $parent = $(this).closest(".mobile-nav-item");
     const wasActive = $parent.hasClass("active");
 
-    $(".mobile-menu-item").removeClass("active");
+    $(".mobile-nav-item").removeClass("active");
 
     if (!wasActive) {
       $parent.addClass("active");
