@@ -984,11 +984,23 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 51px;
+}
+.svg-width img {
+  width: 121.879px;
+  height: 108.48px;
 }
 
 @media (min-width: 1200px) {
   .svg-width {
     justify-content: start;
+
+    margin-bottom: 31px;
+  }
+
+  .svg-width img {
+    width: 94px;
+    height: 84px;
   }
 
   .padding-left-50 {
@@ -3412,6 +3424,10 @@ h6 {
 
 .mb-36px {
   margin-bottom: 28px;
+}
+
+.mb-56px {
+  margin-bottom: 56px;
 }
 
 @media (min-width: 1200px) {
