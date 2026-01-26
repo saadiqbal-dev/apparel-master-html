@@ -4104,6 +4104,8 @@ h6 {
 
 .news-grid-item:hover div h3 {
   text-decoration: underline;
+  text-underline-position: 2px;
+  text-underline-offset: 4px;
 }
 
 .news-grid-item {
@@ -4170,9 +4172,9 @@ h6 {
   }
 
   .news-grid-item div h3 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
-    font-weight: 600;
+    font-weight: 500;
     min-height: 144px;
     margin-bottom: 0px;
   }
