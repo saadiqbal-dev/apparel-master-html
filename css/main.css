@@ -4379,23 +4379,7 @@ h6 {
 /* Contact Info Section */
 .contact-info-section p {
   color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 144.444% */
   margin: 0 0 1rem 0;
-}
-
-@media (min-width: 1200px) {
-  .contact-info-section p {
-    font-size: 20px;
-    line-height: 28px; /* 140% */
-  }
-}
-
-.contact-info-section p:first-of-type {
-  margin-bottom: 1rem;
 }
 
 .contact-info-section > div:last-child p:first-child {
