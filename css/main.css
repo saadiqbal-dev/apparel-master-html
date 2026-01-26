@@ -939,6 +939,20 @@ h6 {
   }
 }
 
+.content-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 353 / 246;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 1200px) {
+  .content-video {
+    aspect-ratio: 835 / 580;
+  }
+}
+
 .content-text-col,
 .content-text-col-2,
 .content-image-col {
