@@ -1022,6 +1022,35 @@ h6 {
   margin-bottom: 17px;
 }
 
+.terms-section {
+  padding: 50px 20px;
+}
+.terms-section h5 {
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.terms-section p {
+  color: #555353;
+}
+
+@media (min-width: 1200px) {
+  .terms-section {
+    max-width: 912px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .terms-section h5 {
+    color: #000;
+    margin-bottom: 30px;
+  }
+
+  .terms-section p {
+    color: #555353;
+  }
+}
+
 /* Content Section Alternate */
 @media (min-width: 1200px) {
   .content-section--alternate {
@@ -1214,8 +1243,18 @@ h6 {
   background: #e9510e;
 }
 
+.yellow-bar {
+  background: #fce82d;
+  width: 55px;
+  height: 3.71px;
+}
+
 @media (min-width: 1200px) {
   .content .content-bar {
+    width: 100px;
+    height: 6px;
+  }
+  .yellow-bar {
     width: 100px;
     height: 6px;
   }
