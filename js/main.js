@@ -384,8 +384,14 @@ $(document).ready(function () {
     }
 
     function handleHeroVideoScroll() {
+      var heroSection = document.querySelector(".hero-video-section");
+      var heroContent = document.querySelector(".hero-video-content");
+      if (!heroSection) return;
+
+      var rect = heroSection.getBoundingClientRect();
+      var windowHeight = window.innerHeight;
       var scrollY = window.scrollY;
-      var threshold = window.innerHeight * 0.9;
+      var threshold = windowHeight * 0.9;
 
       // Fade out effect
       if (scrollY >= threshold) {
@@ -394,12 +400,24 @@ $(document).ready(function () {
         videoBackground.style.opacity = "1";
       }
 
-      // Parallax effect - video moves up as we scroll down (very subtle)
-      // Apply to iframe, not the container
-      if (iframe) {
-        var parallaxOffset = scrollY * -0.3;
-        // Keep centering transform (-50%, -50%) and add parallax
-        iframe.style.transform = "translate(-50%, calc(-50% + " + parallaxOffset + "px))";
+      // Parallax effect - only when section is in viewport
+      if (rect.bottom > 0 && rect.top < windowHeight) {
+        var progress = (windowHeight - rect.top) / (windowHeight + rect.height);
+        var isMobile = window.innerWidth < 1200;
+        var maxMove = rect.height * (isMobile ? 0.35 : 0.25);
+        var translateY = (progress - 0.5) * maxMove;
+
+        // Apply parallax to video
+        if (iframe) {
+          iframe.style.transform = "translate(-50%, calc(-50% + " + translateY + "px))";
+        }
+
+        // Apply parallax to text content (moves faster for depth effect)
+        if (heroContent) {
+          var textMaxMove = rect.height * (isMobile ? 0.5 : 0.35);
+          var textTranslateY = (progress - 0.5) * textMaxMove;
+          heroContent.style.transform = "translateY(" + textTranslateY + "px)";
+        }
       }
     }
 
@@ -407,12 +425,22 @@ $(document).ready(function () {
     sizeHeroVideo();
     handleHeroVideoScroll();
 
-    // Update on resize - refresh both size and scroll calculations
+    // Use requestAnimationFrame for smooth performance
+    var heroTicking = false;
+    window.addEventListener("scroll", function() {
+      if (!heroTicking) {
+        requestAnimationFrame(function() {
+          handleHeroVideoScroll();
+          heroTicking = false;
+        });
+        heroTicking = true;
+      }
+    });
+
     window.addEventListener("resize", function () {
       sizeHeroVideo();
       handleHeroVideoScroll();
     });
-    window.addEventListener("scroll", handleHeroVideoScroll);
   }
 
   // ========================================
@@ -464,62 +492,40 @@ $(document).ready(function () {
 
   if (kiwiHeritageVideo) {
     var kiwiSection = document.querySelector(".kiwi-heritage-section");
-    var iframe = kiwiHeritageVideo.querySelector("iframe");
 
-    // Function to size video properly based on section aspect ratio
-    function sizeKiwiVideo() {
-      if (!iframe || !kiwiSection) return;
-      var sectionWidth = kiwiSection.offsetWidth;
-      var sectionHeight = kiwiSection.offsetHeight;
-      var sectionAspect = sectionWidth / sectionHeight;
-      var videoAspect = 16 / 9;
-      var parallaxBuffer = 1.5;
+    function handleKiwiParallax() {
+      if (!kiwiSection) return;
 
-      if (sectionAspect > videoAspect) {
-        // Section is wider than video - anchor to height
-        iframe.style.height = (sectionHeight * parallaxBuffer) + "px";
-        iframe.style.width = (sectionHeight * parallaxBuffer * videoAspect) + "px";
-        iframe.style.minWidth = "unset";
-        iframe.style.minHeight = "unset";
-      } else {
-        // Section is taller than video - anchor to width
-        iframe.style.width = (sectionWidth * parallaxBuffer) + "px";
-        iframe.style.height = (sectionWidth * parallaxBuffer / videoAspect) + "px";
-        iframe.style.minWidth = "unset";
-        iframe.style.minHeight = "unset";
-      }
-    }
-
-    function handleKiwiVideoScroll() {
       var rect = kiwiSection.getBoundingClientRect();
-      var scrollY = window.scrollY;
-      var sectionTop = kiwiSection.offsetTop;
+      var windowHeight = window.innerHeight;
 
-      // Only apply parallax when section is in viewport
-      if (rect.top < window.innerHeight && rect.bottom > 0 && iframe) {
-        // Calculate parallax offset relative to section position
-        var relativeScroll = scrollY - sectionTop + window.innerHeight;
-        var parallaxOffset = relativeScroll * 0.1;
+      // Only apply when section is in viewport
+      if (rect.bottom > 0 && rect.top < windowHeight) {
+        // Calculate progress: 0 when section enters bottom, 1 when it leaves top
+        var progress = (windowHeight - rect.top) / (windowHeight + rect.height);
+        var isMobile = window.innerWidth < 1200;
 
-        // Limit parallax range to prevent black bars
-        var maxOffset = kiwiSection.offsetHeight * 0.15;
-        parallaxOffset = Math.max(-maxOffset, Math.min(maxOffset, parallaxOffset));
-
-        // Apply parallax to iframe while keeping centering
-        iframe.style.transform = "translate(-50%, calc(-50% + " + parallaxOffset + "px))";
+        // Video parallax - same strength as hero
+        var maxMove = rect.height * (isMobile ? 0.35 : 0.25);
+        var translateY = (progress - 0.5) * maxMove;
+        kiwiHeritageVideo.style.transform = "translateY(" + translateY + "px)";
       }
     }
 
-    // Initial size and scroll state
-    sizeKiwiVideo();
-    handleKiwiVideoScroll();
-
-    // Update on resize - refresh both size and scroll calculations
-    window.addEventListener("resize", function () {
-      sizeKiwiVideo();
-      handleKiwiVideoScroll();
+    // Use requestAnimationFrame for smooth performance
+    var ticking = false;
+    window.addEventListener("scroll", function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          handleKiwiParallax();
+          ticking = false;
+        });
+        ticking = true;
+      }
     });
-    window.addEventListener("scroll", handleKiwiVideoScroll);
+
+    // Initial state
+    handleKiwiParallax();
   }
 
   // ========================================

@@ -4466,7 +4466,7 @@ h6 {
   position: relative;
   height: 373px;
   margin-top: 94px;
-  margin-bottom: 36px;
+  margin-bottom: 56px;
   overflow: hidden;
   background: #000;
 }
@@ -4531,10 +4531,10 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 177.77777778vh;
-  height: 56.25vw;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 177.77777778vh !important;
+  height: 56.25vw !important;
+  min-width: 100vw !important;
+  min-height: 100vh !important;
   border: 0;
   pointer-events: none;
   will-change: transform;
@@ -4548,6 +4548,7 @@ h6 {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  will-change: transform;
 }
 
 @media (min-width: 1200px) {
@@ -5029,7 +5030,8 @@ h6 {
 
 .kiwi-heritage-section {
   position: relative;
-  height: 393px;
+  height: 56.25vw;
+  min-height: 393px;
   overflow: hidden;
   background: #000;
 }
@@ -5042,11 +5044,12 @@ h6 {
 
 .kiwi-heritage-video-wrapper {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
   overflow: hidden;
+  will-change: transform;
 }
 
 .kiwi-heritage-video-wrapper iframe {
@@ -5056,9 +5059,10 @@ h6 {
   transform: translate(-50%, -50%);
   width: 177.77777778vh;
   height: 56.25vw;
+  min-width: 100%;
+  min-height: 100%;
   border: 0;
   pointer-events: none;
-  will-change: transform;
   background: #000;
 }
 
