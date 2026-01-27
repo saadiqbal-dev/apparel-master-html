@@ -4732,11 +4732,8 @@ h6 {
 }
 
 .professional-workwear-content p {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
   color: #000;
-  margin-bottom: 2.5rem;
+  margin-bottom: 23px;
 }
 
 @media (min-width: 1200px) {
@@ -4828,7 +4825,7 @@ h6 {
 
 .rental-card {
   width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 11px;
   background: white;
   overflow: hidden;
   position: relative;
@@ -4875,7 +4872,7 @@ h6 {
 .rental-card-title {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 34px;
   margin: 0;
@@ -4967,7 +4964,7 @@ h6 {
 .rental-card-overlay-title {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 28px;
   margin: 0 0 0.75rem;
@@ -4984,7 +4981,7 @@ h6 {
 .rental-card-overlay-description {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   margin: 0;
 }
@@ -5086,7 +5083,7 @@ h6 {
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media (min-width: 1200px) {
@@ -5712,8 +5709,8 @@ h6 {
 
 @media (min-width: 1200px) {
   .companies-section h2 {
-    font-size: 44px;
-    line-height: normal;
+    font-size: 40px;
+    line-height: 50px;
     max-width: none;
     padding-bottom: 134px;
   }
