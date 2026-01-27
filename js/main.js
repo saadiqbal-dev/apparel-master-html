@@ -449,4 +449,68 @@ $(document).ready(function () {
     // Initial call
     handleKiwiVideoScroll();
   }
+
+  // ========================================
+  // LATEST NEWS CAROUSEL (INDEX-2)
+  // ========================================
+  var newsCarousel = document.getElementById("newsCarousel");
+
+  if (newsCarousel) {
+    var prevBtnDesktop = document.getElementById("newsCarouselPrev");
+    var nextBtnDesktop = document.getElementById("newsCarouselNext");
+    var prevBtnMobile = document.getElementById("newsCarouselPrevMobile");
+    var nextBtnMobile = document.getElementById("newsCarouselNextMobile");
+
+    function scrollCarousel(direction) {
+      var scrollAmount = 0;
+      var cardWidth = newsCarousel.querySelector(".latest-news-card").offsetWidth;
+      var gap = window.innerWidth >= 1200 ? 50 : 20; // 3.125rem = 50px, 1.25rem = 20px
+
+      if (window.innerWidth < 768) {
+        // Mobile: scroll by 75% of container
+        scrollAmount = newsCarousel.offsetWidth * 0.75;
+      } else if (window.innerWidth < 1024) {
+        // Tablet: scroll by 50% of container
+        scrollAmount = newsCarousel.offsetWidth * 0.5;
+      } else if (window.innerWidth < 1200) {
+        // Small desktop: scroll by 33.333% of container
+        scrollAmount = newsCarousel.offsetWidth * 0.33333;
+      } else {
+        // Large desktop: scroll by card width + gap
+        scrollAmount = cardWidth + gap;
+      }
+
+      if (direction === "next") {
+        newsCarousel.scrollLeft += scrollAmount;
+      } else {
+        newsCarousel.scrollLeft -= scrollAmount;
+      }
+    }
+
+    // Desktop controls
+    if (prevBtnDesktop) {
+      prevBtnDesktop.addEventListener("click", function () {
+        scrollCarousel("prev");
+      });
+    }
+
+    if (nextBtnDesktop) {
+      nextBtnDesktop.addEventListener("click", function () {
+        scrollCarousel("next");
+      });
+    }
+
+    // Mobile controls
+    if (prevBtnMobile) {
+      prevBtnMobile.addEventListener("click", function () {
+        scrollCarousel("prev");
+      });
+    }
+
+    if (nextBtnMobile) {
+      nextBtnMobile.addEventListener("click", function () {
+        scrollCarousel("next");
+      });
+    }
+  }
 });
