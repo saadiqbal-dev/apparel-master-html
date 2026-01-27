@@ -2958,6 +2958,10 @@ h6 {
   max-width: none;
 }
 
+.marquee-container.home-page .marquee-track {
+  gap: 0px;
+}
+
 .marquee-track {
   display: flex;
   gap: 151px;
@@ -5583,4 +5587,152 @@ h6 {
 
 .testimonials-dot-active:hover {
   background: #e9510e;
+}
+
+/* ===================================
+   CTA Section
+   =================================== */
+
+.cta-section {
+  background: #e9510e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 76px 26px 92px 26px;
+  gap: 60px;
+  position: relative;
+  z-index: 20;
+  opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  .cta-section {
+    padding: 160px 0 166px 0;
+    gap: 66px;
+  }
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+@media (min-width: 1200px) {
+  .cta-content {
+    gap: 66px;
+  }
+}
+
+.cta-section h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .cta-section h2 {
+    font-size: 36px;
+    line-height: normal;
+  }
+}
+
+.cta-section h2 strong {
+  font-weight: 700;
+}
+
+.cta-btn-enquiry {
+  background: transparent;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 8px 24px;
+  border: 1px solid white;
+  border-radius: 27px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cta-btn-enquiry:hover {
+  color: #e9510e;
+  background: white;
+  border-color: white;
+}
+
+/* ===================================
+   Companies We Work With Section
+   =================================== */
+
+.companies-section {
+  background: white;
+  position: relative;
+  z-index: 20;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.companies-section h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 353px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .companies-section h2 {
+    font-size: 44px;
+    line-height: normal;
+    max-width: none;
+    padding-bottom: 134px;
+  }
+}
+
+.companies-section .marquee-container {
+  margin-bottom: 80px;
+}
+
+@media (min-width: 1200px) {
+  .companies-section .marquee-container {
+    margin-bottom: 157px;
+  }
+}
+
+.company-logo {
+  width: auto;
+  height: 63.92px;
+  object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+  .company-logo {
+    height: 104.716px;
+  }
+}
+
+.companies-section .marquee-item {
+  margin: 0 53.5px;
+}
+
+@media (min-width: 1200px) {
+  .companies-section .marquee-item {
+    margin: 0 90.5px;
+  }
 }
