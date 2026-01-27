@@ -350,4 +350,29 @@ $(document).ready(function () {
       $marqueeTrack.css("animation-play-state", "running");
     }
   });
+
+  // ========================================
+  // HERO VIDEO SCROLL BEHAVIOR (INDEX-2)
+  // ========================================
+  var videoBackground = document.getElementById("heroVideoBackground");
+
+  if (videoBackground) {
+    function handleHeroVideoScroll() {
+      var scrollY = window.scrollY;
+      var threshold = window.innerHeight * 0.9;
+
+      // Fade out effect
+      if (scrollY >= threshold) {
+        videoBackground.style.opacity = "0";
+      } else {
+        videoBackground.style.opacity = "1";
+      }
+
+      // Parallax effect - video moves slower than scroll (very subtle)
+      var parallaxOffset = scrollY * 0.15;
+      videoBackground.style.transform = "translateY(" + parallaxOffset + "px)";
+    }
+
+    window.addEventListener("scroll", handleHeroVideoScroll);
+  }
 });
