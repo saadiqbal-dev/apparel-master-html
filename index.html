@@ -1,1347 +1,1289 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apparel Master</title>
 
-    <!-- Bootstrap 5.3 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apparel Master - Home</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <!-- Gradient background layer -->
-      <div class="header-gradient"></div>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-      <!-- White background layer -->
-      <div class="header-white"></div>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-      <div class="container">
-        <div class="header-content">
-          <!-- Logo -->
-          <a href="/" class="header-logo">
-            <img
-              src="public/images/apparel-master-logo.png"
-              alt="Apparel Master Logo"
-            />
-          </a>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <!-- Gradient background layer -->
+    <div class="header-gradient"></div>
 
-          <!-- Mobile Menu Icon -->
-          <button class="mobile-menu-btn" aria-label="Menu">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="16"
-              viewBox="0 0 21 16"
-              fill="none"
-            >
-              <line
-                x1="0.75"
-                y1="0.75"
-                x2="20.25"
-                y2="0.75"
-                stroke="#fff"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-              <line
-                x1="0.75"
-                y1="15.0071"
-                x2="20.25"
-                y2="15.0071"
-                stroke="#fff"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-              <line
-                x1="0.75"
-                y1="7.87853"
-                x2="20.25"
-                y2="7.87853"
-                stroke="#fff"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-            </svg>
-          </button>
+    <!-- White background layer -->
+    <div class="header-white"></div>
 
-          <!-- Desktop Navigation -->
-          <nav class="header-nav">
-            <ul class="nav-list">
-              <li>
-                <button class="nav-btn" data-megamenu="services">
-                  Services
-                  <span class="nav-underline"></span>
-                </button>
-              </li>
-              <li>
-                <a href="/outlets" class="nav-link">
-                  Find an Outlet
-                  <span class="nav-underline"></span>
-                </a>
-              </li>
-              <li>
-                <button class="nav-btn" data-megamenu="about">
-                  About
-                  <span class="nav-underline"></span>
-                </button>
-              </li>
-              <li>
-                <a href="/client-tools" class="nav-link">
-                  Client Tools
-                  <span class="nav-underline"></span>
-                </a>
-              </li>
-            </ul>
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="/" class="header-logo">
+          <img src="public/images/apparel-master-logo.png" alt="Apparel Master Logo" />
+        </a>
 
-            <div class="nav-actions">
-              <a href="/get-a-quote" class="cta-btn">Get a Quote</a>
-              <button class="phone-btn">Click for 0800 Number</button>
-              <a
-                href="tel:0800808820"
-                class="phone-btn phone-revealed"
-                style="display: none"
-                >0800 808 820</a
-              >
+        <!-- Mobile Menu Icon -->
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16" fill="none">
+            <line x1="0.75" y1="0.75" x2="20.25" y2="0.75" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="0.75" y1="15.0071" x2="20.25" y2="15.0071" stroke="#fff" stroke-width="1.5"
+              stroke-linecap="round" />
+            <line x1="0.75" y1="7.87853" x2="20.25" y2="7.87853" stroke="#fff" stroke-width="1.5"
+              stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li>
+              <button class="nav-btn" data-megamenu="services">
+                Services
+                <span class="nav-underline"></span>
+              </button>
+            </li>
+            <li>
+              <a href="/outlets" class="nav-link">
+                Find an Outlet
+                <span class="nav-underline"></span>
+              </a>
+            </li>
+            <li>
+              <button class="nav-btn" data-megamenu="about">
+                About
+                <span class="nav-underline"></span>
+              </button>
+            </li>
+            <li>
+              <a href="/client-tools" class="nav-link">
+                Client Tools
+                <span class="nav-underline"></span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav-actions">
+            <a href="/get-a-quote" class="cta-btn">Get a Quote</a>
+            <button class="phone-btn">Click for 0800 Number</button>
+            <a href="tel:0800808820" class="phone-btn phone-revealed" style="display: none">0800 808 820</a>
+          </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+          <div class="mobile-nav-overlay">
+            <div class="mobile-nav-header">
+              <a href="/">
+                <img src="public/images/apparel-master-logo.png" alt="Apparel Master Logo" />
+              </a>
+              <button class="mobile-nav-close" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 6L6 18M6 6L18 18" stroke="#000" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
             </div>
-          </nav>
 
-          <!-- Mobile Navigation -->
-          <nav class="mobile-nav">
-            <div class="mobile-nav-overlay">
-              <div class="mobile-nav-header">
-                <a href="/">
-                  <img
-                    src="public/images/apparel-master-logo.png"
-                    alt="Apparel Master Logo"
-                  />
-                </a>
-                <button class="mobile-nav-close" aria-label="Close menu">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M18 6L6 18M6 6L18 18"
-                      stroke="#000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
+            <div class="mobile-nav-divider"></div>
+
+            <div class="mobile-nav-items">
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>WORKWEAR</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
                   </svg>
                 </button>
+                <ul class="mobile-nav-submenu">
+                  <li><a href="/services/workwear/overalls">Overalls</a></li>
+                  <li>
+                    <a href="/services/workwear/workshirts-trousers">Workshirts & Trousers</a>
+                  </li>
+                  <li>
+                    <a href="/services/workwear/protective-clothing">Protective Clothing</a>
+                  </li>
+                  <li>
+                    <a href="/services/workwear/corporate-uniforms">Corporate Uniforms</a>
+                  </li>
+                  <li>
+                    <a href="/services/workwear/embroidery-emblems">Embroidery & Emblems</a>
+                  </li>
+                  <li><a href="/services/workwear/repairs">Repairs</a></li>
+                </ul>
               </div>
 
-              <div class="mobile-nav-divider"></div>
-
-              <div class="mobile-nav-items">
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>WORKWEAR</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li><a href="/services/workwear/overalls">Overalls</a></li>
-                    <li>
-                      <a href="/services/workwear/workshirts-trousers"
-                        >Workshirts & Trousers</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/workwear/protective-clothing"
-                        >Protective Clothing</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/workwear/corporate-uniforms"
-                        >Corporate Uniforms</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/workwear/embroidery-emblems"
-                        >Embroidery & Emblems</a
-                      >
-                    </li>
-                    <li><a href="/services/workwear/repairs">Repairs</a></li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>WORKPLACE</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li>
-                      <a href="/services/workplace/floor-mats">Floor Mats</a>
-                    </li>
-                    <li><a href="/services/workplace/towels">Towels</a></li>
-                    <li>
-                      <a href="/services/workplace/first-aid">First Aid</a>
-                    </li>
-                    <li><a href="/services/workplace/lockers">Lockers</a></li>
-                    <li>
-                      <a href="/services/workplace/washroom-supplies"
-                        >Washroom Supplies</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/workplace/microfibres-cloths"
-                        >Microfibres & Cloths</a
-                      >
-                    </li>
-                    <li><a href="/services/workplace/linen">Linen</a></li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>FOOD INDUSTRY</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li>
-                      <a href="/services/food-industry/workwear"
-                        >Food Industry Workwear</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/food-industry/floor-mats"
-                        >Floor Mats</a
-                      >
-                    </li>
-                    <li><a href="/services/food-industry/ppe">PPE</a></li>
-                    <li>
-                      <a href="/services/food-industry/first-aid">First Aid</a>
-                    </li>
-                    <li>
-                      <a href="/services/food-industry/towels-cloths"
-                        >Towels & Cloths</a
-                      >
-                    </li>
-                    <li><a href="/services/food-industry/mops">Mops</a></li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>HOSPITALITY</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li>
-                      <a href="/services/hospitality/tea-towels">Tea Towels</a>
-                    </li>
-                    <li>
-                      <a href="/services/hospitality/cafe-bar-wipes"
-                        >Café & Bar Wipes</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/hospitality/kitchen-wipes"
-                        >Kitchen Wipes</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/hospitality/glass-cloths"
-                        >Glass Cloths</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/hospitality/floor-care">Floor Care</a>
-                    </li>
-                    <li>
-                      <a href="/services/hospitality/table-linen"
-                        >Table Linen</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/services/hospitality/washroom-supplies"
-                        >Washroom Supplies</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>PPE</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li>
-                      <a href="/services/ppe">Personal Protective Equipment</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>ABOUT US</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li><a href="/about/locations">Locations</a></li>
-                    <li><a href="/contact">Contact us</a></li>
-                    <li><a href="/services">Our Services</a></li>
-                    <li><a href="/about/news">News</a></li>
-                    <li>
-                      <a href="/about/asurequality-accreditations"
-                        >AsureQuality & Accreditations</a
-                      >
-                    </li>
-                    <li><a href="/about/community">Community</a></li>
-                    <li><a href="/about/sustainability">Sustainability</a></li>
-                    <li><a href="/about/policies">Policies</a></li>
-                    <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>CONTACT US</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li><a href="/contact">Contact us</a></li>
-                  </ul>
-                </div>
-
-                <div class="mobile-nav-item">
-                  <button class="mobile-nav-toggle">
-                    <h4>CLIENT TOOLS</h4>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                  <ul class="mobile-nav-submenu">
-                    <li><a href="/client-tools/linen-order">Linen Order</a></li>
-                    <li><a href="/client-tools/jobs">Jobs</a></li>
-                  </ul>
-                </div>
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>WORKPLACE</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li>
+                    <a href="/services/workplace/floor-mats">Floor Mats</a>
+                  </li>
+                  <li><a href="/services/workplace/towels">Towels</a></li>
+                  <li>
+                    <a href="/services/workplace/first-aid">First Aid</a>
+                  </li>
+                  <li><a href="/services/workplace/lockers">Lockers</a></li>
+                  <li>
+                    <a href="/services/workplace/washroom-supplies">Washroom Supplies</a>
+                  </li>
+                  <li>
+                    <a href="/services/workplace/microfibres-cloths">Microfibres & Cloths</a>
+                  </li>
+                  <li><a href="/services/workplace/linen">Linen</a></li>
+                </ul>
               </div>
-            </div>
-          </nav>
-        </div>
-      </div>
 
-      <!-- Mega Menu - Services -->
-      <div class="megamenu" id="megamenu-services">
-        <div class="container">
-          <div class="megamenu-grid">
-            <div class="megamenu-column">
-              <h4>WORKWEAR</h4>
-              <ul>
-                <li><a href="/services/workwear/overalls">Overalls</a></li>
-                <li>
-                  <a href="/services/workwear/workshirts-trousers"
-                    >Workshirts & Trousers</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/workwear/protective-clothing"
-                    >Protective Clothing</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/workwear/corporate-uniforms"
-                    >Corporate Uniforms</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/workwear/embroidery-emblems"
-                    >Embroidery & Emblems</a
-                  >
-                </li>
-                <li><a href="/services/workwear/repairs">Repairs</a></li>
-              </ul>
-            </div>
-            <div class="megamenu-column">
-              <h4>WORKPLACE</h4>
-              <ul>
-                <li><a href="/services/workplace/floor-mats">Floor Mats</a></li>
-                <li><a href="/services/workplace/towels">Towels</a></li>
-                <li><a href="/services/workplace/first-aid">First Aid</a></li>
-                <li><a href="/services/workplace/lockers">Lockers</a></li>
-                <li>
-                  <a href="/services/workplace/washroom-supplies"
-                    >Washroom Supplies</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/workplace/microfibres-cloths"
-                    >Microfibres & Cloths</a
-                  >
-                </li>
-                <li><a href="/services/workplace/linen">Linen</a></li>
-              </ul>
-            </div>
-            <div class="megamenu-column">
-              <h4>FOOD INDUSTRY</h4>
-              <ul>
-                <li>
-                  <a href="/services/food-industry/workwear"
-                    >Food Industry Workwear</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/food-industry/floor-mats">Floor Mats</a>
-                </li>
-                <li><a href="/services/food-industry/ppe">PPE</a></li>
-                <li>
-                  <a href="/services/food-industry/first-aid">First Aid</a>
-                </li>
-                <li>
-                  <a href="/services/food-industry/towels-cloths"
-                    >Towels & Cloths</a
-                  >
-                </li>
-                <li><a href="/services/food-industry/mops">Mops</a></li>
-              </ul>
-            </div>
-            <div class="megamenu-column">
-              <h4>HOSPITALITY</h4>
-              <ul>
-                <li>
-                  <a href="/services/hospitality/tea-towels">Tea Towels</a>
-                </li>
-                <li>
-                  <a href="/services/hospitality/cafe-bar-wipes"
-                    >Café & Bar Wipes</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/hospitality/kitchen-wipes"
-                    >Kitchen Wipes</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/hospitality/glass-cloths">Glass Cloths</a>
-                </li>
-                <li>
-                  <a href="/services/hospitality/floor-care">Floor Care</a>
-                </li>
-                <li>
-                  <a href="/services/hospitality/table-linen">Table Linen</a>
-                </li>
-                <li>
-                  <a href="/services/hospitality/washroom-supplies"
-                    >Washroom Supplies</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="megamenu-column">
-              <h4>PPE</h4>
-              <ul>
-                <li>
-                  <a href="/services/ppe">Personal Protective Equipment</a>
-                </li>
-              </ul>
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>FOOD INDUSTRY</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li>
+                    <a href="/services/food-industry/workwear">Food Industry Workwear</a>
+                  </li>
+                  <li>
+                    <a href="/services/food-industry/floor-mats">Floor Mats</a>
+                  </li>
+                  <li><a href="/services/food-industry/ppe">PPE</a></li>
+                  <li>
+                    <a href="/services/food-industry/first-aid">First Aid</a>
+                  </li>
+                  <li>
+                    <a href="/services/food-industry/towels-cloths">Towels & Cloths</a>
+                  </li>
+                  <li><a href="/services/food-industry/mops">Mops</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>HOSPITALITY</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li>
+                    <a href="/services/hospitality/tea-towels">Tea Towels</a>
+                  </li>
+                  <li>
+                    <a href="/services/hospitality/cafe-bar-wipes">Café & Bar Wipes</a>
+                  </li>
+                  <li>
+                    <a href="/services/hospitality/kitchen-wipes">Kitchen Wipes</a>
+                  </li>
+                  <li>
+                    <a href="/services/hospitality/glass-cloths">Glass Cloths</a>
+                  </li>
+                  <li>
+                    <a href="/services/hospitality/floor-care">Floor Care</a>
+                  </li>
+                  <li>
+                    <a href="/services/hospitality/table-linen">Table Linen</a>
+                  </li>
+                  <li>
+                    <a href="/services/hospitality/washroom-supplies">Washroom Supplies</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>PPE</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li>
+                    <a href="/services/ppe">Personal Protective Equipment</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>ABOUT US</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li><a href="/about/locations">Locations</a></li>
+                  <li><a href="/contact">Contact us</a></li>
+                  <li><a href="/services">Our Services</a></li>
+                  <li><a href="/about/news">News</a></li>
+                  <li>
+                    <a href="/about/asurequality-accreditations">AsureQuality & Accreditations</a>
+                  </li>
+                  <li><a href="/about/community">Community</a></li>
+                  <li><a href="/about/sustainability">Sustainability</a></li>
+                  <li><a href="/about/policies">Policies</a></li>
+                  <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>CONTACT US</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li><a href="/contact">Contact us</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle">
+                  <h4>CLIENT TOOLS</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.466 0L6.67583 6.14436L0.8612 0L0 0.914842L6.66361 7.99351L13.3333 0.914842L12.4721 0H12.466Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <ul class="mobile-nav-submenu">
+                  <li><a href="/client-tools/linen-order">Linen Order</a></li>
+                  <li><a href="/client-tools/jobs">Jobs</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <div class="megamenu-cta">
-            <a href="/get-a-quote" class="cta-card cta-card-black">
-              <p>Title with a call to action placement copy</p>
-              <div class="cta-arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="14"
-                  viewBox="0 0 19 14"
-                  fill="none"
-                >
-                  <path
-                    d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
-                    fill="black"
-                    stroke="black"
-                    stroke-width="0.5"
-                  />
-                </svg>
-              </div>
-            </a>
-            <a href="/contact" class="cta-card cta-card-orange">
-              <p>Title with a call to action placement copy</p>
-              <div class="cta-arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="14"
-                  viewBox="0 0 19 14"
-                  fill="none"
-                >
-                  <path
-                    d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
-                    fill="black"
-                    stroke="black"
-                    stroke-width="0.5"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
+        </nav>
       </div>
+    </div>
 
-      <!-- Mega Menu - About -->
-      <div class="megamenu" id="megamenu-about">
-        <div class="container">
-          <div class="megamenu-grid">
-            <div class="megamenu-column"></div>
-            <div class="megamenu-column"></div>
-            <div class="megamenu-column"></div>
-            <div class="megamenu-column">
-              <h4>ABOUT US</h4>
-              <ul>
-                <li><a href="/about/locations">Locations</a></li>
-                <li><a href="/contact">Contact us</a></li>
-                <li><a href="/services">Our Services</a></li>
-                <li><a href="/about/news">News</a></li>
-                <li>
-                  <a href="/about/asurequality-accreditations"
-                    >AsureQuality & Accreditations</a
-                  >
-                </li>
-                <li><a href="/about/community">Community</a></li>
-                <li><a href="/about/sustainability">Sustainability</a></li>
-                <li><a href="/about/policies">Policies</a></li>
-                <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
-              </ul>
-            </div>
-            <div class="megamenu-column">
-              <h4>CLIENT TOOLS</h4>
-              <ul>
-                <li><a href="/client-tools/linen-order">Linen Order</a></li>
-                <li><a href="/client-tools/jobs">Jobs</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="megamenu-cta">
-            <a href="/get-a-quote" class="cta-card cta-card-black">
-              <p>Title with a call to action placement copy</p>
-              <div class="cta-arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="14"
-                  viewBox="0 0 19 14"
-                  fill="none"
-                >
-                  <path
-                    d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
-                    fill="black"
-                    stroke="black"
-                    stroke-width="0.5"
-                  />
-                </svg>
-              </div>
-            </a>
-            <a href="/contact" class="cta-card cta-card-orange">
-              <p>Title with a call to action placement copy</p>
-              <div class="cta-arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="14"
-                  viewBox="0 0 19 14"
-                  fill="none"
-                >
-                  <path
-                    d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
-                    fill="black"
-                    stroke="black"
-                    stroke-width="0.5"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section
-      class="hero-workwear"
-      style="
-        background-image: url(&quot;public/images/Diamond-Apparelmaster.jpg&quot;);
-      "
-    >
-      <div class="hero-workwear-content">
-        <h1>Apparel Master</h1>
-      </div>
-    </section>
-
-    <!-- Services Links Section -->
-    <section class="py-5" style="padding-top: 100px; padding-bottom: 100px">
+    <!-- Mega Menu - Services -->
+    <div class="megamenu" id="megamenu-services">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="mb-3">Our Services</h2>
-            <p class="lead">
-              Explore our comprehensive range of workwear and workplace
-              solutions
-            </p>
+        <div class="megamenu-grid">
+          <div class="megamenu-column">
+            <h4>WORKWEAR</h4>
+            <ul>
+              <li><a href="/services/workwear/overalls">Overalls</a></li>
+              <li>
+                <a href="/services/workwear/workshirts-trousers">Workshirts & Trousers</a>
+              </li>
+              <li>
+                <a href="/services/workwear/protective-clothing">Protective Clothing</a>
+              </li>
+              <li>
+                <a href="/services/workwear/corporate-uniforms">Corporate Uniforms</a>
+              </li>
+              <li>
+                <a href="/services/workwear/embroidery-emblems">Embroidery & Emblems</a>
+              </li>
+              <li><a href="/services/workwear/repairs">Repairs</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h4>WORKPLACE</h4>
+            <ul>
+              <li><a href="/services/workplace/floor-mats">Floor Mats</a></li>
+              <li><a href="/services/workplace/towels">Towels</a></li>
+              <li><a href="/services/workplace/first-aid">First Aid</a></li>
+              <li><a href="/services/workplace/lockers">Lockers</a></li>
+              <li>
+                <a href="/services/workplace/washroom-supplies">Washroom Supplies</a>
+              </li>
+              <li>
+                <a href="/services/workplace/microfibres-cloths">Microfibres & Cloths</a>
+              </li>
+              <li><a href="/services/workplace/linen">Linen</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h4>FOOD INDUSTRY</h4>
+            <ul>
+              <li>
+                <a href="/services/food-industry/workwear">Food Industry Workwear</a>
+              </li>
+              <li>
+                <a href="/services/food-industry/floor-mats">Floor Mats</a>
+              </li>
+              <li><a href="/services/food-industry/ppe">PPE</a></li>
+              <li>
+                <a href="/services/food-industry/first-aid">First Aid</a>
+              </li>
+              <li>
+                <a href="/services/food-industry/towels-cloths">Towels & Cloths</a>
+              </li>
+              <li><a href="/services/food-industry/mops">Mops</a></li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h4>HOSPITALITY</h4>
+            <ul>
+              <li>
+                <a href="/services/hospitality/tea-towels">Tea Towels</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/cafe-bar-wipes">Café & Bar Wipes</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/kitchen-wipes">Kitchen Wipes</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/glass-cloths">Glass Cloths</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/floor-care">Floor Care</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/table-linen">Table Linen</a>
+              </li>
+              <li>
+                <a href="/services/hospitality/washroom-supplies">Washroom Supplies</a>
+              </li>
+            </ul>
+          </div>
+          <div class="megamenu-column">
+            <h4>PPE</h4>
+            <ul>
+              <li>
+                <a href="/services/ppe">Personal Protective Equipment</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="workplace-floor-mats.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Floor Mats & Floor Coverings</h6>
-                  <p class="card-text text-muted">
-                    Professional floor mat rental and cleaning services for
-                    workplaces across Auckland.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="ppe.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Personal Protective Equipment</h6>
-                  <p class="card-text text-muted">
-                    Comprehensive PPE solutions meeting New Zealand safety
-                    standards.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="food-industry-workwear.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Food Industry Workwear</h6>
-                  <p class="card-text text-muted">
-                    Specialized workwear solutions for food and hospitality
-                    industries.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="outlets.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Find an Outlet</h6>
-                  <p class="card-text text-muted">
-                    Locate your nearest Apparelmaster store across New Zealand.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="diamond-apparelmaster.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Diamond Apparelmaster</h6>
-                  <p class="card-text text-muted">
-                    Professional workwear solutions in Central North Island.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="about.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">About Us</h6>
-                  <p class="card-text text-muted">
-                    Learn about our history, values, and commitment to quality
-                    service.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="jobs.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Jobs</h6>
-                  <p class="card-text text-muted">
-                    Explore career opportunities and join our team at
-                    Apparelmaster.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="community-support.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Community Support</h6>
-                  <p class="card-text text-muted">
-                    Discover how we support local communities and charities
-                    across New Zealand.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="eco-policy.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Eco Policy</h6>
-                  <p class="card-text text-muted">
-                    Learn about our commitment to environmental sustainability
-                    and eco-friendly practices.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="new-employee-form.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">New Employee Form</h6>
-                  <p class="card-text text-muted">
-                    Complete your new employee onboarding documentation online.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="contact.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Contact Us</h6>
-                  <p class="card-text text-muted">
-                    Get in touch with our team for inquiries and support.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="latest-news.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Latest News</h6>
-                  <p class="card-text text-muted">
-                    Stay updated with the latest news and announcements from
-                    Apparelmaster.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="news-article.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">News Article</h6>
-                  <p class="card-text text-muted">
-                    Read detailed articles about our company updates and
-                    industry insights.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <a href="terms.html" class="text-decoration-none">
-              <div
-                class="card h-100 border-0 shadow-sm hover-shadow"
-                style="transition: all 0.3s ease"
-              >
-                <div class="card-body p-4">
-                  <h6 class="card-title mb-3">Terms of Trade</h6>
-                  <p class="card-text text-muted">
-                    Review our terms and conditions for service agreements.
-                  </p>
-                  <span class="text-primary">Learn more →</span>
-                </div>
-              </div>
-            </a>
-          </div>
+
+        <div class="megamenu-cta">
+          <a href="/get-a-quote" class="cta-card cta-card-black">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black" stroke="black" stroke-width="0.5" />
+              </svg>
+            </div>
+          </a>
+          <a href="/contact" class="cta-card cta-card-orange">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black" stroke="black" stroke-width="0.5" />
+              </svg>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Additional Links Section -->
-    <section class="py-5 bg-light">
+    <!-- Mega Menu - About -->
+    <div class="megamenu" id="megamenu-about">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 class="mb-3">Quick Links</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="workplace-floor-mats.html" class="text-decoration-none"
-                  >Floor Mats & Floor Coverings</a
-                >
+        <div class="megamenu-grid">
+          <div class="megamenu-column"></div>
+          <div class="megamenu-column"></div>
+          <div class="megamenu-column"></div>
+          <div class="megamenu-column">
+            <h4>ABOUT US</h4>
+            <ul>
+              <li><a href="/about/locations">Locations</a></li>
+              <li><a href="/contact">Contact us</a></li>
+              <li><a href="/services">Our Services</a></li>
+              <li><a href="/about/news">News</a></li>
+              <li>
+                <a href="/about/asurequality-accreditations">AsureQuality & Accreditations</a>
               </li>
-              <li class="mb-2">
-                <a href="ppe.html" class="text-decoration-none"
-                  >Personal Protective Equipment</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="new-employee-form.html" class="text-decoration-none"
-                  >New Employee Form</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="jobs.html" class="text-decoration-none">Jobs</a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="food-industry-workwear.html"
-                  class="text-decoration-none"
-                  >Food Industry Workwear</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="outlets.html" class="text-decoration-none"
-                  >Find an Outlet</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="diamond-apparelmaster.html"
-                  class="text-decoration-none"
-                  >Diamond Apparelmaster</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="about.html" class="text-decoration-none">About Us</a>
-              </li>
-              <li class="mb-2">
-                <a href="contact.html" class="text-decoration-none"
-                  >Contact Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="latest-news.html" class="text-decoration-none"
-                  >Latest News</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="news-article.html" class="text-decoration-none"
-                  >News Article</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="terms.html" class="text-decoration-none"
-                  >Terms of Trade</a
-                >
-              </li>
+              <li><a href="/about/community">Community</a></li>
+              <li><a href="/about/sustainability">Sustainability</a></li>
+              <li><a href="/about/policies">Policies</a></li>
+              <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 class="mb-3">Services</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="workplace-floor-mats.html" class="text-decoration-none"
-                  >Workplace Solutions</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="ppe.html" class="text-decoration-none"
-                  >Safety Equipment</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="food-industry-workwear.html"
-                  class="text-decoration-none"
-                  >Food Industry Solutions</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4">
-            <h5 class="mb-3">Company</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="about.html" class="text-decoration-none"
-                  >About Apparelmaster</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="/get-a-quote" class="text-decoration-none"
-                  >Get a Quote</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="/contact" class="text-decoration-none">Contact Us</a>
-              </li>
+          <div class="megamenu-column">
+            <h4>CLIENT TOOLS</h4>
+            <ul>
+              <li><a href="/client-tools/linen-order">Linen Order</a></li>
+              <li><a href="/client-tools/jobs">Jobs</a></li>
             </ul>
           </div>
         </div>
+
+        <div class="megamenu-cta">
+          <a href="/get-a-quote" class="cta-card cta-card-black">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black" stroke="black" stroke-width="0.5" />
+              </svg>
+            </div>
+          </a>
+          <a href="/contact" class="cta-card cta-card-orange">
+            <p>Title with a call to action placement copy</p>
+            <div class="cta-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+                <path
+                  d="M11.0449 12.8611L10.6689 12.4968L10.4746 12.3093L10.6768 12.1296L16.2461 7.18921L0.25 7.18921L0.25 6.17358L16.2461 6.17358L10.6768 1.23315L10.4746 1.05347L10.6689 0.865966L11.0449 0.501708L11.2119 0.340575L11.3848 0.493896L18.166 6.50952L18.377 6.69702L18.165 6.88354L11.3848 12.8689L11.2109 13.0222L11.0449 12.8611Z"
+                  fill="black" stroke="black" stroke-width="0.5" />
+              </svg>
+            </div>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <!-- Mobile Layout -->
-      <div class="footer-mobile">
-        <div class="d-flex flex-column">
-          <!-- Logo -->
-          <img
-            src="public/images/apparel-master-logo.png"
-            alt="Apparel Master Logo"
-            class="footer-logo"
-          />
+  <!-- Hero Section with Video Background -->
+  <section class="hero-video-section">
+    <!-- Fixed Video Background -->
+    <div class="hero-video-background" id="heroVideoBackground">
+      <iframe
+        src="https://player.vimeo.com/video/1147812884?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&background=1"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Background Video"></iframe>
+    </div>
 
-          <!-- Divider -->
-          <div class="footer-divider"></div>
+    <!-- Hero Content -->
+    <div class="hero-video-content">
+      <div class="hero-video-text">
+        <h1>Fully managed workwear & workplace rental solutions</h1>
+        <a href="#content" class="hero-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-          <!-- Collapsed menu -->
-          <div class="footer-menu">
-            <div class="footer-menu-item">
-              <button class="footer-menu-toggle">
-                <h4>Work Rental</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                >
-                  <rect x="10.2666" width="1.46667" height="22" fill="black" />
-                  <rect
-                    y="11.7334"
-                    width="1.46667"
-                    height="22"
-                    transform="rotate(-90 0 11.7334)"
-                    fill="black"
-                  />
-                </svg>
-              </button>
-              <ul class="footer-submenu">
-                <li><a href="/services">Our Services</a></li>
-              </ul>
+  <!-- Curve Overlay -->
+  <div class="hero-curve-overlay">
+    <svg width="1920" height="295" viewBox="0 0 1920 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1616.41 4.94824C1641.13 3.69832 1907.25 -3.47201 1919.76 2.08496C1919.84 106.917 1919.93 228.388 1919.97 294.999H0V90.7773C171.118 161.105 360.649 177.405 545.242 164.488C805.629 146.268 1056.04 68.1884 1313.91 33.1084C1414.28 19.4584 1515.24 10.0582 1616.41 4.94824Z"
+        fill="white" />
+    </svg>
+  </div>
+
+  <!-- Professional Workwear Section -->
+  <div class="professional-workwear-section">
+    <img src="public/images/hero.png" alt="Professional Workwear" class="professional-workwear-image" />
+    <div class="professional-workwear-content">
+      <div class="professional-workwear-bar"></div>
+      <h2>Professional Workwear, Made Easy.</h2>
+      <p>
+        Start saving your business time and money with Apparelmaster's fully
+        managed solutions for staff uniforms, protective clothing, overalls,
+        mats, towelling and more. We take the expense and hassle out of staff
+        workwear and laundering, so you and your team can focus on what you do
+        best.
+      </p>
+      <a href="#" class="hero-btn professional-workwear-btn">Learn More About Rental Solutions</a>
+    </div>
+  </div>
+
+  <!-- Rental Solutions Section -->
+  <section class="rental-solutions-section">
+    <div class="rental-solutions-container">
+      <h2 class="rental-solutions-heading">
+        Our Workwear and Workplace Rental Solutions
+      </h2>
+
+      <div class="rental-solutions-grid">
+        <!-- Card 1: Workshirts & Trousers -->
+        <div class="rental-card">
+          <img src="public/images/solutions/workshirts.png" alt="Workshirts & Trousers" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Workshirts & Trousers</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Workshirts & Trousers</h3>
+              <p class="rental-card-overlay-description">
+                Professional work shirts and trousers help your team look smart
+                and feel comfortable on the job. Our fully managed rental service
+                ensures garments are clean, well-fitted, and delivered on time. We
+                handle laundering, repairs, and replacements, so you can focus on
+                your business.
+              </p>
             </div>
+            <a href="/services/workwear/workshirts-trousers" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
 
-            <div class="footer-menu-item">
-              <button class="footer-menu-toggle">
-                <h4>Other Products</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                >
-                  <rect x="10.2666" width="1.46667" height="22" fill="black" />
-                  <rect
-                    y="11.7334"
-                    width="1.46667"
-                    height="22"
-                    transform="rotate(-90 0 11.7334)"
-                    fill="black"
-                  />
-                </svg>
-              </button>
-              <ul class="footer-submenu">
-                <li><a href="/services">Our Services</a></li>
-              </ul>
+        <!-- Card 2: PPE -->
+        <div class="rental-card">
+          <img src="public/images/solutions/ppe.jpg" alt="PPE" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">PPE</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">PPE</h3>
+              <p class="rental-card-overlay-description">
+                Keep your workforce safe with our comprehensive range of Personal
+                Protective Equipment. From high-visibility clothing to safety
+                gear, we ensure compliance with all safety standards through our
+                managed rental service.
+              </p>
             </div>
+            <a href="/services/ppe" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
 
-            <div class="footer-menu-item">
-              <button class="footer-menu-toggle">
-                <h4>Client Tools</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                >
-                  <rect x="10.2666" width="1.46667" height="22" fill="black" />
-                  <rect
-                    y="11.7334"
-                    width="1.46667"
-                    height="22"
-                    transform="rotate(-90 0 11.7334)"
-                    fill="black"
-                  />
-                </svg>
-              </button>
-              <ul class="footer-submenu">
-                <li><a href="/client-tools/linen-order">Linen Order</a></li>
-                <li><a href="/client-tools/jobs">Jobs</a></li>
-              </ul>
+        <!-- Card 3: Overalls & Workwear -->
+        <div class="rental-card">
+          <img src="public/images/solutions/workwear.png" alt="Overalls & Workwear" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Overalls & Workwear</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Overalls & Workwear</h3>
+              <p class="rental-card-overlay-description">
+                Durable overalls and workwear designed for demanding industrial
+                environments. Our rental service provides regular maintenance,
+                cleaning, and replacement to keep your team protected and
+                professional.
+              </p>
             </div>
+            <a href="/services/workwear/overalls" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
 
-            <div class="footer-menu-item">
-              <button class="footer-menu-toggle">
-                <h4>About Us</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                >
-                  <rect x="10.2666" width="1.46667" height="22" fill="black" />
-                  <rect
-                    y="11.7334"
-                    width="1.46667"
-                    height="22"
-                    transform="rotate(-90 0 11.7334)"
-                    fill="black"
-                  />
-                </svg>
-              </button>
-              <ul class="footer-submenu">
-                <li><a href="/about/locations">Locations</a></li>
-                <li><a href="/contact">Contact us</a></li>
-                <li><a href="/services">Our Services</a></li>
-                <li><a href="/about/news">News</a></li>
-                <li>
-                  <a href="/about/asurequality-accreditations"
-                    >AsureQuality & Accreditations</a
-                  >
-                </li>
-                <li><a href="/about/community">Community</a></li>
-                <li><a href="/about/sustainability">Sustainability</a></li>
-                <li><a href="/about/policies">Policies</a></li>
-                <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
-              </ul>
+        <!-- Card 4: Food Industry -->
+        <div class="rental-card">
+          <img src="public/images/solutions/food-industry.jpg" alt="Food Industry" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Food Industry</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Food Industry</h3>
+              <p class="rental-card-overlay-description">
+                Specialized food-safe uniforms and apparel meeting all hygiene
+                standards. Our comprehensive service includes regular laundering
+                and quality checks to ensure compliance with food safety
+                regulations.
+              </p>
+            </div>
+            <a href="/services/food-industry" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Towelling Rental -->
+        <div class="rental-card">
+          <img src="public/images/solutions/towel-rental.jpg" alt="Towelling Rental" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Towelling Rental</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Towelling Rental</h3>
+              <p class="rental-card-overlay-description">
+                Premium quality towels for hospitality and commercial use. Our
+                rental service provides fresh, clean towels on a flexible schedule
+                with hassle-free laundering and replacement.
+              </p>
+            </div>
+            <a href="/services/towelling-rental" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Mats & Floor Coverings -->
+        <div class="rental-card">
+          <img src="public/images/solutions/mats.jpg" alt="Mats & Floor Coverings" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Mats & Floor Coverings</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Mats & Floor Coverings</h3>
+              <p class="rental-card-overlay-description">
+                Professional entrance mats and floor coverings to keep your
+                workplace clean and safe. Regular maintenance and exchange service
+                ensures optimal performance and appearance.
+              </p>
+            </div>
+            <a href="/services/mats-floor-coverings" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 7: Roller & Cabinet Towels -->
+        <div class="rental-card">
+          <img src="public/images/solutions/roller.jpg" alt="Roller & Cabinet Towels" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Roller & Cabinet Towels</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">
+                Roller & Cabinet Towels
+              </h3>
+              <p class="rental-card-overlay-description">
+                Hygienic roller towel systems and cabinet towels for workplace
+                washrooms. Our service includes regular replacement and
+                maintenance for continuous cleanliness and hygiene.
+              </p>
+            </div>
+            <a href="/services/roller-cabinet-towels" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 8: First Aid Kits -->
+        <div class="rental-card">
+          <img src="public/images/solutions/first-aid-kit.jpg" alt="First Aid Kits" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">First Aid Kits</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">First Aid Kits</h3>
+              <p class="rental-card-overlay-description">
+                Fully stocked and maintained first aid kits to keep your workplace
+                safe and compliant. Regular inspections and restocking ensure
+                you're always prepared for emergencies.
+              </p>
+            </div>
+            <a href="/services/first-aid-kits" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 9: Washroom Supplies -->
+        <div class="rental-card">
+          <img src="public/images/solutions/washroom-supplies.jpg" alt="Washroom Supplies" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Washroom Supplies</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Washroom Supplies</h3>
+              <p class="rental-card-overlay-description">
+                Complete washroom supply solutions including soap dispensers, hand
+                dryers, and hygiene products. Regular servicing and restocking
+                keeps your facilities clean and well-maintained.
+              </p>
+            </div>
+            <a href="/services/washroom-supplies" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 10: Lockers -->
+        <div class="rental-card">
+          <img src="public/images/solutions/lockers.jpg" alt="Lockers" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Lockers</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Lockers</h3>
+              <p class="rental-card-overlay-description">
+                Secure locker solutions for employee belongings and workplace
+                storage. Available in various sizes and configurations to meet
+                your specific requirements.
+              </p>
+            </div>
+            <a href="/services/lockers" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 11: Embroidery -->
+        <div class="rental-card">
+          <img src="public/images/solutions/embroidery.jpg" alt="Embroidery" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Embroidery</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Embroidery</h3>
+              <p class="rental-card-overlay-description">
+                Professional embroidery services to brand your workwear with
+                company logos and employee names. High-quality stitching ensures
+                durability and a professional appearance.
+              </p>
+            </div>
+            <a href="/services/embroidery" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+
+        <!-- Card 12: Hospitality -->
+        <div class="rental-card">
+          <img src="public/images/solutions/hospitality.jpg" alt="Hospitality" class="rental-card-image" />
+          <div class="rental-card-header">
+            <h3 class="rental-card-title">Hospitality</h3>
+          </div>
+          <div class="rental-card-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="10.2666" width="1.46667" height="22" fill="black" />
+              <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+            </svg>
+          </div>
+          <div class="rental-card-overlay">
+            <div class="rental-card-overlay-content">
+              <h3 class="rental-card-overlay-title">Hospitality</h3>
+              <p class="rental-card-overlay-description">
+                Specialized uniforms and linens for the hospitality industry. From
+                front-of-house to kitchen staff, our rental service ensures your
+                team always looks professional and presentable.
+              </p>
+            </div>
+            <a href="/services/hospitality" class="rental-card-overlay-btn">Find out more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kiwi Heritage Video Section -->
+  <section class="kiwi-heritage-section">
+    <div class="kiwi-heritage-video-wrapper" id="kiwiHeritageVideo">
+      <iframe
+        src="https://player.vimeo.com/video/1147818889?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&background=1"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Kiwi Heritage Video"></iframe>
+    </div>
+    <div class="kiwi-heritage-content">
+      <h2>
+        100% New Zealand<br />
+        owned and operated.
+      </h2>
+      <a href="#" class="hero-btn">Discover Our Kiwi Heritage</a>
+    </div>
+  </section>
+
+  <!-- Latest News Section -->
+  <section class="latest-news-section">
+    <!-- Mobile Heading -->
+    <h2 class="latest-news-mobile-heading">Latest News</h2>
+
+    <!-- Desktop Brand Box -->
+    <div class="latest-news-brand-box">
+      <h2>Latest News</h2>
+      <div class="latest-news-controls">
+        <button class="news-carousel-btn news-carousel-btn-prev" id="newsCarouselPrev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
+            <mask id="path-1-inside-1_637_4249" fill="white">
+              <path
+                d="M9.18281e-07 10.4961L11.4336 -1.62313e-06L12.5303 1.14551L3.19238 9.71191L30 9.71191L30 11.2803L3.19238 11.2803L12.5303 19.8545L11.4336 21L9.18281e-07 10.4961Z" />
+            </mask>
+            <path
+              d="M9.18281e-07 10.4961L11.4336 -1.62313e-06L12.5303 1.14551L3.19238 9.71191L30 9.71191L30 11.2803L3.19238 11.2803L12.5303 19.8545L11.4336 21L9.18281e-07 10.4961Z"
+              fill="white" />
+            <path
+              d="M9.18281e-07 10.4961L-0.676259 9.75943L-1.47842 10.4958L-0.676532 11.2325L9.18281e-07 10.4961ZM11.4336 -1.62313e-06L12.1559 -0.691545L11.4787 -1.3989L10.7573 -0.736666L11.4336 -1.62313e-06ZM12.5303 1.14551L13.2063 1.8824L13.959 1.19184L13.2526 0.453963L12.5303 1.14551ZM3.19238 9.71191L2.51637 8.97502L0.623057 10.7119L3.19238 10.7119L3.19238 9.71191ZM30 9.71191L31 9.71191L31 8.71191L30 8.71191L30 9.71191ZM30 11.2803L30 12.2803L31 12.2803L31 11.2803L30 11.2803ZM3.19238 11.2803L3.19238 10.2803L0.624783 10.2803L2.51604 12.0169L3.19238 11.2803ZM12.5303 19.8545L13.2526 20.546L13.9587 19.8085L13.2066 19.1179L12.5303 19.8545ZM11.4336 21L10.7571 21.7364L11.4785 22.3992L12.1559 21.6915L11.4336 21ZM9.18281e-07 10.4961L0.676261 11.2328L12.1099 0.736662L11.4336 -1.62313e-06L10.7573 -0.736666L-0.676259 9.75943L9.18281e-07 10.4961ZM11.4336 -1.62313e-06L10.7113 0.691542L11.8079 1.83705L12.5303 1.14551L13.2526 0.453963L12.1559 -0.691545L11.4336 -1.62313e-06ZM12.5303 1.14551L11.8543 0.408614L2.51637 8.97502L3.19238 9.71191L3.86839 10.4488L13.2063 1.8824L12.5303 1.14551ZM3.19238 9.71191L3.19238 10.7119L30 10.7119L30 9.71191L30 8.71191L3.19238 8.71191L3.19238 9.71191ZM30 9.71191L29 9.71191L29 11.2803L30 11.2803L31 11.2803L31 9.71191L30 9.71191ZM30 11.2803L30 10.2803L3.19238 10.2803L3.19238 11.2803L3.19238 12.2803L30 12.2803L30 11.2803ZM3.19238 11.2803L2.51604 12.0169L11.8539 20.5911L12.5303 19.8545L13.2066 19.1179L3.86873 10.5437L3.19238 11.2803ZM12.5303 19.8545L11.8079 19.1629L10.7113 20.3085L11.4336 21L12.1559 21.6915L13.2526 20.546L12.5303 19.8545ZM11.4336 21L12.1101 20.2636L0.676534 9.75968L9.18281e-07 10.4961L-0.676532 11.2325L10.7571 21.7364L11.4336 21Z"
+              fill="white" mask="url(#path-1-inside-1_637_4249)" />
+          </svg>
+        </button>
+        <button class="news-carousel-btn news-carousel-btn-next" id="newsCarouselNext">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
+            <path
+              d="M30 10.5039L18.5664 21L17.4697 19.8545L26.8076 11.2881H0V9.71973H26.8076L17.4697 1.14551L18.5664 0L30 10.5039Z"
+              fill="#F15D22" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel Wrapper -->
+    <div class="latest-news-carousel-wrapper">
+      <div class="latest-news-carousel" id="newsCarousel">
+        <!-- News Card 1 -->
+        <a href="#" class="latest-news-card">
+          <img src="public/images/news/news-1.png" alt="Pryors Apparelmaster Reign Supreme at Nelson Awards Night"
+            class="latest-news-card-image" />
+          <div class="latest-news-card-content">
+            <p class="latest-news-card-category">Awards</p>
+            <h3 class="latest-news-card-title">
+              Pryors Apparelmaster Reign Supreme at Nelson Awards Night.
+            </h3>
+            <p class="latest-news-card-readmore">Read more</p>
+          </div>
+        </a>
+
+        <!-- News Card 2 -->
+        <a href="#" class="latest-news-card">
+          <img src="public/images/news/news-1.png" alt="Pryors Apparelmaster Reign Supreme at Nelson Awards Night"
+            class="latest-news-card-image" />
+          <div class="latest-news-card-content">
+            <p class="latest-news-card-category">Awards</p>
+            <h3 class="latest-news-card-title">
+              Pryors Apparelmaster Reign Supreme at Nelson Awards Night.
+            </h3>
+            <p class="latest-news-card-readmore">Read more</p>
+          </div>
+        </a>
+
+        <!-- News Card 3 -->
+        <a href="#" class="latest-news-card">
+          <img src="public/images/news/news-1.png" alt="Pryors Apparelmaster Reign Supreme at Nelson Awards Night"
+            class="latest-news-card-image" />
+          <div class="latest-news-card-content">
+            <p class="latest-news-card-category">Awards</p>
+            <h3 class="latest-news-card-title">
+              Pryors Apparelmaster Reign Supreme at Nelson Awards Night.
+            </h3>
+            <p class="latest-news-card-readmore">Read more</p>
+          </div>
+        </a>
+
+        <!-- News Card 4 -->
+        <a href="#" class="latest-news-card">
+          <img src="public/images/news/news-1.png" alt="Pryors Apparelmaster Reign Supreme at Nelson Awards Night"
+            class="latest-news-card-image" />
+          <div class="latest-news-card-content">
+            <p class="latest-news-card-category">Awards</p>
+            <h3 class="latest-news-card-title">
+              Pryors Apparelmaster Reign Supreme at Nelson Awards Night.
+            </h3>
+            <p class="latest-news-card-readmore">Read more</p>
+          </div>
+        </a>
+
+        <!-- News Card 5 -->
+        <a href="#" class="latest-news-card">
+          <img src="public/images/news/news-1.png" alt="Pryors Apparelmaster Reign Supreme at Nelson Awards Night"
+            class="latest-news-card-image" />
+          <div class="latest-news-card-content">
+            <p class="latest-news-card-category">Awards</p>
+            <h3 class="latest-news-card-title">
+              Pryors Apparelmaster Reign Supreme at Nelson Awards Night.
+            </h3>
+            <p class="latest-news-card-readmore">Read more</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div class="latest-news-mobile-controls">
+      <button class="news-carousel-btn news-carousel-btn-prev" id="newsCarouselPrevMobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
+          <mask id="path-1-inside-1_637_4249_mobile" fill="white">
+            <path
+              d="M9.18281e-07 10.4961L11.4336 -1.62313e-06L12.5303 1.14551L3.19238 9.71191L30 9.71191L30 11.2803L3.19238 11.2803L12.5303 19.8545L11.4336 21L9.18281e-07 10.4961Z" />
+          </mask>
+          <path
+            d="M9.18281e-07 10.4961L11.4336 -1.62313e-06L12.5303 1.14551L3.19238 9.71191L30 9.71191L30 11.2803L3.19238 11.2803L12.5303 19.8545L11.4336 21L9.18281e-07 10.4961Z"
+            fill="white" />
+          <path
+            d="M9.18281e-07 10.4961L-0.676259 9.75943L-1.47842 10.4958L-0.676532 11.2325L9.18281e-07 10.4961ZM11.4336 -1.62313e-06L12.1559 -0.691545L11.4787 -1.3989L10.7573 -0.736666L11.4336 -1.62313e-06ZM12.5303 1.14551L13.2063 1.8824L13.959 1.19184L13.2526 0.453963L12.5303 1.14551ZM3.19238 9.71191L2.51637 8.97502L0.623057 10.7119L3.19238 10.7119L3.19238 9.71191ZM30 9.71191L31 9.71191L31 8.71191L30 8.71191L30 9.71191ZM30 11.2803L30 12.2803L31 12.2803L31 11.2803L30 11.2803ZM3.19238 11.2803L3.19238 10.2803L0.624783 10.2803L2.51604 12.0169L3.19238 11.2803ZM12.5303 19.8545L13.2526 20.546L13.9587 19.8085L13.2066 19.1179L12.5303 19.8545ZM11.4336 21L10.7571 21.7364L11.4785 22.3992L12.1559 21.6915L11.4336 21ZM9.18281e-07 10.4961L0.676261 11.2328L12.1099 0.736662L11.4336 -1.62313e-06L10.7573 -0.736666L-0.676259 9.75943L9.18281e-07 10.4961ZM11.4336 -1.62313e-06L10.7113 0.691542L11.8079 1.83705L12.5303 1.14551L13.2526 0.453963L12.1559 -0.691545L11.4336 -1.62313e-06ZM12.5303 1.14551L11.8543 0.408614L2.51637 8.97502L3.19238 9.71191L3.86839 10.4488L13.2063 1.8824L12.5303 1.14551ZM3.19238 9.71191L3.19238 10.7119L30 10.7119L30 9.71191L30 8.71191L3.19238 8.71191L3.19238 9.71191ZM30 9.71191L29 9.71191L29 11.2803L30 11.2803L31 11.2803L31 9.71191L30 9.71191ZM30 11.2803L30 10.2803L3.19238 10.2803L3.19238 11.2803L3.19238 12.2803L30 12.2803L30 11.2803ZM3.19238 11.2803L2.51604 12.0169L11.8539 20.5911L12.5303 19.8545L13.2066 19.1179L3.86873 10.5437L3.19238 11.2803ZM12.5303 19.8545L11.8079 19.1629L10.7113 20.3085L11.4336 21L12.1559 21.6915L13.2526 20.546L12.5303 19.8545ZM11.4336 21L12.1101 20.2636L0.676534 9.75968L9.18281e-07 10.4961L-0.676532 11.2325L10.7571 21.7364L11.4336 21Z"
+            fill="white" mask="url(#path-1-inside-1_637_4249_mobile)" />
+        </svg>
+      </button>
+      <button class="news-carousel-btn news-carousel-btn-next" id="newsCarouselNextMobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
+          <path
+            d="M30 10.5039L18.5664 21L17.4697 19.8545L26.8076 11.2881H0V9.71973H26.8076L17.4697 1.14551L18.5664 0L30 10.5039Z"
+            fill="#1A1A1A" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Client Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="testimonials-carousel" id="testimonialsCarousel">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content-wrapper">
+          <div class="testimonial-card">
+            <svg class="testimonial-quote-icon" width="48" height="33" viewBox="0 0 48 33" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M35.9 31.8856C41.5 31.8856 46.1 27.5414 46.1 22.2528C46.1 16.9642 41.7 12.7144 36.2 12.6199C36.7 9.03121 38 5.53694 39.9 2.42042C40.1 2.04266 40.1 1.57047 39.7 1.28715C39.4 1.00383 38.9 0.909387 38.5 1.09827C30.7 5.34806 25.7 13.1866 25.5 21.6861V22.2528C25.7 27.5414 30.3 31.8762 35.9 31.8762V31.8856Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10" />
+              <path
+                d="M11.4 31.8856C17 31.8856 21.6 27.5414 21.6 22.2528C21.6 16.9642 17.2 12.7144 11.7 12.6199C12.2 9.03121 13.5 5.53694 15.4 2.42042C15.6 2.04266 15.6 1.57047 15.2 1.28715C14.9 1.00383 14.4 0.909387 14 1.09827C6.2 5.34806 1.2 13.196 1 21.6956V22.2622C1.2 27.5509 5.8 31.8856 11.4 31.8856Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+            <p class="testimonial-text">The service is always excellent and the quality of the laundry garments is
+              consistently top-notch, reliable, and truly exceeds expectations every single time without fail or
+              compromise.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-author-bar"></div>
+              <div class="testimonial-author-info">
+                <p class="testimonial-author-name">Mike Fulcher</p>
+                <p class="testimonial-author-company">Mike's Chainsaws & Outdoor Power Ltd.</p>
+              </div>
             </div>
           </div>
+          <img src="public/images/testimonials/tractor.png" alt="Mike Fulcher"
+            class="testimonial-image testimonial-image-home-hide" />
+        </div>
+      </div>
 
-          <div class="footer-divider reverse-margin"></div>
-
-          <!-- Find Us Section -->
-          <div class="footer-find-us">
-            <h4>Find us</h4>
-            <div class="address">
-              <div>Apparelmaster</div>
-              <div>Diamond Dry Cleaners</div>
-              <div>8 Miller Street,</div>
-              <div>Dannevirke 4930</div>
-              <div>(Example only)</div>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content-wrapper">
+          <div class="testimonial-card">
+            <svg class="testimonial-quote-icon" width="48" height="33" viewBox="0 0 48 33" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M35.9 31.8856C41.5 31.8856 46.1 27.5414 46.1 22.2528C46.1 16.9642 41.7 12.7144 36.2 12.6199C36.7 9.03121 38 5.53694 39.9 2.42042C40.1 2.04266 40.1 1.57047 39.7 1.28715C39.4 1.00383 38.9 0.909387 38.5 1.09827C30.7 5.34806 25.7 13.1866 25.5 21.6861V22.2528C25.7 27.5414 30.3 31.8762 35.9 31.8762V31.8856Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10" />
+              <path
+                d="M11.4 31.8856C17 31.8856 21.6 27.5414 21.6 22.2528C21.6 16.9642 17.2 12.7144 11.7 12.6199C12.2 9.03121 13.5 5.53694 15.4 2.42042C15.6 2.04266 15.6 1.57047 15.2 1.28715C14.9 1.00383 14.4 0.909387 14 1.09827C6.2 5.34806 1.2 13.196 1 21.6956V22.2622C1.2 27.5509 5.8 31.8856 11.4 31.8856Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+            <p class="testimonial-text">Apparelmaster consistently ensures that our team is well-presented, providing
+              high-quality uniforms that help us maintain a sharp, professional appearance at all times.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-author-bar"></div>
+              <div class="testimonial-author-info">
+                <p class="testimonial-author-name">Damian Southorn</p>
+                <p class="testimonial-author-title">Industrial Fire Brigade Chief</p>
+                <p class="testimonial-author-company">Refining NZ</p>
+              </div>
             </div>
           </div>
+          <img src="public/images/testimonials/fireman.jpg" alt="Damian Southorn"
+            class="testimonial-image testimonial-image-home-hide" />
+        </div>
+      </div>
+    </div>
 
-          <!-- Submit an Enquiry heading -->
-          <h4>Submit an Enquiry</h4>
+    <!-- Desktop Pagination Dots -->
+    <div class="testimonials-pagination">
+      <span class="testimonials-dot testimonials-dot-active" data-slide="0"></span>
+      <span class="testimonials-dot" data-slide="1"></span>
+    </div>
+  </section>
 
-          <!-- Click for 0800 button -->
+  <!-- Companies We Work With Section -->
+  <section class="companies-section">
+    <h2>Companies we proudly work with</h2>
+    <div class="marquee-container home-page">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <img src="public/images/logos/aa-motoring.jpg" alt="AA Motoring" class="company-logo" />
+        </div>
+        <div class="marquee-item">
+          <img src="public/images/logos/anzco.png" alt="ANZCO Foods" class="company-logo" />
+        </div>
+        <div class="marquee-item">
+          <img src="public/images/logos/mitsubishi.svg" alt="Mitsubishi" class="company-logo" />
+        </div>
+        <div class="marquee-item">
+          <img src="public/images/logos/rnz.png" alt="Radio New Zealand" class="company-logo" />
+        </div>
+        <div class="marquee-item">
+          <img src="public/images/logos/toyota.svg" alt="Toyota" class="company-logo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>
+        Speak to the <strong>New Zealand</strong> managed workwear experts
+        today.
+      </h2>
+      <a href="/contact" class="cta-btn-enquiry">Make an Enquiry</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Mobile Layout -->
+    <div class="footer-mobile">
+      <div class="d-flex flex-column">
+        <!-- Logo -->
+        <img src="public/images/apparel-master-logo.png" alt="Apparel Master Logo" class="footer-logo" />
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Collapsed menu -->
+        <div class="footer-menu">
+          <div class="footer-menu-item">
+            <button class="footer-menu-toggle">
+              <h4>Work Rental</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <rect x="10.2666" width="1.46667" height="22" fill="black" />
+                <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+              </svg>
+            </button>
+            <ul class="footer-submenu">
+              <li><a href="/services">Our Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-menu-item">
+            <button class="footer-menu-toggle">
+              <h4>Other Products</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <rect x="10.2666" width="1.46667" height="22" fill="black" />
+                <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+              </svg>
+            </button>
+            <ul class="footer-submenu">
+              <li><a href="/services">Our Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-menu-item">
+            <button class="footer-menu-toggle">
+              <h4>Client Tools</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <rect x="10.2666" width="1.46667" height="22" fill="black" />
+                <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+              </svg>
+            </button>
+            <ul class="footer-submenu">
+              <li><a href="/client-tools/linen-order">Linen Order</a></li>
+              <li><a href="/client-tools/jobs">Jobs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-menu-item">
+            <button class="footer-menu-toggle">
+              <h4>About Us</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <rect x="10.2666" width="1.46667" height="22" fill="black" />
+                <rect y="11.7334" width="1.46667" height="22" transform="rotate(-90 0 11.7334)" fill="black" />
+              </svg>
+            </button>
+            <ul class="footer-submenu">
+              <li><a href="/about/locations">Locations</a></li>
+              <li><a href="/contact">Contact us</a></li>
+              <li><a href="/services">Our Services</a></li>
+              <li><a href="/about/news">News</a></li>
+              <li>
+                <a href="/about/asurequality-accreditations">AsureQuality & Accreditations</a>
+              </li>
+              <li><a href="/about/community">Community</a></li>
+              <li><a href="/about/sustainability">Sustainability</a></li>
+              <li><a href="/about/policies">Policies</a></li>
+              <li><a href="/about/terms-of-trade">Terms of Trade</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider reverse-margin"></div>
+
+        <!-- Find Us Section -->
+        <div class="footer-find-us">
+          <h4>Find us</h4>
+          <div class="address">
+            <div>Apparelmaster</div>
+            <div>Diamond Dry Cleaners</div>
+            <div>8 Miller Street,</div>
+            <div>Dannevirke 4930</div>
+            <div>(Example only)</div>
+          </div>
+        </div>
+
+        <!-- Submit an Enquiry heading -->
+        <h4>Submit an Enquiry</h4>
+
+        <!-- Click for 0800 button -->
+        <button class="footer-phone-btn">Click for 0800 Number</button>
+        <a href="tel:0800808820" class="footer-phone-btn revealed">0800 808 820</a>
+
+        <!-- Social Icons -->
+        <div class="footer-social">
+          <a href="/facebook" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none">
+              <path
+                d="M17.8187 19.9566L18.8058 13.5358H12.6253V9.36944C12.6253 7.61205 13.487 5.90074 16.257 5.90074H19.0667V0.43441C19.0667 0.43441 16.5178 0 14.078 0C8.98692 0 5.65892 3.07378 5.65892 8.64213V13.5358H0V19.9566H5.65892V35.4801C6.79467 35.6578 7.95682 35.75 9.14209 35.75C10.3274 35.75 11.4895 35.6578 12.6253 35.4801V19.9566H17.8187Z"
+                fill="black" />
+            </svg>
+          </a>
+          <a href="/instagram" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+              <path
+                d="M17.16 3.09211C21.7416 3.09211 22.2826 3.10826 24.091 3.19303C25.7622 3.26972 26.6705 3.54826 27.276 3.78238C28.0752 4.09321 28.6484 4.46459 29.2499 5.06605C29.8514 5.66752 30.2228 6.2367 30.5336 7.04C30.7677 7.6455 31.0462 8.55376 31.1229 10.225C31.2037 12.0334 31.2238 12.5783 31.2238 17.156C31.2238 21.7336 31.2077 22.2785 31.1229 24.087C31.0462 25.7582 30.7677 26.6664 30.5336 27.2719C30.2228 28.0712 29.8514 28.6444 29.2499 29.2459C28.6484 29.8473 28.0793 30.2187 27.276 30.5295C26.6705 30.7637 25.7622 31.0422 24.091 31.1189C22.2826 31.1996 21.7416 31.2198 17.16 31.2198C12.5784 31.2198 12.0374 31.2037 10.229 31.1189C8.5578 31.0422 7.64953 30.7637 7.04403 30.5295C6.24476 30.2187 5.67156 29.8473 5.07009 29.2459C4.46862 28.6444 4.09725 28.0752 3.78642 27.2719C3.55229 26.6664 3.27375 25.7582 3.19706 24.087C3.11632 22.2785 3.09614 21.7336 3.09614 17.156C3.09614 12.5783 3.11229 12.0334 3.19706 10.225C3.27375 8.55376 3.55229 7.6455 3.78642 7.04C4.09725 6.24073 4.46862 5.66752 5.07009 5.06605C5.67156 4.46459 6.24073 4.09321 7.04403 3.78238C7.64953 3.54826 8.5578 3.26972 10.229 3.19303C12.0374 3.11229 12.5824 3.09211 17.16 3.09211ZM17.16 0C12.5017 0 11.9163 0.0201836 10.0877 0.104954C8.26311 0.189725 7.01577 0.47633 5.92183 0.90422C4.79559 1.34422 3.83889 1.92954 2.88219 2.8822C1.92953 3.83486 1.34018 4.79156 0.904216 5.92183C0.480363 7.01174 0.189716 8.25908 0.104946 10.0877C0.0201751 11.9163 0 12.5017 0 17.16C0 21.8183 0.0201751 22.4037 0.104946 24.2323C0.189716 26.0569 0.476326 27.3042 0.904216 28.3982C1.34422 29.5244 1.92953 30.4811 2.88219 31.4378C3.83486 32.3905 4.79155 32.9798 5.92183 33.4158C7.01173 33.8396 8.25908 34.1303 10.0877 34.215C11.9163 34.2998 12.5017 34.32 17.16 34.32C21.8183 34.32 22.4037 34.2998 24.2323 34.215C26.0569 34.1303 27.3042 33.8437 28.3981 33.4158C29.5244 32.9758 30.4811 32.3905 31.4378 31.4378C32.3905 30.4851 32.9798 29.5284 33.4158 28.3982C33.8396 27.3083 34.1303 26.0609 34.215 24.2323C34.2998 22.4037 34.32 21.8183 34.32 17.16C34.32 12.5017 34.2998 11.9163 34.215 10.0877C34.1303 8.26312 33.8437 7.01578 33.4158 5.92183C32.9758 4.7956 32.3905 3.8389 31.4378 2.8822C30.4851 1.92954 29.5284 1.34018 28.3981 0.90422C27.3082 0.480367 26.0609 0.189725 24.2323 0.104954C22.4037 0.0201836 21.8183 0 17.16 0Z"
+                fill="black" />
+              <path
+                d="M17.1604 9.35938C12.8528 9.35938 9.36035 12.8519 9.36035 17.1594C9.36035 21.4669 12.8528 24.9594 17.1604 24.9594C21.4679 24.9594 24.9604 21.4669 24.9604 17.1594C24.9604 12.8519 21.4679 9.35938 17.1604 9.35938ZM17.1604 22.2247C14.3649 22.2247 12.095 19.9584 12.095 17.1594C12.095 14.3604 14.3614 12.094 17.1604 12.094C19.9593 12.094 22.2257 14.3604 22.2257 17.1594C22.2257 19.9584 19.9593 22.2247 17.1604 22.2247Z"
+                fill="black" />
+              <path
+                d="M26.52 9.35825C27.3815 9.35825 28.08 8.66026 28.08 7.79924C28.08 6.93823 27.3815 6.24023 26.52 6.24023C25.6584 6.24023 24.96 6.93823 24.96 7.79924C24.96 8.66026 25.6584 9.35825 26.52 9.35825Z"
+                fill="black" />
+            </svg>
+          </a>
+          <a href="/youtube" aria-label="Youtube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="31" viewBox="0 0 39 31" fill="none">
+              <g clipPath="url(#clip0_footer_mobile)">
+                <path
+                  d="M36.7612 5.86083C36.3036 4.17494 35.0834 2.89045 33.4818 2.40876C30.5836 1.60596 19.0674 1.60596 19.0674 1.60596C19.0674 1.60596 7.55111 1.60596 4.65297 2.40876C3.05137 2.89045 1.83111 4.17494 1.37351 5.86083C0.61084 8.9115 0.61084 15.2537 0.61084 15.2537C0.61084 15.2537 0.61084 21.5959 1.37351 24.6465C1.83111 26.3324 3.05137 27.6169 4.65297 28.0986C7.55111 28.9014 19.0674 28.9014 19.0674 28.9014C19.0674 28.9014 30.5836 28.9014 33.4818 28.0986C35.0834 27.6169 36.3036 26.3324 36.7612 24.6465C37.5239 21.5959 37.5239 15.2537 37.5239 15.2537C37.5239 15.2537 37.5239 8.9115 36.7612 5.86083ZM15.3303 21.0339V9.47347L24.9399 15.2537L15.3303 21.0339Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_footer_mobile">
+                  <rect width="38.1333" height="30.5067" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Footer text -->
+        <p>
+          © <span class="current-year">2025</span> ApparelMaster. All rights
+          reserved. Privacy Policy. Terms of Trade.
+        </p>
+      </div>
+
+      <!-- Leaf image centered at bottom -->
+      <img src="public/images/leaf.svg" alt="Leaf" class="footer-leaf" />
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="footer-desktop">
+      <div class="footer-desktop-content">
+        <div class="footer-left">
+          <img src="public/images/apparel-master-logo.png" alt="Apparel Master Logo" class="footer-logo" />
+
           <button class="footer-phone-btn">Click for 0800 Number</button>
-          <a href="tel:0800808820" class="footer-phone-btn revealed"
-            >0800 808 820</a
-          >
+          <a href="tel:0800808820" class="footer-phone-btn revealed">0800 808 820</a>
+        </div>
 
-          <!-- Social Icons -->
-          <div class="footer-social">
-            <a href="/facebook" aria-label="Facebook">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="36"
-                viewBox="0 0 20 36"
-                fill="none"
-              >
-                <path
-                  d="M17.8187 19.9566L18.8058 13.5358H12.6253V9.36944C12.6253 7.61205 13.487 5.90074 16.257 5.90074H19.0667V0.43441C19.0667 0.43441 16.5178 0 14.078 0C8.98692 0 5.65892 3.07378 5.65892 8.64213V13.5358H0V19.9566H5.65892V35.4801C6.79467 35.6578 7.95682 35.75 9.14209 35.75C10.3274 35.75 11.4895 35.6578 12.6253 35.4801V19.9566H17.8187Z"
-                  fill="black"
-                />
-              </svg>
-            </a>
-            <a href="/instagram" aria-label="Instagram">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="35"
-                height="35"
-                viewBox="0 0 35 35"
-                fill="none"
-              >
-                <path
-                  d="M17.16 3.09211C21.7416 3.09211 22.2826 3.10826 24.091 3.19303C25.7622 3.26972 26.6705 3.54826 27.276 3.78238C28.0752 4.09321 28.6484 4.46459 29.2499 5.06605C29.8514 5.66752 30.2228 6.2367 30.5336 7.04C30.7677 7.6455 31.0462 8.55376 31.1229 10.225C31.2037 12.0334 31.2238 12.5783 31.2238 17.156C31.2238 21.7336 31.2077 22.2785 31.1229 24.087C31.0462 25.7582 30.7677 26.6664 30.5336 27.2719C30.2228 28.0712 29.8514 28.6444 29.2499 29.2459C28.6484 29.8473 28.0793 30.2187 27.276 30.5295C26.6705 30.7637 25.7622 31.0422 24.091 31.1189C22.2826 31.1996 21.7416 31.2198 17.16 31.2198C12.5784 31.2198 12.0374 31.2037 10.229 31.1189C8.5578 31.0422 7.64953 30.7637 7.04403 30.5295C6.24476 30.2187 5.67156 29.8473 5.07009 29.2459C4.46862 28.6444 4.09725 28.0752 3.78642 27.2719C3.55229 26.6664 3.27375 25.7582 3.19706 24.087C3.11632 22.2785 3.09614 21.7336 3.09614 17.156C3.09614 12.5783 3.11229 12.0334 3.19706 10.225C3.27375 8.55376 3.55229 7.6455 3.78642 7.04C4.09725 6.24073 4.46862 5.66752 5.07009 5.06605C5.67156 4.46459 6.24073 4.09321 7.04403 3.78238C7.64953 3.54826 8.5578 3.26972 10.229 3.19303C12.0374 3.11229 12.5824 3.09211 17.16 3.09211ZM17.16 0C12.5017 0 11.9163 0.0201836 10.0877 0.104954C8.26311 0.189725 7.01577 0.47633 5.92183 0.90422C4.79559 1.34422 3.83889 1.92954 2.88219 2.8822C1.92953 3.83486 1.34018 4.79156 0.904216 5.92183C0.480363 7.01174 0.189716 8.25908 0.104946 10.0877C0.0201751 11.9163 0 12.5017 0 17.16C0 21.8183 0.0201751 22.4037 0.104946 24.2323C0.189716 26.0569 0.476326 27.3042 0.904216 28.3982C1.34422 29.5244 1.92953 30.4811 2.88219 31.4378C3.83486 32.3905 4.79155 32.9798 5.92183 33.4158C7.01173 33.8396 8.25908 34.1303 10.0877 34.215C11.9163 34.2998 12.5017 34.32 17.16 34.32C21.8183 34.32 22.4037 34.2998 24.2323 34.215C26.0569 34.1303 27.3042 33.8437 28.3981 33.4158C29.5244 32.9758 30.4811 32.3905 31.4378 31.4378C32.3905 30.4851 32.9798 29.5284 33.4158 28.3982C33.8396 27.3083 34.1303 26.0609 34.215 24.2323C34.2998 22.4037 34.32 21.8183 34.32 17.16C34.32 12.5017 34.2998 11.9163 34.215 10.0877C34.1303 8.26312 33.8437 7.01578 33.4158 5.92183C32.9758 4.7956 32.3905 3.8389 31.4378 2.8822C30.4851 1.92954 29.5284 1.34018 28.3981 0.90422C27.3082 0.480367 26.0609 0.189725 24.2323 0.104954C22.4037 0.0201836 21.8183 0 17.16 0Z"
-                  fill="black"
-                />
-                <path
-                  d="M17.1604 9.35938C12.8528 9.35938 9.36035 12.8519 9.36035 17.1594C9.36035 21.4669 12.8528 24.9594 17.1604 24.9594C21.4679 24.9594 24.9604 21.4669 24.9604 17.1594C24.9604 12.8519 21.4679 9.35938 17.1604 9.35938ZM17.1604 22.2247C14.3649 22.2247 12.095 19.9584 12.095 17.1594C12.095 14.3604 14.3614 12.094 17.1604 12.094C19.9593 12.094 22.2257 14.3604 22.2257 17.1594C22.2257 19.9584 19.9593 22.2247 17.1604 22.2247Z"
-                  fill="black"
-                />
-                <path
-                  d="M26.52 9.35825C27.3815 9.35825 28.08 8.66026 28.08 7.79924C28.08 6.93823 27.3815 6.24023 26.52 6.24023C25.6584 6.24023 24.96 6.93823 24.96 7.79924C24.96 8.66026 25.6584 9.35825 26.52 9.35825Z"
-                  fill="black"
-                />
-              </svg>
-            </a>
-            <a href="/youtube" aria-label="Youtube">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="39"
-                height="31"
-                viewBox="0 0 39 31"
-                fill="none"
-              >
-                <g clipPath="url(#clip0_footer_mobile)">
-                  <path
-                    d="M36.7612 5.86083C36.3036 4.17494 35.0834 2.89045 33.4818 2.40876C30.5836 1.60596 19.0674 1.60596 19.0674 1.60596C19.0674 1.60596 7.55111 1.60596 4.65297 2.40876C3.05137 2.89045 1.83111 4.17494 1.37351 5.86083C0.61084 8.9115 0.61084 15.2537 0.61084 15.2537C0.61084 15.2537 0.61084 21.5959 1.37351 24.6465C1.83111 26.3324 3.05137 27.6169 4.65297 28.0986C7.55111 28.9014 19.0674 28.9014 19.0674 28.9014C19.0674 28.9014 30.5836 28.9014 33.4818 28.0986C35.0834 27.6169 36.3036 26.3324 36.7612 24.6465C37.5239 21.5959 37.5239 15.2537 37.5239 15.2537C37.5239 15.2537 37.5239 8.9115 36.7612 5.86083ZM15.3303 21.0339V9.47347L24.9399 15.2537L15.3303 21.0339Z"
-                    fill="black"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_footer_mobile">
-                    <rect width="38.1333" height="30.5067" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
+        <div class="footer-right">
+          <div class="footer-columns">
+            <div class="footer-column services">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="/workwear">Workwear</a></li>
+                <li><a href="/workplace">Workplace</a></li>
+                <li><a href="/food-industry">Food Industry</a></li>
+                <li><a href="/hospitality">Hospitality</a></li>
+                <li><a href="/ppe">PPE</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column find-us">
+              <h4>Find us</h4>
+              <ul>
+                <li>Apparelmaster</li>
+                <li>Diamond Dry Cleaners</li>
+                <li>8 Miller Street,</li>
+                <li>Dannevirke 4930</li>
+                <li>(Example only)</li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Follow us</h4>
+              <ul>
+                <li><a href="/facebook">Facebook</a></li>
+                <li><a href="/instagram">Instagram</a></li>
+                <li><a href="/youtube">Youtube</a></li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Footer text -->
           <p>
-            © <span class="current-year">2025</span> ApparelMaster. All rights
-            reserved. Privacy Policy. Terms of Trade.
+            © <span class="current-year">2025</span> ApparelMaster. All
+            rights reserved. Privacy Policy. Terms of Trade.
           </p>
         </div>
-
-        <!-- Leaf image centered at bottom -->
-        <img src="public/images/leaf.svg" alt="Leaf" class="footer-leaf" />
       </div>
 
-      <!-- Desktop Layout -->
-      <div class="footer-desktop">
-        <div class="footer-desktop-content">
-          <div class="footer-left">
-            <img
-              src="public/images/apparel-master-logo.png"
-              alt="Apparel Master Logo"
-              class="footer-logo"
-            />
+      <img src="public/images/leaf.svg" alt="Leaf" class="footer-leaf" />
+    </div>
+  </footer>
 
-            <button class="footer-phone-btn">Click for 0800 Number</button>
-            <a href="tel:0800808820" class="footer-phone-btn revealed"
-              >0800 808 820</a
-            >
-          </div>
+  <!-- jQuery 3.7 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-          <div class="footer-right">
-            <div class="footer-columns">
-              <div class="footer-column services">
-                <h4>Services</h4>
-                <ul>
-                  <li><a href="/workwear">Workwear</a></li>
-                  <li><a href="/workplace">Workplace</a></li>
-                  <li><a href="/food-industry">Food Industry</a></li>
-                  <li><a href="/hospitality">Hospitality</a></li>
-                  <li><a href="/ppe">PPE</a></li>
-                </ul>
-              </div>
+  <!-- Bootstrap 5.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-              <div class="footer-column find-us">
-                <h4>Find us</h4>
-                <ul>
-                  <li>Apparelmaster</li>
-                  <li>Diamond Dry Cleaners</li>
-                  <li>8 Miller Street,</li>
-                  <li>Dannevirke 4930</li>
-                  <li>(Example only)</li>
-                </ul>
-              </div>
+  <!-- Vimeo Player API -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
-              <div class="footer-column">
-                <h4>Follow us</h4>
-                <ul>
-                  <li><a href="/facebook">Facebook</a></li>
-                  <li><a href="/instagram">Instagram</a></li>
-                  <li><a href="/youtube">Youtube</a></li>
-                </ul>
-              </div>
-            </div>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
 
-            <p>
-              © <span class="current-year">2025</span> ApparelMaster. All rights
-              reserved. Privacy Policy. Terms of Trade.
-            </p>
-          </div>
-        </div>
-
-        <img src="public/images/leaf.svg" alt="Leaf" class="footer-leaf" />
-      </div>
-    </footer>
-
-    <!-- jQuery 3.7 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Bootstrap 5.3 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-  </body>
 </html>
