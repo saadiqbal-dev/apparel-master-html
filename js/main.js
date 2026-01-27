@@ -403,11 +403,15 @@ $(document).ready(function () {
       }
     }
 
-    // Initial size
+    // Initial size and scroll state
     sizeHeroVideo();
+    handleHeroVideoScroll();
 
-    // Update on resize
-    window.addEventListener("resize", sizeHeroVideo);
+    // Update on resize - refresh both size and scroll calculations
+    window.addEventListener("resize", function () {
+      sizeHeroVideo();
+      handleHeroVideoScroll();
+    });
     window.addEventListener("scroll", handleHeroVideoScroll);
   }
 
@@ -506,14 +510,16 @@ $(document).ready(function () {
       }
     }
 
-    // Initial size
+    // Initial size and scroll state
     sizeKiwiVideo();
-
-    // Update on resize
-    window.addEventListener("resize", sizeKiwiVideo);
-    window.addEventListener("scroll", handleKiwiVideoScroll);
-    // Initial call
     handleKiwiVideoScroll();
+
+    // Update on resize - refresh both size and scroll calculations
+    window.addEventListener("resize", function () {
+      sizeKiwiVideo();
+      handleKiwiVideoScroll();
+    });
+    window.addEventListener("scroll", handleKiwiVideoScroll);
   }
 
   // ========================================
