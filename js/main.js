@@ -417,4 +417,36 @@ $(document).ready(function () {
       }
     });
   }
+
+  // ========================================
+  // KIWI HERITAGE VIDEO PARALLAX (INDEX-2)
+  // ========================================
+  var kiwiHeritageVideo = document.getElementById("kiwiHeritageVideo");
+
+  if (kiwiHeritageVideo) {
+    var kiwiSection = document.querySelector(".kiwi-heritage-section");
+
+    function handleKiwiVideoScroll() {
+      var rect = kiwiSection.getBoundingClientRect();
+      var scrollY = window.scrollY;
+      var sectionTop = kiwiSection.offsetTop;
+
+      // Only apply parallax when section is in viewport
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        // Calculate parallax offset relative to section position
+        var relativeScroll = scrollY - sectionTop + window.innerHeight;
+        var parallaxOffset = relativeScroll * 0.1;
+
+        // Limit parallax range to prevent black bars (tighter limits)
+        var maxOffset = kiwiSection.offsetHeight * 0.25;
+        parallaxOffset = Math.max(-maxOffset, Math.min(maxOffset, parallaxOffset));
+
+        kiwiHeritageVideo.style.transform = "translateY(" + parallaxOffset + "px)";
+      }
+    }
+
+    window.addEventListener("scroll", handleKiwiVideoScroll);
+    // Initial call
+    handleKiwiVideoScroll();
+  }
 });

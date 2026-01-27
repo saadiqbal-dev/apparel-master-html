@@ -5014,3 +5014,73 @@ h6 {
   background: black;
   color: white;
 }
+
+/* ========================================
+   KIWI HERITAGE VIDEO SECTION
+   ======================================== */
+
+.kiwi-heritage-section {
+  position: relative;
+  height: 393px;
+  overflow: hidden;
+  background: #000;
+}
+
+@media (min-width: 1200px) {
+  .kiwi-heritage-section {
+    height: 921px;
+  }
+}
+
+.kiwi-heritage-video-wrapper {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  right: 0;
+  height: 160%;
+  overflow: hidden;
+}
+
+.kiwi-heritage-video-wrapper iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.77777778vh;
+  height: 56.25vw;
+  min-width: 100%;
+  min-height: 160%;
+  border: 0;
+  pointer-events: none;
+}
+
+.kiwi-heritage-content {
+  position: absolute;
+  left: 4.25rem;
+  top: 7.875rem;
+  z-index: 10;
+}
+
+@media (min-width: 1200px) {
+  .kiwi-heritage-content {
+    left: 16.93vw;
+    top: 30.23vh;
+  }
+}
+
+.kiwi-heritage-content h2 {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  .kiwi-heritage-content h2 {
+    font-size: 48px;
+    line-height: normal;
+    margin-bottom: 2.875rem;
+  }
+}
