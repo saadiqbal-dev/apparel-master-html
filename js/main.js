@@ -79,7 +79,7 @@ $(document).ready(function () {
     if (activeMegaMenu) {
       $("#megamenu-" + activeMegaMenu).removeClass("active");
       $('.nav-btn[data-megamenu="' + activeMegaMenu + '"]').removeClass(
-        "active",
+        "active"
       );
       activeMegaMenu = null;
       $(".header").removeClass("menu-open");
@@ -139,7 +139,7 @@ $(document).ready(function () {
     function () {
       $(".mobile-nav-overlay").removeClass("active");
       $("body").css("overflow", "");
-    },
+    }
   );
 
   /**
@@ -228,7 +228,7 @@ $(document).ready(function () {
    */
   function positionChevron($select) {
     const $wrapper = $select.closest(
-      ".jobs-search-select-wrapper, .form-select-wrapper",
+      ".jobs-search-select-wrapper, .form-select-wrapper"
     );
     const $chevron = $wrapper.find(".jobs-search-chevron");
 
@@ -368,11 +368,53 @@ $(document).ready(function () {
         videoBackground.style.opacity = "1";
       }
 
-      // Parallax effect - video moves slower than scroll (very subtle)
-      var parallaxOffset = scrollY * 0.15;
+      // Parallax effect - video moves up as we scroll down (very subtle)
+      var parallaxOffset = scrollY * -0.3;
       videoBackground.style.transform = "translateY(" + parallaxOffset + "px)";
     }
 
     window.addEventListener("scroll", handleHeroVideoScroll);
+  }
+
+  // ========================================
+  // RENTAL SOLUTIONS CARDS (INDEX-2)
+  // ========================================
+  var rentalCards = document.querySelectorAll(".rental-card");
+
+  if (rentalCards.length > 0) {
+    rentalCards.forEach(function (card) {
+      // Handle click on mobile/tablet
+      card.addEventListener("click", function (e) {
+        // Only on mobile/tablet (below 1200px)
+        if (window.innerWidth < 1200) {
+          // Don't toggle if clicking the link
+          if (e.target.classList.contains("rental-card-overlay-btn")) {
+            return;
+          }
+          e.preventDefault();
+          card.classList.toggle("active");
+        }
+      });
+
+      // Prevent link click from closing the overlay on mobile
+      var link = card.querySelector(".rental-card-overlay-btn");
+      if (link) {
+        link.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      }
+    });
+
+    // Close active cards when clicking outside
+    document.addEventListener("click", function (e) {
+      if (window.innerWidth < 1200) {
+        var clickedCard = e.target.closest(".rental-card");
+        if (!clickedCard) {
+          rentalCards.forEach(function (card) {
+            card.classList.remove("active");
+          });
+        }
+      }
+    });
   }
 });
