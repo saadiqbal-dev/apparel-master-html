@@ -4464,7 +4464,9 @@ h6 {
 
 .hero-video-section {
   position: relative;
-  height: 55vh;
+  height: 373px;
+  margin-top: 94px;
+  margin-bottom: 36px;
   overflow: hidden;
   background: #000;
 }
@@ -4472,6 +4474,8 @@ h6 {
 @media (min-width: 1200px) {
   .hero-video-section {
     height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -4597,6 +4601,8 @@ h6 {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
+
+  min-width: 161px;
 }
 
 .hero-btn:hover {
