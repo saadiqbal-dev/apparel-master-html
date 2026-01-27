@@ -4816,7 +4816,7 @@ h6 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .rental-solutions-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 3.125rem;
@@ -4937,7 +4937,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .rental-card-overlay {
-    padding: 1.875rem 2.625rem 3.25rem;
+    padding: 1.875rem 2.625rem 37px;
   }
 }
 
