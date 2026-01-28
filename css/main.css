@@ -39,6 +39,10 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #e9510e;
 }
 
 /* ========================================
@@ -571,12 +575,36 @@ h6 {
   max-width: 1752px;
   padding: 48px 16px 50px;
 }
-
 .megamenu-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 130px;
 }
+
+@media (min-width: 1200px) {
+  .megamenu .container {
+    max-width: 1752px;
+    padding: 48px 60px 50px;
+  }
+  .megamenu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 80px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .megamenu .container {
+    max-width: 1752px;
+    padding: 48px 16px 50px;
+  }
+  .megamenu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 130px;
+  }
+}
+
 .megamenu-grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2167,7 +2195,7 @@ h6 {
 }
 
 .footer-mobile .footer-logo {
-  width: 231px;
+  width: 137px;
   height: auto;
   aspect-ratio: 77/38;
   max-width: 100%;
@@ -4715,6 +4743,14 @@ h6 {
 
 @media (min-width: 1200px) {
   .professional-workwear-section {
+    padding: 0 6.25rem 7.125rem 60px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5.875rem;
+  }
+}
+@media (min-width: 1500px) {
+  .professional-workwear-section {
     padding: 0 6.25rem 7.125rem 13.75rem;
     flex-direction: row;
     justify-content: center;
@@ -5862,16 +5898,14 @@ h6 {
 
 .company-logo {
   width: auto;
-  height: 63.92px;
+  max-height: 63.92px;
   object-fit: contain;
 }
 
 @media (min-width: 1200px) {
   .company-logo {
     max-height: 104.716px;
-    min-height: 57px;
-    height: auto;
-    width: 100%;
+    width: auto;
     object-fit: contain;
   }
 }
