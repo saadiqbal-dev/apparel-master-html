@@ -1189,7 +1189,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .btn-cta {
-    padding: 10px 20px;
+    padding: 10px 30px;
     height: 50px;
     margin: 0;
     display: inline-block;
@@ -2439,6 +2439,12 @@ h6 {
 }
 
 @media (min-width: 1200px) {
+  .footer-desktop {
+    display: block;
+    padding: 48px 60px;
+  }
+}
+@media (min-width: 1600px) {
   .footer-desktop {
     display: block;
     padding: 48px 100px;
@@ -4387,7 +4393,7 @@ h6 {
   line-height: 28px; /* 233.333% */
   margin-top: 27px;
   margin-bottom: 15px;
-  text-align: center;
+  text-align: left;
 }
 
 .read-more-item h3 {
@@ -5882,7 +5888,7 @@ h6 {
     font-size: 40px;
     line-height: 50px;
     max-width: none;
-    padding-bottom: 134px;
+    padding-bottom: 154px;
   }
 }
 
@@ -5892,7 +5898,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .companies-section .marquee-container {
-    margin-bottom: 157px;
+    margin-bottom: 170px;
   }
 }
 
