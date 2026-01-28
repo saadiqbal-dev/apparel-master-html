@@ -79,7 +79,7 @@ $(document).ready(function () {
     if (activeMegaMenu) {
       $("#megamenu-" + activeMegaMenu).removeClass("active");
       $('.nav-btn[data-megamenu="' + activeMegaMenu + '"]').removeClass(
-        "active"
+        "active",
       );
       activeMegaMenu = null;
       $(".header").removeClass("menu-open");
@@ -139,7 +139,7 @@ $(document).ready(function () {
     function () {
       $(".mobile-nav-overlay").removeClass("active");
       $("body").css("overflow", "");
-    }
+    },
   );
 
   /**
@@ -228,7 +228,7 @@ $(document).ready(function () {
    */
   function positionChevron($select) {
     const $wrapper = $select.closest(
-      ".jobs-search-select-wrapper, .form-select-wrapper"
+      ".jobs-search-select-wrapper, .form-select-wrapper",
     );
     const $chevron = $wrapper.find(".jobs-search-chevron");
 
@@ -250,7 +250,7 @@ $(document).ready(function () {
 
     // Get select's actual left padding dynamically
     const selectPadding = parseInt($select.css("padding-left"), 10) || 0;
-    const chevronLeft = selectPadding + textWidth + 8; // padding + text + gap
+    const chevronLeft = selectPadding + textWidth + 28; // padding + text + gap
     $chevron.css({
       position: "absolute",
       left: chevronLeft + "px",
@@ -370,14 +370,16 @@ $(document).ready(function () {
 
       if (viewportAspect > videoAspect) {
         // Viewport is wider than video - anchor to height
-        iframe.style.height = (viewportHeight * parallaxBuffer) + "px";
-        iframe.style.width = (viewportHeight * parallaxBuffer * videoAspect) + "px";
+        iframe.style.height = viewportHeight * parallaxBuffer + "px";
+        iframe.style.width =
+          viewportHeight * parallaxBuffer * videoAspect + "px";
         iframe.style.minWidth = "unset";
         iframe.style.minHeight = "unset";
       } else {
         // Viewport is taller than video - anchor to width
-        iframe.style.width = (viewportWidth * parallaxBuffer) + "px";
-        iframe.style.height = (viewportWidth * parallaxBuffer / videoAspect) + "px";
+        iframe.style.width = viewportWidth * parallaxBuffer + "px";
+        iframe.style.height =
+          (viewportWidth * parallaxBuffer) / videoAspect + "px";
         iframe.style.minWidth = "unset";
         iframe.style.minHeight = "unset";
       }
@@ -409,7 +411,8 @@ $(document).ready(function () {
 
         // Apply parallax to video
         if (iframe) {
-          iframe.style.transform = "translate(-50%, calc(-50% + " + translateY + "px))";
+          iframe.style.transform =
+            "translate(-50%, calc(-50% + " + translateY + "px))";
         }
 
         // Apply parallax to text content (moves faster for depth effect)
@@ -427,9 +430,9 @@ $(document).ready(function () {
 
     // Use requestAnimationFrame for smooth performance
     var heroTicking = false;
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
       if (!heroTicking) {
-        requestAnimationFrame(function() {
+        requestAnimationFrame(function () {
           handleHeroVideoScroll();
           heroTicking = false;
         });
@@ -514,9 +517,9 @@ $(document).ready(function () {
 
     // Use requestAnimationFrame for smooth performance
     var ticking = false;
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
       if (!ticking) {
-        requestAnimationFrame(function() {
+        requestAnimationFrame(function () {
           handleKiwiParallax();
           ticking = false;
         });
@@ -541,7 +544,8 @@ $(document).ready(function () {
 
     function scrollCarousel(direction) {
       var scrollAmount = 0;
-      var cardWidth = newsCarousel.querySelector(".latest-news-card").offsetWidth;
+      var cardWidth =
+        newsCarousel.querySelector(".latest-news-card").offsetWidth;
       var gap = window.innerWidth >= 1200 ? 50 : 20; // 3.125rem = 50px, 1.25rem = 20px
 
       if (window.innerWidth < 768) {

@@ -268,6 +268,12 @@ h6 {
 
 @media (min-width: 1200px) {
   .header-content {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .header-content {
     padding: 0 16px;
     gap: 0;
   }
@@ -836,9 +842,20 @@ h6 {
   max-width: 1720px;
   height: 49px;
 }
-@media (max-width: 1700px) {
+@media (min-width: 1200px) {
   .breadcrumb-container {
-    padding: 0 40px 0 40px;
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .breadcrumb-container {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1900px) {
+  .breadcrumb-container {
+    padding: 0 0px;
   }
 }
 
@@ -905,8 +922,8 @@ h6 {
 
 @media (min-width: 1200px) {
   .content-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -1380,14 +1397,14 @@ h6 {
 
 @media (min-width: 1200px) {
   .testimonial-section {
-    padding: 127px 20px;
+    padding: 127px 60px;
     overflow: hidden;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .testimonial-section {
-    padding: 127px 40px;
+    padding: 127px 20px;
   }
 }
 
@@ -1764,6 +1781,21 @@ h6 {
   .about-orange-first .full-width-content-wrapper {
     padding-top: 60px;
     padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 40px;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1500px) {
+  .full-width-content-wrapper {
+    max-width: 850px;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+
+  .about-orange-first .full-width-content-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
     padding-left: 40px;
     padding-right: 40px;
     justify-content: flex-start;
@@ -1784,7 +1816,7 @@ h6 {
 }
 .full-width-text h4 {
   font-weight: 400;
-  line-height: 32px;
+  line-height: 38px;
 }
 
 @media (min-width: 1200px) {
@@ -1879,6 +1911,13 @@ h6 {
 }
 
 @media (min-width: 1200px) {
+  .orange-content-wrapper {
+    max-width: 960px;
+    padding: 70px 78px 70px 60px;
+  }
+}
+
+@media (min-width: 1500px) {
   .orange-content-wrapper {
     max-width: 960px;
     padding: 70px 78px 70px 100px;
@@ -2397,8 +2436,9 @@ h6 {
 
 .footer-desktop .footer-logo {
   aspect-ratio: 69/34;
-  max-height: 136px;
+  max-height: 101px;
   width: auto;
+  aspect-ratio: 204/101;
 }
 
 .footer-right {
@@ -2466,6 +2506,7 @@ h6 {
 .footer-desktop .footer-right p {
   text-align: left;
   min-width: 627px;
+  color: #979595;
 }
 
 .footer-desktop .footer-leaf {
@@ -3636,6 +3677,12 @@ h6 {
   gap: 50px;
 }
 
+@media (max-width: 1500px) {
+  .jobs-listing-container {
+    padding: 0 60px;
+  }
+}
+
 @media (max-width: 1199px) {
   .jobs-listing-container {
     padding: 0 20px;
@@ -3992,6 +4039,14 @@ h6 {
     margin-top: 80px;
     margin-bottom: 64px;
     max-width: 1400px;
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1500px) {
+  .latest-news {
+    margin-top: 80px;
+    margin-bottom: 64px;
+    max-width: 1400px;
     padding: 0 40px;
   }
 }
@@ -4019,7 +4074,7 @@ h6 {
 .featured-news div h5 {
   all: unset;
   display: block;
-  color: #000;
+  color: #979595;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -4082,7 +4137,7 @@ h6 {
   .featured-news div h5 {
     all: unset;
     display: block;
-    color: #000;
+    color: #979595;
     font-family: Inter;
     font-size: 12px;
     font-style: normal;
@@ -4129,7 +4184,7 @@ h6 {
 .news-grid-item div h5 {
   all: unset;
   display: block;
-  color: #000;
+  color: #979595;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -4407,11 +4462,11 @@ h6 {
 }
 
 .contact-info-section > div:last-child p:first-child {
-  margin-bottom: 1.5rem; /* Space between PO Box and Main Office */
+  margin-bottom: 1.5rem;
 }
 
 .contact-info-section > div:last-child p:not(:first-child) {
-  margin-bottom: 0; /* No space between items - they're part of one paragraph */
+  margin-bottom: 0;
 }
 
 .contact-info-section strong {
@@ -4432,7 +4487,7 @@ h6 {
   padding-left: 31px;
   gap: 13px;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
   margin-top: 36px;
@@ -5265,7 +5320,7 @@ h6 {
 }
 
 .latest-news-card-category {
-  color: #666;
+  color: #979595;
   font-family: "Inter", sans-serif;
   font-size: 15.134px;
   line-height: 30.268px;
@@ -5310,7 +5365,7 @@ h6 {
 }
 
 .latest-news-card-readmore {
-  color: #666;
+  color: #979595;
   font-family: "Inter", sans-serif;
   font-size: 15.134px;
   line-height: 30.268px;
@@ -5356,9 +5411,17 @@ h6 {
   color: white;
 }
 
+.news-carousel-btn-prev svg path {
+  fill: white;
+}
+
 .news-carousel-btn-prev:hover {
-  background: transparent;
+  background: white;
   border-color: white;
+}
+
+.news-carousel-btn-prev:hover svg path {
+  fill: #f15d22;
 }
 
 .news-carousel-btn-next {
@@ -5367,9 +5430,41 @@ h6 {
   border-color: white;
 }
 
+.news-carousel-btn-next svg path {
+  fill: #f15d22;
+}
+
 .news-carousel-btn-next:hover {
+  background: transparent;
+  border-color: white;
+}
+
+.news-carousel-btn-next:hover svg path {
+  fill: white;
+}
+
+/* Swap styles when hovering on prev button */
+.news-carousel-btn-prev:hover ~ .news-carousel-btn-next {
+  background: transparent;
+  border-color: white;
+}
+
+.news-carousel-btn-prev:hover ~ .news-carousel-btn-next svg path {
+  fill: white;
+}
+
+/* Swap styles when hovering on next button */
+.latest-news-controls:has(.news-carousel-btn-next:hover)
+  .news-carousel-btn-prev {
   background: white;
   border-color: white;
+}
+
+.latest-news-controls:has(.news-carousel-btn-next:hover)
+  .news-carousel-btn-prev
+  svg
+  path {
+  fill: #f15d22;
 }
 
 .news-carousel-btn svg {
