@@ -1,8 +1,64 @@
+/**
+ * ========================================
+ * APPARELMASTER - MAIN JAVASCRIPT
+ * ========================================
+ * Optimized jQuery-based implementation
+ * ========================================
+ */
+
 $(document).ready(function () {
+  "use strict";
+
   // ========================================
-  // VARIABLES
+  // CONFIGURATION & UTILITIES
   // ========================================
-  let activeMegaMenu = null;
+
+  /**
+   * Breakpoint configuration
+   */
+  var BREAKPOINTS = {
+    mobile: 768,
+    tablet: 1024,
+    desktop: 1200,
+  };
+
+  /**
+   * Cache window object for better performance
+   */
+  var $window = $(window);
+  var $document = $(document);
+
+  /**
+   * Utility: Check if viewport is mobile
+   */
+  function isMobile() {
+    return $window.width() < BREAKPOINTS.desktop;
+  }
+
+  /**
+   * Utility: Check if viewport is desktop
+   */
+  function isDesktop() {
+    return $window.width() >= BREAKPOINTS.desktop;
+  }
+
+  /**
+   * Utility: Get viewport dimensions
+   */
+  function getViewport() {
+    return {
+      width: $window.width(),
+      height: $window.height(),
+    };
+  }
+
+  // ========================================
+  // CACHED SELECTORS
+  // ========================================
+
+  var $header = $(".header");
+  var $mobileNavOverlay = $(".mobile-nav-overlay");
+  var $body = $("body");
 
   // ========================================
   // HEADER & NAVIGATION
@@ -13,22 +69,19 @@ $(document).ready(function () {
    * Adds 'scrolled' class when page is scrolled
    */
   function updateHeaderScroll() {
-    if ($(window).scrollTop() > 0) {
-      $(".header").addClass("scrolled");
+    if ($window.scrollTop() > 0) {
+      $header.addClass("scrolled");
     } else {
-      $(".header").removeClass("scrolled");
+      $header.removeClass("scrolled");
     }
   }
 
-  // Check scroll position on page load
+  // Initialize on load and update on scroll
   updateHeaderScroll();
-
-  // Update on scroll
-  $(window).on("scroll", updateHeaderScroll);
+  $window.on("scroll", updateHeaderScroll);
 
   /**
    * Phone button reveal (Header)
-   * Shows phone number when button is clicked
    */
   $(".phone-btn")
     .not(".phone-revealed")
@@ -41,30 +94,10 @@ $(document).ready(function () {
   // MEGA MENU
   // ========================================
 
-  /**
-   * Mega menu toggle
-   * Opens/closes mega menu on nav button click
-   */
-  $(".nav-btn").on("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const menuId = $(this).data("megamenu");
-    const $megamenu = $("#megamenu-" + menuId);
-
-    if (activeMegaMenu === menuId) {
-      closeMegaMenu();
-    } else {
-      closeMegaMenu();
-      activeMegaMenu = menuId;
-      $megamenu.addClass("active");
-      $('.nav-btn[data-megamenu="' + menuId + '"]').addClass("active");
-      $(".header").addClass("menu-open");
-    }
-  });
+  var activeMegaMenu = null;
 
   /**
-   * Close mega menu function
+   * Close mega menu
    */
   function closeMegaMenu() {
     if (activeMegaMenu) {
@@ -73,17 +106,37 @@ $(document).ready(function () {
         "active",
       );
       activeMegaMenu = null;
-      $(".header").removeClass("menu-open");
+      $header.removeClass("menu-open");
     }
   }
 
   /**
+   * Mega menu toggle
+   */
+  $(".nav-btn").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var menuId = $(this).data("megamenu");
+    var $megamenu = $("#megamenu-" + menuId);
+
+    if (activeMegaMenu === menuId) {
+      closeMegaMenu();
+    } else {
+      closeMegaMenu();
+      activeMegaMenu = menuId;
+      $megamenu.addClass("active");
+      $('.nav-btn[data-megamenu="' + menuId + '"]').addClass("active");
+      $header.addClass("menu-open");
+    }
+  });
+
+  /**
    * Close mega menu on outside click
    */
-  $(document).on("mousedown", function (e) {
+  $document.on("mousedown", function (e) {
     if (activeMegaMenu) {
-      const $target = $(e.target);
-
+      var $target = $(e.target);
       if (
         !$target.closest(".nav-btn").length &&
         !$target.closest(".megamenu").length &&
@@ -97,7 +150,7 @@ $(document).ready(function () {
   /**
    * Close mega menu on Escape key
    */
-  $(document).on("keydown", function (e) {
+  $document.on("keydown", function (e) {
     if (e.key === "Escape" && activeMegaMenu) {
       closeMegaMenu();
     }
@@ -115,21 +168,21 @@ $(document).ready(function () {
   // ========================================
 
   /**
-   * Mobile menu open
+   * Open mobile menu
    */
   $(".mobile-menu-btn").on("click", function () {
-    $(".mobile-nav-overlay").addClass("active");
-    $("body").css("overflow", "hidden");
+    $mobileNavOverlay.addClass("active");
+    $body.css("overflow", "hidden");
   });
 
   /**
-   * Mobile menu close
+   * Close mobile menu
    */
   $(".mobile-nav-close, .mobile-nav-header a, .mobile-nav-submenu a").on(
     "click",
     function () {
-      $(".mobile-nav-overlay").removeClass("active");
-      $("body").css("overflow", "");
+      $mobileNavOverlay.removeClass("active");
+      $body.css("overflow", "");
     },
   );
 
@@ -137,8 +190,8 @@ $(document).ready(function () {
    * Mobile menu accordion
    */
   $(".mobile-nav-toggle").on("click", function () {
-    const $parent = $(this).closest(".mobile-nav-item");
-    const wasActive = $parent.hasClass("active");
+    var $parent = $(this).closest(".mobile-nav-item");
+    var wasActive = $parent.hasClass("active");
 
     $(".mobile-nav-item").removeClass("active");
 
@@ -148,18 +201,18 @@ $(document).ready(function () {
   });
 
   // ========================================
-  // ACCORDION (Orange Section)
+  // ACCORDIONS
   // ========================================
 
   /**
-   * Custom accordion functionality
+   * Custom accordion functionality (Orange Section)
    */
   $(".accordion-button-custom").on("click", function () {
-    const accordionId = $(this).data("accordion");
-    const $button = $(this);
-    const $content = $("#" + accordionId);
-    const $wrapper = $content.find(".accordion-content-wrapper");
-    const wasActive = $button.hasClass("active");
+    var accordionId = $(this).data("accordion");
+    var $button = $(this);
+    var $content = $("#" + accordionId);
+    var $wrapper = $content.find(".accordion-content-wrapper");
+    var wasActive = $button.hasClass("active");
 
     // Close all other accordions
     $(".accordion-button-custom").not($button).removeClass("active");
@@ -175,7 +228,7 @@ $(document).ready(function () {
       $content.css("max-height", "0").removeClass("active");
     } else {
       $button.addClass("active");
-      const wrapperHeight = $wrapper.outerHeight(true);
+      var wrapperHeight = $wrapper.outerHeight(true);
       $content.css("max-height", wrapperHeight + "px").addClass("active");
     }
   });
@@ -188,8 +241,8 @@ $(document).ready(function () {
    * Footer menu accordion
    */
   $(".footer-menu-toggle").on("click", function () {
-    const $parent = $(this).closest(".footer-menu-item");
-    const wasActive = $parent.hasClass("active");
+    var $parent = $(this).closest(".footer-menu-item");
+    var wasActive = $parent.hasClass("active");
 
     $(".footer-menu-item").removeClass("active");
 
@@ -213,18 +266,21 @@ $(document).ready(function () {
    */
   $(".current-year").text(new Date().getFullYear());
 
+  // ========================================
+  // FORM SELECT CHEVRON POSITIONING
+  // ========================================
+
   /**
-   * Jobs select chevron positioning
-   * Positions chevron right after the selected text content
+   * Position chevron right after the selected text content
    */
   function positionChevron($select) {
-    const $wrapper = $select.closest(
+    var $wrapper = $select.closest(
       ".jobs-search-select-wrapper, .form-select-wrapper",
     );
-    const $chevron = $wrapper.find(".jobs-search-chevron");
+    var $chevron = $wrapper.find(".jobs-search-chevron");
 
-    // Create a temporary element to measure text width
-    const $temp = $("<span>")
+    // Create temporary element to measure text width
+    var $temp = $("<span>")
       .css({
         visibility: "hidden",
         position: "absolute",
@@ -236,104 +292,83 @@ $(document).ready(function () {
       .text($select.val() || $select.find("option:first").text())
       .appendTo("body");
 
-    const textWidth = $temp.outerWidth();
+    var textWidth = $temp.outerWidth();
     $temp.remove();
 
-    // Get select's actual left padding dynamically
-    const selectPadding = parseInt($select.css("padding-left"), 10) || 0;
-    const chevronLeft = selectPadding + textWidth + 28; // padding + text + gap
+    // Get select's padding and calculate chevron position
+    var selectPadding = parseInt($select.css("padding-left"), 10) || 0;
+    var chevronLeft = selectPadding + textWidth + 28;
     $chevron.css({
       position: "absolute",
       left: chevronLeft + "px",
     });
   }
 
-  // Position chevrons on load
-  $(".jobs-search-select").each(function () {
+  // Initialize chevron positions
+  $(".jobs-search-select, .form-select-wrapper select").each(function () {
     positionChevron($(this));
   });
 
-  // Reposition chevron on change
-  $(".jobs-search-select").on("change", function () {
-    positionChevron($(this));
-  });
+  // Update on change
+  $(".jobs-search-select, .form-select-wrapper select").on(
+    "change",
+    function () {
+      positionChevron($(this));
+    },
+  );
 
-  // Position form select chevrons on load
-  $(".form-select-wrapper select").each(function () {
-    positionChevron($(this));
-  });
+  // ========================================
+  // MARQUEE / CAROUSEL IMPLEMENTATION
+  // ========================================
 
-  // Reposition form select chevron on change
-  $(".form-select-wrapper select").on("change", function () {
-    positionChevron($(this));
-  });
-
-  // Robust Marquee Implementation
+  /**
+   * Initialize marquee for seamless infinite scrolling
+   */
   function initializeMarquee() {
     var $marqueeTrack = $(".marquee-track");
 
-    // Check if marquee exists on this page
-    if ($marqueeTrack.length === 0) {
-      return;
-    }
+    if (!$marqueeTrack.length) return;
 
-    // Get original items (only direct children that haven't been cloned)
     var $marqueeItems = $marqueeTrack.find(".marquee-item");
 
-    // Verify we have items to clone
-    if ($marqueeItems.length === 0) {
+    if (!$marqueeItems.length) {
       console.warn("No marquee items found to clone");
       return;
     }
 
-    // Check if already initialized (items already cloned)
-    if ($marqueeTrack.data("marquee-initialized")) {
-      return;
-    }
+    if ($marqueeTrack.data("marquee-initialized")) return;
 
-    // Clone items multiple times for seamless infinite scrolling
-    // We need enough clones to ensure smooth continuous animation
+    // Clone items for seamless infinite scrolling
     var cloneCount = 10;
-
-    // Store the original items
     var originalItems = $marqueeItems.clone();
 
-    // Clone and append items
-    for (let i = 0; i < cloneCount; i++) {
+    for (var i = 0; i < cloneCount; i++) {
       originalItems.clone().appendTo($marqueeTrack);
     }
 
-    // Mark as initialized
     $marqueeTrack.data("marquee-initialized", true);
 
-    // Force reflow to ensure animation starts properly
+    // Force reflow and start animation
     $marqueeTrack[0].offsetHeight;
-
-    // Add class to start animation
     $marqueeTrack.addClass("marquee-active");
   }
 
-  // Initialize marquee on page load
   initializeMarquee();
 
-  // Re-initialize if window is resized (handles orientation changes on mobile)
+  // Re-initialize on window resize
   var resizeTimer;
-  $(window).on("resize", function () {
+  $window.on("resize", function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-      // Check if marquee needs re-initialization
       var $marqueeTrack = $(".marquee-track");
-      if (
-        $marqueeTrack.length > 0 &&
-        !$marqueeTrack.data("marquee-initialized")
-      ) {
+      if ($marqueeTrack.length && !$marqueeTrack.data("marquee-initialized")) {
         initializeMarquee();
       }
     }, 250);
   });
 
-  // Handle visibility change - pause animation when page is hidden
-  $(document).on("visibilitychange", function () {
+  // Pause animation when page is hidden
+  $document.on("visibilitychange", function () {
     var $marqueeTrack = $(".marquee-track");
     if (document.hidden) {
       $marqueeTrack.css("animation-play-state", "paused");
@@ -345,61 +380,65 @@ $(document).ready(function () {
   // ========================================
   // HERO VIDEO SCROLL BEHAVIOR (INDEX-2)
   // ========================================
+
   var $videoBackground = $("#heroVideoBackground");
 
   if ($videoBackground.length) {
     var $iframe = $videoBackground.find("iframe");
 
-    // Function to size video properly based on viewport aspect ratio
+    /**
+     * Size video properly based on viewport aspect ratio
+     */
     function sizeHeroVideo() {
       if (!$iframe.length) return;
-      var viewportWidth = $(window).width();
-      var viewportHeight = $(window).height();
-      var viewportAspect = viewportWidth / viewportHeight;
+
+      var viewport = getViewport();
+      var viewportAspect = viewport.width / viewport.height;
       var videoAspect = 16 / 9;
       var parallaxBuffer = 1.2;
 
       if (viewportAspect > videoAspect) {
         // Viewport is wider than video - anchor to height
         $iframe.css({
-          height: viewportHeight * parallaxBuffer + "px",
-          width: viewportHeight * parallaxBuffer * videoAspect + "px",
+          height: viewport.height * parallaxBuffer + "px",
+          width: viewport.height * parallaxBuffer * videoAspect + "px",
           minWidth: "unset",
           minHeight: "unset",
         });
       } else {
         // Viewport is taller than video - anchor to width
         $iframe.css({
-          width: viewportWidth * parallaxBuffer + "px",
-          height: (viewportWidth * parallaxBuffer) / videoAspect + "px",
+          width: viewport.width * parallaxBuffer + "px",
+          height: (viewport.width * parallaxBuffer) / videoAspect + "px",
           minWidth: "unset",
           minHeight: "unset",
         });
       }
     }
 
+    /**
+     * Handle hero video scroll effects
+     */
     function handleHeroVideoScroll() {
       var $heroSection = $(".hero-video-section");
       var $heroContent = $(".hero-video-content");
+
       if (!$heroSection.length) return;
 
       var rect = $heroSection[0].getBoundingClientRect();
-      var windowHeight = $(window).height();
-      var scrollY = $(window).scrollTop();
-      var threshold = windowHeight * 0.9;
+      var viewport = getViewport();
+      var scrollY = $window.scrollTop();
+      var threshold = viewport.height * 0.9;
 
       // Fade out effect
-      if (scrollY >= threshold) {
-        $videoBackground.css("opacity", "0");
-      } else {
-        $videoBackground.css("opacity", "1");
-      }
+      $videoBackground.css("opacity", scrollY >= threshold ? "0" : "1");
 
       // Parallax effect - only when section is in viewport
-      if (rect.bottom > 0 && rect.top < windowHeight) {
-        var progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-        var isMobile = $(window).width() < 1200;
-        var maxMove = rect.height * (isMobile ? 0.35 : 0.25);
+      if (rect.bottom > 0 && rect.top < viewport.height) {
+        var progress =
+          (viewport.height - rect.top) / (viewport.height + rect.height);
+        var mobile = isMobile();
+        var maxMove = rect.height * (mobile ? 0.35 : 0.25);
         var translateY = (progress - 0.5) * maxMove;
 
         // Apply parallax to video
@@ -410,22 +449,22 @@ $(document).ready(function () {
           );
         }
 
-        // Apply parallax to text content (moves faster for depth effect)
+        // Apply parallax to text content
         if ($heroContent.length) {
-          var textMaxMove = rect.height * (isMobile ? 0.5 : 0.35);
+          var textMaxMove = rect.height * (mobile ? 0.5 : 0.35);
           var textTranslateY = (progress - 0.5) * textMaxMove;
           $heroContent.css("transform", "translateY(" + textTranslateY + "px)");
         }
       }
     }
 
-    // Initial size and scroll state
+    // Initialize
     sizeHeroVideo();
     handleHeroVideoScroll();
 
-    // Use requestAnimationFrame for smooth performance
+    // Optimize scroll with requestAnimationFrame
     var heroTicking = false;
-    $(window).on("scroll", function () {
+    $window.on("scroll", function () {
       if (!heroTicking) {
         requestAnimationFrame(function () {
           handleHeroVideoScroll();
@@ -435,7 +474,7 @@ $(document).ready(function () {
       }
     });
 
-    $(window).on("resize", function () {
+    $window.on("resize", function () {
       sizeHeroVideo();
       handleHeroVideoScroll();
     });
@@ -444,26 +483,25 @@ $(document).ready(function () {
   // ========================================
   // RENTAL SOLUTIONS CARDS (INDEX-2)
   // ========================================
+
   var $rentalCards = $(".rental-card");
 
-  if ($rentalCards.length > 0) {
+  if ($rentalCards.length) {
     $rentalCards.each(function () {
       var $card = $(this);
 
       // Handle click on mobile/tablet
       $card.on("click", function (e) {
-        // Only on mobile/tablet (below 1200px)
-        if ($(window).width() < 1200) {
+        if (isMobile()) {
           // Don't toggle if clicking the link
-          if ($(e.target).hasClass("rental-card-overlay-btn")) {
-            return;
-          }
+          if ($(e.target).hasClass("rental-card-overlay-btn")) return;
+
           e.preventDefault();
           $card.toggleClass("active");
         }
       });
 
-      // Prevent link click from closing the overlay on mobile
+      // Prevent link click from closing overlay
       var $link = $card.find(".rental-card-overlay-btn");
       if ($link.length) {
         $link.on("click", function (e) {
@@ -473,8 +511,8 @@ $(document).ready(function () {
     });
 
     // Close active cards when clicking outside
-    $(document).on("click", function (e) {
-      if ($(window).width() < 1200) {
+    $document.on("click", function (e) {
+      if (isMobile()) {
         var $clickedCard = $(e.target).closest(".rental-card");
         if (!$clickedCard.length) {
           $rentalCards.removeClass("active");
@@ -486,49 +524,52 @@ $(document).ready(function () {
   // ========================================
   // KIWI HERITAGE VIDEO PARALLAX (INDEX-2)
   // ========================================
+
   var $kiwiHeritageVideo = $("#kiwiHeritageVideo");
 
   if ($kiwiHeritageVideo.length) {
     var $kiwiSection = $(".kiwi-heritage-section");
 
+    /**
+     * Handle Kiwi Heritage video parallax effect
+     */
     function handleKiwiParallax() {
       if (!$kiwiSection.length) return;
 
       var rect = $kiwiSection[0].getBoundingClientRect();
-      var windowHeight = $(window).height();
+      var viewport = getViewport();
 
       // Only apply when section is in viewport
-      if (rect.bottom > 0 && rect.top < windowHeight) {
-        // Calculate progress: 0 when section enters bottom, 1 when it leaves top
-        var progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-        var isMobile = $(window).width() < 1200;
-
-        // Video parallax - same strength as hero
-        var maxMove = rect.height * (isMobile ? 0.35 : 0.25);
+      if (rect.bottom > 0 && rect.top < viewport.height) {
+        var progress =
+          (viewport.height - rect.top) / (viewport.height + rect.height);
+        var mobile = isMobile();
+        var maxMove = rect.height * (mobile ? 0.35 : 0.25);
         var translateY = (progress - 0.5) * maxMove;
+
         $kiwiHeritageVideo.css("transform", "translateY(" + translateY + "px)");
       }
     }
 
-    // Use requestAnimationFrame for smooth performance
-    var ticking = false;
-    $(window).on("scroll", function () {
-      if (!ticking) {
+    // Optimize with requestAnimationFrame
+    var kiwiTicking = false;
+    $window.on("scroll", function () {
+      if (!kiwiTicking) {
         requestAnimationFrame(function () {
           handleKiwiParallax();
-          ticking = false;
+          kiwiTicking = false;
         });
-        ticking = true;
+        kiwiTicking = true;
       }
     });
 
-    // Initial state
     handleKiwiParallax();
   }
 
   // ========================================
   // LATEST NEWS CAROUSEL (INDEX-2)
   // ========================================
+
   var $newsCarousel = $("#newsCarousel");
 
   if ($newsCarousel.length) {
@@ -537,22 +578,22 @@ $(document).ready(function () {
     var $prevBtnMobile = $("#newsCarouselPrevMobile");
     var $nextBtnMobile = $("#newsCarouselNextMobile");
 
+    /**
+     * Scroll carousel in specified direction
+     */
     function scrollCarousel(direction) {
       var scrollAmount = 0;
       var cardWidth = $newsCarousel.find(".latest-news-card").outerWidth();
-      var gap = $(window).width() >= 1200 ? 50 : 20; // 3.125rem = 50px, 1.25rem = 20px
+      var viewport = getViewport();
+      var gap = viewport.width >= BREAKPOINTS.desktop ? 50 : 20;
 
-      if ($(window).width() < 768) {
-        // Mobile: scroll by 75% of container
+      if (viewport.width < BREAKPOINTS.mobile) {
         scrollAmount = $newsCarousel.outerWidth() * 0.75;
-      } else if ($(window).width() < 1024) {
-        // Tablet: scroll by 50% of container
+      } else if (viewport.width < BREAKPOINTS.tablet) {
         scrollAmount = $newsCarousel.outerWidth() * 0.5;
-      } else if ($(window).width() < 1200) {
-        // Small desktop: scroll by 33.333% of container
+      } else if (viewport.width < BREAKPOINTS.desktop) {
         scrollAmount = $newsCarousel.outerWidth() * 0.33333;
       } else {
-        // Large desktop: scroll by card width + gap
         scrollAmount = cardWidth + gap;
       }
 
@@ -590,8 +631,12 @@ $(document).ready(function () {
     }
   }
 
-  // Client Testimonials Carousel
+  // ========================================
+  // CLIENT TESTIMONIALS CAROUSEL
+  // ========================================
+
   var $testimonialsCarousel = $("#testimonialsCarousel");
+
   if ($testimonialsCarousel.length) {
     var currentSlide = 0;
     var $slides = $testimonialsCarousel.find(".testimonial-item");
@@ -600,6 +645,9 @@ $(document).ready(function () {
     var autoplayInterval;
     var autoplayDelay = 4000;
 
+    /**
+     * Navigate to specific slide
+     */
     function goToSlide(index) {
       if (index < 0) {
         currentSlide = totalSlides - 1;
@@ -624,20 +672,32 @@ $(document).ready(function () {
       });
     }
 
+    /**
+     * Move to next slide
+     */
     function nextSlide() {
       goToSlide(currentSlide + 1);
     }
 
+    /**
+     * Start autoplay
+     */
     function startAutoplay() {
       autoplayInterval = setInterval(nextSlide, autoplayDelay);
     }
 
+    /**
+     * Stop autoplay
+     */
     function stopAutoplay() {
       if (autoplayInterval) {
         clearInterval(autoplayInterval);
       }
     }
 
+    /**
+     * Reset autoplay timer
+     */
     function resetAutoplay() {
       stopAutoplay();
       startAutoplay();
@@ -655,7 +715,7 @@ $(document).ready(function () {
     startAutoplay();
 
     // Pause on hover (desktop only)
-    if ($(window).width() >= 1200) {
+    if (isDesktop()) {
       $testimonialsCarousel.on("mouseenter", stopAutoplay);
       $testimonialsCarousel.on("mouseleave", startAutoplay);
     }
