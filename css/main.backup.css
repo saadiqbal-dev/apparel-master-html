@@ -4751,7 +4751,7 @@ h6 {
   .professional-workwear-section {
     padding: 0 6.25rem 7.125rem 60px;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     gap: 5.875rem;
   }
 }
@@ -4759,7 +4759,7 @@ h6 {
   .professional-workwear-section {
     padding: 0 6.25rem 7.125rem 13.75rem;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     gap: 5.875rem;
   }
 }
