@@ -1,12 +1,3 @@
-/**
- * ========================================
- * APPARELMASTER - MAIN JAVASCRIPT
- * ========================================
- * Using jQuery for DOM manipulation
- * and event handling
- * ========================================
- */
-
 $(document).ready(function () {
   // ========================================
   // VARIABLES
@@ -342,7 +333,7 @@ $(document).ready(function () {
   });
 
   // Handle visibility change - pause animation when page is hidden
-  document.addEventListener("visibilitychange", function () {
+  $(document).on("visibilitychange", function () {
     var $marqueeTrack = $(".marquee-track");
     if (document.hidden) {
       $marqueeTrack.css("animation-play-state", "paused");
@@ -354,72 +345,76 @@ $(document).ready(function () {
   // ========================================
   // HERO VIDEO SCROLL BEHAVIOR (INDEX-2)
   // ========================================
-  var videoBackground = document.getElementById("heroVideoBackground");
+  var $videoBackground = $("#heroVideoBackground");
 
-  if (videoBackground) {
-    var iframe = videoBackground.querySelector("iframe");
+  if ($videoBackground.length) {
+    var $iframe = $videoBackground.find("iframe");
 
     // Function to size video properly based on viewport aspect ratio
     function sizeHeroVideo() {
-      if (!iframe) return;
-      var viewportWidth = window.innerWidth;
-      var viewportHeight = window.innerHeight;
+      if (!$iframe.length) return;
+      var viewportWidth = $(window).width();
+      var viewportHeight = $(window).height();
       var viewportAspect = viewportWidth / viewportHeight;
       var videoAspect = 16 / 9;
       var parallaxBuffer = 1.2;
 
       if (viewportAspect > videoAspect) {
         // Viewport is wider than video - anchor to height
-        iframe.style.height = viewportHeight * parallaxBuffer + "px";
-        iframe.style.width =
-          viewportHeight * parallaxBuffer * videoAspect + "px";
-        iframe.style.minWidth = "unset";
-        iframe.style.minHeight = "unset";
+        $iframe.css({
+          height: viewportHeight * parallaxBuffer + "px",
+          width: viewportHeight * parallaxBuffer * videoAspect + "px",
+          minWidth: "unset",
+          minHeight: "unset",
+        });
       } else {
         // Viewport is taller than video - anchor to width
-        iframe.style.width = viewportWidth * parallaxBuffer + "px";
-        iframe.style.height =
-          (viewportWidth * parallaxBuffer) / videoAspect + "px";
-        iframe.style.minWidth = "unset";
-        iframe.style.minHeight = "unset";
+        $iframe.css({
+          width: viewportWidth * parallaxBuffer + "px",
+          height: (viewportWidth * parallaxBuffer) / videoAspect + "px",
+          minWidth: "unset",
+          minHeight: "unset",
+        });
       }
     }
 
     function handleHeroVideoScroll() {
-      var heroSection = document.querySelector(".hero-video-section");
-      var heroContent = document.querySelector(".hero-video-content");
-      if (!heroSection) return;
+      var $heroSection = $(".hero-video-section");
+      var $heroContent = $(".hero-video-content");
+      if (!$heroSection.length) return;
 
-      var rect = heroSection.getBoundingClientRect();
-      var windowHeight = window.innerHeight;
-      var scrollY = window.scrollY;
+      var rect = $heroSection[0].getBoundingClientRect();
+      var windowHeight = $(window).height();
+      var scrollY = $(window).scrollTop();
       var threshold = windowHeight * 0.9;
 
       // Fade out effect
       if (scrollY >= threshold) {
-        videoBackground.style.opacity = "0";
+        $videoBackground.css("opacity", "0");
       } else {
-        videoBackground.style.opacity = "1";
+        $videoBackground.css("opacity", "1");
       }
 
       // Parallax effect - only when section is in viewport
       if (rect.bottom > 0 && rect.top < windowHeight) {
         var progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-        var isMobile = window.innerWidth < 1200;
+        var isMobile = $(window).width() < 1200;
         var maxMove = rect.height * (isMobile ? 0.35 : 0.25);
         var translateY = (progress - 0.5) * maxMove;
 
         // Apply parallax to video
-        if (iframe) {
-          iframe.style.transform =
-            "translate(-50%, calc(-50% + " + translateY + "px))";
+        if ($iframe.length) {
+          $iframe.css(
+            "transform",
+            "translate(-50%, calc(-50% + " + translateY + "px))",
+          );
         }
 
         // Apply parallax to text content (moves faster for depth effect)
-        if (heroContent) {
+        if ($heroContent.length) {
           var textMaxMove = rect.height * (isMobile ? 0.5 : 0.35);
           var textTranslateY = (progress - 0.5) * textMaxMove;
-          heroContent.style.transform = "translateY(" + textTranslateY + "px)";
+          $heroContent.css("transform", "translateY(" + textTranslateY + "px)");
         }
       }
     }
@@ -430,7 +425,7 @@ $(document).ready(function () {
 
     // Use requestAnimationFrame for smooth performance
     var heroTicking = false;
-    window.addEventListener("scroll", function () {
+    $(window).on("scroll", function () {
       if (!heroTicking) {
         requestAnimationFrame(function () {
           handleHeroVideoScroll();
@@ -440,7 +435,7 @@ $(document).ready(function () {
       }
     });
 
-    window.addEventListener("resize", function () {
+    $(window).on("resize", function () {
       sizeHeroVideo();
       handleHeroVideoScroll();
     });
@@ -449,40 +444,40 @@ $(document).ready(function () {
   // ========================================
   // RENTAL SOLUTIONS CARDS (INDEX-2)
   // ========================================
-  var rentalCards = document.querySelectorAll(".rental-card");
+  var $rentalCards = $(".rental-card");
 
-  if (rentalCards.length > 0) {
-    rentalCards.forEach(function (card) {
+  if ($rentalCards.length > 0) {
+    $rentalCards.each(function () {
+      var $card = $(this);
+
       // Handle click on mobile/tablet
-      card.addEventListener("click", function (e) {
+      $card.on("click", function (e) {
         // Only on mobile/tablet (below 1200px)
-        if (window.innerWidth < 1200) {
+        if ($(window).width() < 1200) {
           // Don't toggle if clicking the link
-          if (e.target.classList.contains("rental-card-overlay-btn")) {
+          if ($(e.target).hasClass("rental-card-overlay-btn")) {
             return;
           }
           e.preventDefault();
-          card.classList.toggle("active");
+          $card.toggleClass("active");
         }
       });
 
       // Prevent link click from closing the overlay on mobile
-      var link = card.querySelector(".rental-card-overlay-btn");
-      if (link) {
-        link.addEventListener("click", function (e) {
+      var $link = $card.find(".rental-card-overlay-btn");
+      if ($link.length) {
+        $link.on("click", function (e) {
           e.stopPropagation();
         });
       }
     });
 
     // Close active cards when clicking outside
-    document.addEventListener("click", function (e) {
-      if (window.innerWidth < 1200) {
-        var clickedCard = e.target.closest(".rental-card");
-        if (!clickedCard) {
-          rentalCards.forEach(function (card) {
-            card.classList.remove("active");
-          });
+    $(document).on("click", function (e) {
+      if ($(window).width() < 1200) {
+        var $clickedCard = $(e.target).closest(".rental-card");
+        if (!$clickedCard.length) {
+          $rentalCards.removeClass("active");
         }
       }
     });
@@ -491,33 +486,33 @@ $(document).ready(function () {
   // ========================================
   // KIWI HERITAGE VIDEO PARALLAX (INDEX-2)
   // ========================================
-  var kiwiHeritageVideo = document.getElementById("kiwiHeritageVideo");
+  var $kiwiHeritageVideo = $("#kiwiHeritageVideo");
 
-  if (kiwiHeritageVideo) {
-    var kiwiSection = document.querySelector(".kiwi-heritage-section");
+  if ($kiwiHeritageVideo.length) {
+    var $kiwiSection = $(".kiwi-heritage-section");
 
     function handleKiwiParallax() {
-      if (!kiwiSection) return;
+      if (!$kiwiSection.length) return;
 
-      var rect = kiwiSection.getBoundingClientRect();
-      var windowHeight = window.innerHeight;
+      var rect = $kiwiSection[0].getBoundingClientRect();
+      var windowHeight = $(window).height();
 
       // Only apply when section is in viewport
       if (rect.bottom > 0 && rect.top < windowHeight) {
         // Calculate progress: 0 when section enters bottom, 1 when it leaves top
         var progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-        var isMobile = window.innerWidth < 1200;
+        var isMobile = $(window).width() < 1200;
 
         // Video parallax - same strength as hero
         var maxMove = rect.height * (isMobile ? 0.35 : 0.25);
         var translateY = (progress - 0.5) * maxMove;
-        kiwiHeritageVideo.style.transform = "translateY(" + translateY + "px)";
+        $kiwiHeritageVideo.css("transform", "translateY(" + translateY + "px)");
       }
     }
 
     // Use requestAnimationFrame for smooth performance
     var ticking = false;
-    window.addEventListener("scroll", function () {
+    $(window).on("scroll", function () {
       if (!ticking) {
         requestAnimationFrame(function () {
           handleKiwiParallax();
@@ -534,75 +529,74 @@ $(document).ready(function () {
   // ========================================
   // LATEST NEWS CAROUSEL (INDEX-2)
   // ========================================
-  var newsCarousel = document.getElementById("newsCarousel");
+  var $newsCarousel = $("#newsCarousel");
 
-  if (newsCarousel) {
-    var prevBtnDesktop = document.getElementById("newsCarouselPrev");
-    var nextBtnDesktop = document.getElementById("newsCarouselNext");
-    var prevBtnMobile = document.getElementById("newsCarouselPrevMobile");
-    var nextBtnMobile = document.getElementById("newsCarouselNextMobile");
+  if ($newsCarousel.length) {
+    var $prevBtnDesktop = $("#newsCarouselPrev");
+    var $nextBtnDesktop = $("#newsCarouselNext");
+    var $prevBtnMobile = $("#newsCarouselPrevMobile");
+    var $nextBtnMobile = $("#newsCarouselNextMobile");
 
     function scrollCarousel(direction) {
       var scrollAmount = 0;
-      var cardWidth =
-        newsCarousel.querySelector(".latest-news-card").offsetWidth;
-      var gap = window.innerWidth >= 1200 ? 50 : 20; // 3.125rem = 50px, 1.25rem = 20px
+      var cardWidth = $newsCarousel.find(".latest-news-card").outerWidth();
+      var gap = $(window).width() >= 1200 ? 50 : 20; // 3.125rem = 50px, 1.25rem = 20px
 
-      if (window.innerWidth < 768) {
+      if ($(window).width() < 768) {
         // Mobile: scroll by 75% of container
-        scrollAmount = newsCarousel.offsetWidth * 0.75;
-      } else if (window.innerWidth < 1024) {
+        scrollAmount = $newsCarousel.outerWidth() * 0.75;
+      } else if ($(window).width() < 1024) {
         // Tablet: scroll by 50% of container
-        scrollAmount = newsCarousel.offsetWidth * 0.5;
-      } else if (window.innerWidth < 1200) {
+        scrollAmount = $newsCarousel.outerWidth() * 0.5;
+      } else if ($(window).width() < 1200) {
         // Small desktop: scroll by 33.333% of container
-        scrollAmount = newsCarousel.offsetWidth * 0.33333;
+        scrollAmount = $newsCarousel.outerWidth() * 0.33333;
       } else {
         // Large desktop: scroll by card width + gap
         scrollAmount = cardWidth + gap;
       }
 
       if (direction === "next") {
-        newsCarousel.scrollLeft += scrollAmount;
+        $newsCarousel.scrollLeft($newsCarousel.scrollLeft() + scrollAmount);
       } else {
-        newsCarousel.scrollLeft -= scrollAmount;
+        $newsCarousel.scrollLeft($newsCarousel.scrollLeft() - scrollAmount);
       }
     }
 
     // Desktop controls
-    if (prevBtnDesktop) {
-      prevBtnDesktop.addEventListener("click", function () {
+    if ($prevBtnDesktop.length) {
+      $prevBtnDesktop.on("click", function () {
         scrollCarousel("prev");
       });
     }
 
-    if (nextBtnDesktop) {
-      nextBtnDesktop.addEventListener("click", function () {
+    if ($nextBtnDesktop.length) {
+      $nextBtnDesktop.on("click", function () {
         scrollCarousel("next");
       });
     }
 
     // Mobile controls
-    if (prevBtnMobile) {
-      prevBtnMobile.addEventListener("click", function () {
+    if ($prevBtnMobile.length) {
+      $prevBtnMobile.on("click", function () {
         scrollCarousel("prev");
       });
     }
 
-    if (nextBtnMobile) {
-      nextBtnMobile.addEventListener("click", function () {
+    if ($nextBtnMobile.length) {
+      $nextBtnMobile.on("click", function () {
         scrollCarousel("next");
       });
     }
   }
 
   // Client Testimonials Carousel
-  var testimonialsCarousel = document.getElementById("testimonialsCarousel");
-  if (testimonialsCarousel) {
+  var $testimonialsCarousel = $("#testimonialsCarousel");
+  if ($testimonialsCarousel.length) {
     var currentSlide = 0;
-    var slides = testimonialsCarousel.querySelectorAll(".testimonial-item");
-    var dots = document.querySelectorAll(".testimonials-dot");
-    var totalSlides = slides.length;
+    var $slides = $testimonialsCarousel.find(".testimonial-item");
+    var $dots = $(".testimonials-dot");
+    var totalSlides = $slides.length;
     var autoplayInterval;
     var autoplayDelay = 4000;
 
@@ -615,15 +609,17 @@ $(document).ready(function () {
         currentSlide = index;
       }
 
-      testimonialsCarousel.style.transform =
-        "translateX(-" + currentSlide * 100 + "%)";
+      $testimonialsCarousel.css(
+        "transform",
+        "translateX(-" + currentSlide * 100 + "%)",
+      );
 
       // Update dots
-      dots.forEach(function (dot, i) {
+      $dots.each(function (i) {
         if (i === currentSlide) {
-          dot.classList.add("testimonials-dot-active");
+          $(this).addClass("testimonials-dot-active");
         } else {
-          dot.classList.remove("testimonials-dot-active");
+          $(this).removeClass("testimonials-dot-active");
         }
       });
     }
@@ -648,8 +644,8 @@ $(document).ready(function () {
     }
 
     // Dot click handlers
-    dots.forEach(function (dot, index) {
-      dot.addEventListener("click", function () {
+    $dots.each(function (index) {
+      $(this).on("click", function () {
         goToSlide(index);
         resetAutoplay();
       });
@@ -659,9 +655,9 @@ $(document).ready(function () {
     startAutoplay();
 
     // Pause on hover (desktop only)
-    if (window.innerWidth >= 1200) {
-      testimonialsCarousel.addEventListener("mouseenter", stopAutoplay);
-      testimonialsCarousel.addEventListener("mouseleave", startAutoplay);
+    if ($(window).width() >= 1200) {
+      $testimonialsCarousel.on("mouseenter", stopAutoplay);
+      $testimonialsCarousel.on("mouseleave", startAutoplay);
     }
   }
 });
