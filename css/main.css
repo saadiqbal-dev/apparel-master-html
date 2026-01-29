@@ -5492,7 +5492,13 @@ h6 {
 }
 
 .news-carousel-btn-prev:hover svg path {
-  fill: #f15d22;
+  fill: #242323;
+}
+
+@media (min-width: 1200px) {
+  .news-carousel-btn-prev:hover svg path {
+    fill: #f15d22;
+  }
 }
 
 .news-carousel-btn-next {
@@ -5548,6 +5554,12 @@ h6 {
   width: 1.875rem;
   height: 1.875rem;
   fill: #242323;
+}
+
+@media (min-width: 1200px) {
+  .news-carousel-btn svg {
+    fill: #f15d22;
+  }
 }
 
 /* ===================================
