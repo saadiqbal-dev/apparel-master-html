@@ -6154,9 +6154,33 @@ h6 {
   }
 }
 
+.max-width-container {
+  max-width: 1720px;
+  margin: auto;
+}
+
 .tiles-section {
   background: #f1f2f2;
-  padding: 85px 100px;
+  padding: 34px 20px;
   margin: 0 auto;
   width: 100%;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .tiles-section {
+    background: #f1f2f2;
+    padding: 85px 60px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .tiles-section {
+    background: #f1f2f2;
+    padding: 85px 100px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
