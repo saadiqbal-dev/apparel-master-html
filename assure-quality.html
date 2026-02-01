@@ -793,7 +793,7 @@
     <section class="asure-accordion">
       <div class="asure-container">
         <div
-          class="d-flex flex-column align-items-center justify-content-center gap-3"
+          class="d-flex flex-column text-container align-items-start align-items-md-center justify-content-center gap-3"
         >
           <h5>Accreditation</h5>
           <p>
@@ -803,10 +803,58 @@
             accredited Apparelmaster outlets.
           </p>
         </div>
-        <div class="img-carousel">
-          <img src="public/images/asureQuality/accordion-1.jpg" />
-          <img src="public/images/asureQuality/accordion-2.jpg" />
-          <img src="public/images/asureQuality/accordion-3.jpg" />
+
+        <div class="img-carousel-wrapper">
+          <div class="img-carousel" id="imgCarousel">
+            <img src="public/images/asureQuality/accordion-1.jpg" />
+            <img src="public/images/asureQuality/accordion-2.jpg" />
+            <img src="public/images/asureQuality/accordion-3.jpg" />
+          </div>
+        </div>
+        <!-- Mobile Carousel Controls -->
+        <div class="img-carousel-controls d-flex d-xl-none gap-3 mb-4">
+          <button
+            id="imgCarouselPrev"
+            class="img-carousel-btn img-carousel-btn-prev"
+            aria-label="Previous"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+            >
+              <path
+                d="M18.75 22.5L11.25 15L18.75 7.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            id="imgCarouselNext"
+            class="img-carousel-btn img-carousel-btn-next"
+            aria-label="Next"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+            >
+              <path
+                d="M11.25 22.5L18.75 15L11.25 7.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

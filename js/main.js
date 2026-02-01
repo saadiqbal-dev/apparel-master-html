@@ -720,4 +720,49 @@ $(document).ready(function () {
       $testimonialsCarousel.on("mouseleave", startAutoplay);
     }
   }
+
+  // ========================================
+  // IMAGE CAROUSEL (ASSURE QUALITY PAGE)
+  // ========================================
+
+  var $imgCarousel = $("#imgCarousel");
+
+  if ($imgCarousel.length) {
+    var $prevBtn = $("#imgCarouselPrev");
+    var $nextBtn = $("#imgCarouselNext");
+
+    /**
+     * Scroll image carousel in specified direction
+     * @param {string} direction - "next" or "prev"
+     */
+    function scrollImgCarousel(direction) {
+      // Scroll by full carousel width (one image at a time) using jQuery
+      var scrollAmount = $imgCarousel.width();
+      var currentScroll = $imgCarousel.scrollLeft();
+      var newScroll;
+
+      if (direction === "next") {
+        newScroll = currentScroll + scrollAmount;
+      } else {
+        newScroll = currentScroll - scrollAmount;
+      }
+
+      // Use jQuery animate for smooth scrolling
+      $imgCarousel.animate(
+        {
+          scrollLeft: newScroll,
+        },
+        300,
+      );
+    }
+
+    // Button click handlers using jQuery
+    $prevBtn.on("click", function () {
+      scrollImgCarousel("prev");
+    });
+
+    $nextBtn.on("click", function () {
+      scrollImgCarousel("next");
+    });
+  }
 });

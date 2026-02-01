@@ -5948,26 +5948,122 @@ h6 {
 
 .asure-accordion {
   background: #242323;
-  padding: 107px 100px;
+  padding: 50px 20px;
   margin-bottom: 50px;
 }
 
-.asure-accordion div > h5,
-p {
+.text-container h5 {
   color: #fff;
   max-width: 860px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+.text-container p {
+  color: #fff;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Image Carousel - Mobile Controls */
+.img-carousel-controls {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.img-carousel-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: white;
+}
+
+.img-carousel-btn svg {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.img-carousel-btn-prev {
+  background: transparent;
+  color: white;
+}
+
+.img-carousel-btn-prev:hover {
+  background: white;
+  border-color: white;
+  color: #242323;
+}
+
+.img-carousel-btn-next {
+  background: white;
+  color: #242323;
+  border-color: white;
+}
+
+.img-carousel-btn-next:hover {
+  background: transparent;
+  border-color: white;
+  color: white;
+}
+
+/* Swap styles when hovering on prev button */
+.img-carousel-btn-prev:hover ~ .img-carousel-btn-next {
+  background: transparent;
+  border-color: white;
+  color: white;
+}
+
+/* Swap styles when hovering on next button */
+.img-carousel-controls:has(.img-carousel-btn-next:hover)
+  .img-carousel-btn-prev {
+  background: white;
+  border-color: white;
+  color: #242323;
+}
+
+/* Image Carousel - Wrapper */
+.img-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0 0;
+  width: 100%;
 }
 
 .img-carousel {
-  margin: 90px 0 0;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+}
+
+.img-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .img-carousel img {
-  width: 568px;
-  height: 580px;
+  flex: 0 0 100%;
+  width: 100%;
+  max-height: 731px;
+  border-radius: 12px;
+  height: auto;
+  aspect-ratio: 568 / 580;
   object-fit: cover;
+  scroll-snap-align: start;
+}
+.img-carousel-wrapper {
+  margin: 40px 0 0;
 }
 
 @media (min-width: 1200px) {
@@ -5977,19 +6073,30 @@ p {
     margin-bottom: 50px;
   }
 
-  .asure-accordion div > h5,
-  p {
+  .text-container h5 {
+    color: #fff;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .text-container p {
     color: #fff;
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
   }
 
-  .img-carousel {
+  .img-carousel-wrapper {
+    overflow: visible;
     margin: 90px 0 0;
+  }
+
+  .img-carousel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+    overflow: visible;
+    padding: 0;
   }
 
   .img-carousel img {
@@ -6011,16 +6118,26 @@ p {
     width: 100%;
   }
 
-  .asure-accordion div > h5,
-  p {
+  .text-container h5 {
+    color: #fff;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .text-container p {
     color: #fff;
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
   }
 
-  .img-carousel {
+  .img-carousel-wrapper {
     margin: 90px 0 0;
+  }
+
+  .img-carousel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
 
   .img-carousel img {
