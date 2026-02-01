@@ -4752,7 +4752,7 @@ h6 {
   .professional-workwear-section {
     padding: 0 6.25rem 7.125rem 60px;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     gap: 5.875rem;
   }
 }
@@ -4760,7 +4760,7 @@ h6 {
   .professional-workwear-section {
     padding: 0 6.25rem 7.125rem 13.75rem;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     gap: 5.875rem;
   }
 }
@@ -4901,7 +4901,7 @@ h6 {
   }
 }
 
-.rental-solutions-heading {
+.rental-solutions-section h2 {
   text-align: center;
   font-family: "Inter", sans-serif;
   color: #000;
@@ -4913,7 +4913,7 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .rental-solutions-heading {
+  .rental-solutions-section h2 {
     max-width: none;
     font-size: 40px;
     line-height: 50px;
@@ -4986,7 +4986,7 @@ h6 {
   }
 }
 
-.rental-card-title {
+.rental-card-header h3 {
   color: #000;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -4996,7 +4996,7 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .rental-card-title {
+  .rental-card-header h3 {
     font-size: 20px;
   }
 }
@@ -5084,7 +5084,7 @@ h6 {
   }
 }
 
-.rental-card-overlay-title {
+.rental-card-overlay-content h3 {
   color: #000;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -5094,14 +5094,14 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .rental-card-overlay-title {
+  .rental-card-overlay-content h3 {
     font-size: 20px;
     line-height: 34px;
     margin-bottom: 1rem;
   }
 }
 
-.rental-card-overlay-description {
+.rental-card-overlay-content p {
   color: #000;
   font-family: "Inter", sans-serif;
   font-size: 13px;
@@ -5110,7 +5110,7 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .rental-card-overlay-description {
+  .rental-card-overlay-content p {
     font-size: 16px;
   }
 }
@@ -5243,7 +5243,7 @@ h6 {
   }
 }
 
-.latest-news-mobile-heading {
+.latest-news-section > h2 {
   color: white;
   font-family: "Inter", sans-serif;
   text-align: center;
@@ -5254,7 +5254,7 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .latest-news-mobile-heading {
+  .latest-news-section > h2 {
     display: none;
   }
 }
@@ -5391,7 +5391,7 @@ h6 {
   }
 }
 
-.latest-news-card-category {
+.latest-news-card-content p:first-child {
   color: #979595;
   font-family: "Inter", sans-serif;
   font-size: 15.134px;
@@ -5401,13 +5401,13 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .latest-news-card-category {
+  .latest-news-card-content p:first-child {
     font-size: 14px;
     line-height: 28px;
   }
 }
 
-.latest-news-card-title {
+.latest-news-card-content h3 {
   font-family: "Inter", sans-serif;
   color: #000;
   font-size: 21.62px;
@@ -5418,25 +5418,25 @@ h6 {
 }
 
 @media (min-width: 768px) {
-  .latest-news-card-title {
+  .latest-news-card-content h3 {
     font-size: 18px;
   }
 }
 
 @media (min-width: 1200px) {
-  .latest-news-card-title {
+  .latest-news-card-content h3 {
     font-size: 20px;
     line-height: 28px;
   }
 }
 
-.latest-news-card:hover .latest-news-card-title {
+.latest-news-card:hover .latest-news-card-content h3 {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
 
-.latest-news-card-readmore {
+.latest-news-card-content p:last-child {
   color: #979595;
   font-family: "Inter", sans-serif;
   font-size: 15.134px;
@@ -5446,7 +5446,7 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .latest-news-card-readmore {
+  .latest-news-card-content p:last-child {
     font-size: 14px;
     line-height: 28px;
   }
@@ -5661,7 +5661,7 @@ h6 {
   flex-shrink: 0;
 }
 
-.testimonial-text {
+.testimonial-card > p {
   color: #000;
   font-family: "Inter", sans-serif;
   font-size: 24px;
@@ -5672,7 +5672,7 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .testimonial-text {
+  .testimonial-card > p {
     font-size: 26px;
     line-height: 36px;
     padding-top: 18px;
@@ -5704,7 +5704,6 @@ h6 {
   .testimonial-author-info {
     font-size: 18px;
     line-height: 24px;
-
     margin-top: -6px;
     margin-bottom: -7px;
   }
@@ -5712,18 +5711,22 @@ h6 {
 
 .testimonial-author-info p {
   margin: 0;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
-.testimonial-author-name {
+@media (min-width: 1200px) {
+  .testimonial-author-info p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.testimonial-author-info p:first-child {
   font-weight: 600;
-}
-
-.testimonial-author-title {
-  font-weight: 400;
-}
-
-.testimonial-author-company {
-  font-weight: 400;
 }
 
 .testimonial-image {
