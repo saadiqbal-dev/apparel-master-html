@@ -6153,3 +6153,10 @@ h6 {
     max-width: 1720px;
   }
 }
+
+.tiles-section {
+  background: #f1f2f2;
+  padding: 85px 100px;
+  margin: 0 auto;
+  width: 100%;
+}
