@@ -934,11 +934,14 @@ h6 {
      CONTENT SECTIONS
      ======================================== */
 
+.content-section {
+  background: #fff;
+}
+
 /* Content Section 1 */
 @media (min-width: 1200px) {
   .content-section {
     padding-top: 50px !important;
-    background: #fff;
   }
 }
 
