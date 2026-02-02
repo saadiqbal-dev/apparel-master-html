@@ -6197,10 +6197,14 @@ h6 {
   display: flex;
   padding: 40px 20px;
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
   background: #fff;
 }
+
+.max-width-1920 {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .max-w-152 {
   max-width: 152px;
 }
@@ -6265,8 +6269,6 @@ h6 {
     display: flex;
     padding: 90px 60px;
     width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
   }
   .sustainability-item {
     width: 100%;
@@ -6325,8 +6327,6 @@ h6 {
     display: flex;
     padding: 90px 100px;
     width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
   }
   .sustainability-item {
     width: 100%;
