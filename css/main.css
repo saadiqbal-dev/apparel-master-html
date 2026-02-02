@@ -6195,13 +6195,13 @@ h6 {
 
 .sustainability {
   display: flex;
-  padding: 40px 20px;
+  padding: 40px 20px 130px 20px;
   width: 100%;
   background: #fff;
 }
 
 .max-width-1920 {
-  max-width: 1920px;
+  max-width: 1720px;
   margin: 0 auto;
 }
 
@@ -6264,6 +6264,10 @@ h6 {
   margin: 0;
 }
 
+.max-width-236 {
+  max-width: 216px;
+}
+
 @media (min-width: 1200px) {
   .sustainability {
     display: flex;
@@ -6287,9 +6291,9 @@ h6 {
   }
   .sustainability-item p {
     color: #b0a9a9;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 38px; /* 127.778% */
+    line-height: 40px; /* 127.778% */
     padding: 0;
     margin: 0;
   }
@@ -6303,14 +6307,14 @@ h6 {
 
   .carbon-item p {
     color: #b0a9a9;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 38px; /* 127.778% */
+    line-height: 40px; /* 127.778% */
     padding: 0;
     margin: 0;
     max-width: 325px;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
   }
 
@@ -6345,9 +6349,9 @@ h6 {
   }
   .sustainability-item p {
     color: #b0a9a9;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 46px; /* 127.778% */
+    line-height: 40px; /* 127.778% */
     padding: 0;
     margin: 0;
   }
@@ -6368,7 +6372,7 @@ h6 {
     margin: 0;
     max-width: 325px;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
   }
 
@@ -6377,6 +6381,23 @@ h6 {
     font-weight: 600;
     padding: 0;
     margin: 0;
+  }
+}
+
+.map-img {
+  max-width: 410px;
+  height: auto;
+  position: relative;
+  top: -50px;
+}
+
+.mobile-hidden {
+  display: none !important;
+}
+
+@media (min-width: 1200px) {
+  .mobile-hidden {
+    display: flex !important;
   }
 }
 
