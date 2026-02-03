@@ -172,16 +172,6 @@ h6 {
   }
 }
 
-.text-20-mona,
-.text-20-mona p {
-  color: #000;
-  font-family: "Mona Sans";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px; /* 140% */
-}
-
 .ml-auto {
   margin-left: auto;
 }
@@ -1064,19 +1054,6 @@ h6 {
   }
 }
 
-.content-bar {
-  width: 55px;
-  height: 3.71px;
-  background: #e9510e;
-}
-
-@media (min-width: 1200px) {
-  .content-bar {
-    width: 100px;
-    height: 6px;
-  }
-}
-
 .content-text p {
   font-weight: 500;
   margin: 0;
@@ -1179,12 +1156,10 @@ h6 {
   color: black;
   background: transparent;
   text-decoration: none;
-  display: inline-block;
   text-align: center;
   white-space: nowrap;
   transition: all 0.3s ease;
   margin: 0 auto;
-  display: block;
   width: fit-content;
   height: 50px;
   display: flex;
@@ -6463,11 +6438,11 @@ h6 {
 }
 
 .hero-workwear--assure-quality {
-  background-image: url("../public/images/asureQuality/hero.jpg");
+  background-image: url("../public/images/asureQuality/hero.png");
 }
 
 .hero-workwear--community {
-  background-image: url("../public/images/community/hero.jpg");
+  background-image: url("../public/images/community/hero.png");
 }
 
 .hero-workwear--diamond {
@@ -6475,11 +6450,11 @@ h6 {
 }
 
 .hero-workwear--eco-policy {
-  background-image: url("../public/images/eco-policy/hero.jpg");
+  background-image: url("../public/images/eco-policy/hero.png");
 }
 
 .hero-workwear--food-industry {
-  background-image: url("../public/images/food-industry/food-industry-header.png");
+  background-image: url("../public/images/food-industry-specific.jpg");
 }
 
 .hero-workwear--latest-news {
@@ -6487,15 +6462,15 @@ h6 {
 }
 
 .hero-workwear--new-employee {
-  background-image: url("../public/images/new-employee-form/hero.png");
+  background-image: url("../public/images/employee-form/hero.png");
 }
 
 .hero-workwear--news-article {
-  background-image: url("../public/images/news-article/hero.png");
+  background-image: url("../public/images/latest-news/hero.png");
 }
 
 .hero-workwear--our-services {
-  background-image: url("../public/images/our-services/hero.jpg");
+  background-image: url("../public/images/ourServices/hero.png");
 }
 
 .hero-workwear--ppe {
@@ -6507,7 +6482,7 @@ h6 {
 }
 
 .hero-workwear--workplace {
-  background-image: url("../public/images/workplace-floor-mats/workplace-floor-mats-header.png");
+  background-image: url("../public/images/floor/floor-header.jpg");
 }
 
 /* Responsive Video Wrapper */
