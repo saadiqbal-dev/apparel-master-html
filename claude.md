@@ -6,51 +6,51 @@ This document tracks the unified class structure created for cleaner, backend-fr
 
 ---
 
-## Bold Content Section
+## First Content Section (FC)
 
-**Location in CSS:** `/css/main.css` lines 2982-3085
+**Location in CSS:** `/css/main.css` lines 2445-2580
 
-**Purpose:** Generic, reusable content section that can be used anywhere on any page. Features a two-column layout with an image on one side and text content with an orange decorative bar on the other. Perfect for Laravel Blade templates and CMS integration.
+**Purpose:** Unified classes for the first content section that appears after hero/breadcrumb. This section typically has an image on the left and content with an orange bar on the right.
 
 ### Old Classes → New Classes Mapping
 
-| Old Classes                    | New Class                | Description                       |
-| ------------------------------ | ------------------------ | --------------------------------- |
-| `content-section py-5`         | `bold-content`           | Section wrapper with all padding  |
-| `container content-container`  | `bold-content-container` | Container with responsive padding |
-| `content-image-col`            | `content-image-col`      | Image column wrapper (unchanged)  |
-| `content-image`                | `content-image`          | Image element (unchanged)         |
-| `content-text-col`             | `bold-content-text-col`  | Text column wrapper               |
-| `content-text`                 | `bold-content-text`      | Text content wrapper              |
-| `content-bar`                  | `content-bar`            | Orange decorative bar (unchanged) |
-| `svg-width` (eco-policy only)  | `svg-width`              | Optional SVG wrapper (unchanged)  |
+| Old Classes                                 | New Class      | Description                       |
+| ------------------------------------------- | -------------- | --------------------------------- |
+| `content-section py-5 content-section-last` | `fc-section`   | Section wrapper with all padding  |
+| `container content-container`               | `fc-container` | Container with responsive padding |
+| `content-image-col`                         | `fc-img-col`   | Image column wrapper              |
+| `content-image`                             | `fc-img`       | Image element with aspect ratios  |
+| `content-text-col`                          | `fc-text-col`  | Text column wrapper               |
+| `content-text`                              | `fc-text`      | Text content wrapper              |
+| `content-bar`                               | `fc-bar`       | Orange decorative bar             |
 
 ### Complete Class Reference
 
-#### `.bold-content`
+#### `.fc-section`
 
-**Merges:** `content-section` + `py-5`
+**Merges:** `content-section` + `py-5` + `content-section-last`
 
 **Styles:**
 
-- Mobile: `padding-top: 1.5rem; padding-bottom: 1.5rem;`
-- Desktop (≥1200px): `padding-top: 3rem; padding-bottom: 3rem;`
+- Mobile: `padding-top: 1.5rem; padding-bottom: 56px;`
+- Desktop (≥1200px): `padding-top: 50px; padding-bottom: 114px;`
+- Row gutters: Mobile `54px`, Desktop `50px`
 
 **Usage:**
 
 ```html
-<section class="bold-content"></section>
+<section class="fc-section"></section>
 ```
 
 ---
 
-#### `.bold-content-container`
+#### `.fc-container`
 
 **Merges:** `container` + `content-container`
 
 **Styles:**
 
-- `max-width: 1720px; margin: 0 auto;`
+- `max-width: 1720px`
 - Mobile: `padding: 0 20px`
 - Desktop (≥1200px): `padding: 0 40px`
 - Wide (≥1920px): `padding: 0`
@@ -58,38 +58,49 @@ This document tracks the unified class structure created for cleaner, backend-fr
 **Usage:**
 
 ```html
-<div class="container bold-content-container"></div>
+<div class="fc-container"></div>
 ```
 
 ---
 
-#### `.content-image-col`
+#### `.fc-img-col`
 
-**Original class (unchanged)** - Image column wrapper
+**Merges:** `content-image-col`
+
+**Styles:**
+
+- Mobile: `justify-content: flex-start`
+- Desktop (≥1200px): `justify-content: center`
 
 **Usage:**
 
 ```html
 <div
-  class="col-xl-6 d-flex align-items-center content-image-col order-1 order-xl-0"
+  class="col-xl-6 d-flex align-items-center fc-img-col order-1 order-xl-0"
 ></div>
 ```
 
 ---
 
-#### `.content-image`
+#### `.fc-img`
 
-**Original class (unchanged)** - Image element with aspect ratios
+**Merges:** `content-image`
+
+**Styles:**
+
+- `width: 100%; height: auto; object-fit: cover;`
+- Mobile: `aspect-ratio: 353 / 246`
+- Desktop (≥1200px): `aspect-ratio: 835 / 580`
 
 **Usage:**
 
 ```html
-<img src="..." alt="..." class="content-image" />
+<img src="..." alt="..." class=" fc-img " />
 ```
 
 ---
 
-#### `.bold-content-text-col`
+#### `.fc-text-col`
 
 **Merges:** `content-text-col`
 
@@ -102,13 +113,13 @@ This document tracks the unified class structure created for cleaner, backend-fr
 
 ```html
 <div
-  class="col-xl-6 d-flex align-items-center bold-content-text-col order-0 order-xl-1"
+  class="col-xl-6 d-flex align-items-center fc-text-col order-0 order-xl-1"
 ></div>
 ```
 
 ---
 
-#### `.bold-content-text`
+#### `.fc-text`
 
 **Merges:** `content-text`
 
@@ -125,97 +136,56 @@ This document tracks the unified class structure created for cleaner, backend-fr
 **Usage:**
 
 ```html
-<div class="bold-content-text">
-  <div class="bold-content-bar mb-4"></div>
+<div class="fc-text">
+  <div class="fc-bar mb-4"></div>
   <p>Content here...</p>
 </div>
 ```
 
 ---
 
-#### `.content-bar`
+#### `.fc-bar`
 
-**Original class (unchanged)** - Orange decorative bar
+**Merges:** `content-bar`
+
+**Styles:**
+
+- Mobile: `width: 55px; height: 3.71px`
+- Desktop (≥1200px): `width: 100px; height: 6px`
+- `background: #e9510e` (orange)
 
 **Usage:**
 
 ```html
-<div class="content-bar mb-4"></div>
-```
-
----
-
-#### `.svg-width`
-
-**Original class (unchanged)** - Optional SVG logo wrapper (eco-policy only)
-
-**Usage (optional):**
-
-```html
-<div class="svg-width">
-  <img src="public/images/eco-policy/eco.svg" alt="Eco Policy" />
-</div>
+<div class="fc-bar mb-4"></div>
 ```
 
 ---
 
 ## Complete HTML Example
 
-### Standard Version (Most Pages)
-
 ```html
-<section class="bold-content">
-  <div class="container bold-content-container">
+<!-- First Content Section -->
+<section class="fc-section">
+  <div class="fc-container">
     <div class="row">
       <!-- Image Column (left on desktop) -->
       <div
-        class="col-xl-6 d-flex align-items-center content-image-col order-1 order-xl-0"
+        class="col-xl-6 d-flex align-items-center fc-img-col order-1 order-xl-0"
       >
         <img
-          src="public/images/ppe/ppe-1.webp"
-          alt="Personal Protective Equipment"
-          class="content-image"
+          src="public/images/about/about-1.png"
+          alt="About Apparel Master"
+          class=" fc-img "
         />
       </div>
 
       <!-- Text Column (right on desktop) -->
       <div
-        class="col-xl-6 d-flex align-items-center bold-content-text-col order-0 order-xl-1"
+        class="col-xl-6 d-flex align-items-center fc-text-col order-0 order-xl-1"
       >
-        <div class="bold-content-text">
-          <div class="content-bar mb-4"></div>
-          <p>Your content text here...</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-```
-
-### With Optional SVG Logo (eco-policy.html)
-
-```html
-<section class="bold-content">
-  <div class="container bold-content-container">
-    <div class="row">
-      <div
-        class="col-xl-6 d-flex align-items-center content-image-col order-1 order-xl-0"
-      >
-        <img
-          src="public/images/eco-policy/1.webp"
-          alt="Our Community Support"
-          class="content-image"
-        />
-      </div>
-      <div
-        class="col-xl-6 d-flex align-items-center bold-content-text-col order-0 order-xl-1"
-      >
-        <div class="bold-content-text">
-          <!-- Optional SVG logo -->
-          <div class="svg-width">
-            <img src="public/images/eco-policy/eco.svg" alt="Eco Policy" />
-          </div>
-          <div class="content-bar mb-4"></div>
+        <div class="fc-text">
+          <div class="fc-bar mb-4"></div>
           <p>Your content text here...</p>
         </div>
       </div>
@@ -226,14 +196,14 @@ This document tracks the unified class structure created for cleaner, backend-fr
 
 ---
 
-## Pages Using Bold Content Section
+## Pages Using This Pattern
 
-1. **ppe.html** (line 696) - ✅ Updated to new classes
-2. **food-industry-workwear.html** (line 698) - ✅ Updated to new classes
-3. **workplace-floor-mats.html** (line 698) - ✅ Updated to new classes
-4. **eco-policy.html** (line 704) - ✅ Updated to new classes (with optional SVG)
+1. **about.html** (line 699) - ✅ Updated to new classes
+2. **food-industry-workwear.html** (line 700) - ✅ Updated to new classes
+3. **ppe.html** (line 703) - ✅ Updated to new classes
+4. **workplace-floor-mats.html** (line 702) - ✅ Updated to new classes
 
-**All 4 pages now use the unified bold-content class system!**
+**All 4 pages now use the unified FC class system!**
 
 ---
 
@@ -241,22 +211,21 @@ This document tracks the unified class structure created for cleaner, backend-fr
 
 Always keep these Bootstrap utility classes:
 
-- `container` - Bootstrap container wrapper
-- `row` - Bootstrap row wrapper
-- `col-xl-6` - Column width (responsive, stacks on mobile)
+- `col-xl-6` - Column width (no need for col-12, mobile-first default)
 - `d-flex` - Flexbox display
 - `align-items-center` - Vertical centering
-- `order-1 order-xl-0` - Mobile order 1, desktop order 0 (image left on desktop)
-- `order-0 order-xl-1` - Mobile order 0, desktop order 1 (text right on desktop)
+- `order-1 order-xl-0` - Image left on desktop
+- `order-0 order-xl-1` - Text right on desktop
+- `` - Responsive image
+- `` - Border radius
 - `mb-4` - Margin bottom (for orange bar)
 
 ---
 
 ## Notes
 
-- **bold-content** is a generic, reusable section that can be used anywhere without conflicts
-- All custom classes are consolidated into single, unified classes with responsive behavior built-in
-- No need for multiple custom classes on same element (except Bootstrap utilities)
-- Perfect for Laravel Blade templates and CMS integration
+- **FC** stands for "First Content" (section after hero)
+- All classes are single, unified classes with responsive behavior built-in
+- No need for multiple custom classes on same element
 - Original classes remain in CSS for backward compatibility with other pages
-- This pattern appears on 4 pages total (first content section after breadcrumb)
+- This pattern appears on 4 pages total (excluding outlets, diamond-apparelmaster, and index)
