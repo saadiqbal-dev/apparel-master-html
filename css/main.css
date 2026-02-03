@@ -1044,6 +1044,17 @@ h6 {
   }
 
   .padding-left-50 {
+    padding-left: 25px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .padding-left-50 {
+    padding-left: 25px;
+  }
+}
+@media (min-width: 1900px) {
+  .padding-left-50 {
     padding-left: 50px;
   }
 }
