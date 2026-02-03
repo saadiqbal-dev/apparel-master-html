@@ -6509,3 +6509,21 @@ h6 {
 .hero-workwear--workplace {
   background-image: url("../public/images/workplace-floor-mats/workplace-floor-mats-header.png");
 }
+
+/* Responsive Video Wrapper */
+.responsive-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.responsive-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
