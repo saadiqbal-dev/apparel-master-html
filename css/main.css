@@ -453,7 +453,7 @@ h6 {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  /* line-height: 32px; */
+  line-height: 32px;
   padding: 10px 30px;
   border-radius: 27px;
   transition: all 0.3s ease;
@@ -6421,4 +6421,91 @@ h6 {
   .parallax-image {
     height: 748px;
   }
+}
+
+/* Utility Classes - Replacing Inline Styles */
+
+/* Section Padding */
+.section-padding-lg {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Hover Transition */
+.hover-transition {
+  transition: all 0.3s ease;
+}
+
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
+
+/* Hero Background Images - Dynamic */
+.hero-workwear--contact {
+  background-image: url("../public/images/contact/hero.png");
+}
+
+.hero-workwear--jobs {
+  background-image: url("../public/images/jobs/hero.png");
+}
+
+.hero-workwear--outlets {
+  background-image: url("../public/images/location.jpg");
+}
+
+.hero-workwear--terms {
+  background-image: url("../public/images/terms-hero.png");
+}
+
+.hero-workwear--about {
+  background-image: url("../public/images/about/about-header.png");
+}
+
+.hero-workwear--assure-quality {
+  background-image: url("../public/images/asureQuality/hero.jpg");
+}
+
+.hero-workwear--community {
+  background-image: url("../public/images/community/hero.jpg");
+}
+
+.hero-workwear--diamond {
+  background-image: url("../public/images/Diamond-Apparelmaster.jpg");
+}
+
+.hero-workwear--eco-policy {
+  background-image: url("../public/images/eco-policy/hero.jpg");
+}
+
+.hero-workwear--food-industry {
+  background-image: url("../public/images/food-industry/food-industry-header.png");
+}
+
+.hero-workwear--latest-news {
+  background-image: url("../public/images/latest-news/hero.png");
+}
+
+.hero-workwear--new-employee {
+  background-image: url("../public/images/new-employee-form/hero.png");
+}
+
+.hero-workwear--news-article {
+  background-image: url("../public/images/news-article/hero.png");
+}
+
+.hero-workwear--our-services {
+  background-image: url("../public/images/our-services/hero.jpg");
+}
+
+.hero-workwear--ppe {
+  background-image: url("../public/images/ppe/ppe-header.png");
+}
+
+.hero-workwear--sustainability {
+  background-image: url("../public/images/sustainability/hero.jpg");
+}
+
+.hero-workwear--workplace {
+  background-image: url("../public/images/workplace-floor-mats/workplace-floor-mats-header.png");
 }
