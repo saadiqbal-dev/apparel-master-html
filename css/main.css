@@ -931,7 +931,7 @@ h6 {
 /* Content Section 1 */
 @media (min-width: 1200px) {
   .content-section {
-    padding-top: 50px !important;
+    padding-top: 50px;
   }
 }
 
@@ -1743,6 +1743,12 @@ h6 {
 
   .full-width-padding {
     padding-top: 123px !important;
+    background: white;
+  }
+
+  .full-width-86-padding {
+    padding-top: 86px !important;
+    background: white;
   }
 }
 
