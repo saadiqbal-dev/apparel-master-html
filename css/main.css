@@ -46,6 +46,12 @@ a:hover {
   color: #e9510e;
 }
 
+a > span > img {
+  padding: 0px 4px;
+  position: relative;
+  top: -2px;
+}
+
 /* ========================================
    GLOBAL H1 DEFAULTS
    ======================================== */
