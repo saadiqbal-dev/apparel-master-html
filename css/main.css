@@ -6502,6 +6502,10 @@ h6 {
   background-image: url("../public/images/floor/floor-header.jpg");
 }
 
+.hero-workwear--solutions {
+  background-image: url("../public/images/sustainability/workplace-solutions-hero.png");
+}
+
 /* Responsive Video Wrapper */
 .responsive-video-wrapper {
   position: relative;
