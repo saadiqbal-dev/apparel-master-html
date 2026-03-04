@@ -6859,3 +6859,11 @@ h6 {
     margin-bottom: 40px;
   }
 }
+
+.location-styles > h6 > span {
+  color: #000;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 28px;
+}
