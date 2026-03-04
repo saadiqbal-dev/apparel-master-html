@@ -766,3 +766,43 @@ $(document).ready(function () {
     });
   }
 });
+
+  // ========================================
+  // FAQ ACCORDION
+  // ========================================
+
+  /**
+   * Initialize FAQ Accordion
+   */
+  function initFaqAccordion() {
+    var $faqItems = $(".faq-item");
+
+    // Exit early if no FAQ items exist
+    if (!$faqItems.length) {
+      return;
+    }
+
+    // Handle FAQ question click (using event delegation for dynamic content)
+    $(".faq-container, .faq-container-base").on(
+      "click",
+      ".faq-question",
+      function () {
+        var $question = $(this);
+        var $faqItem = $question.parent();
+        var isActive = $faqItem.hasClass("active");
+
+        // Close all other FAQ items first
+        $(".faq-item").not($faqItem).removeClass("active");
+
+        // Toggle current FAQ item
+        if (isActive) {
+          $faqItem.removeClass("active");
+        } else {
+          $faqItem.addClass("active");
+        }
+      }
+    );
+  }
+
+  // Initialize FAQ accordion
+  initFaqAccordion();
