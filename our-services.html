@@ -112,9 +112,7 @@
             <div class="nav-actions">
               <a href="/get-a-quote" class="cta-btn">Get a Quote</a>
               <button class="phone-btn">Click for 0800 Number</button>
-              <a
-                href="tel:0800808820"
-                class="phone-btn phone-revealed hidden"
+              <a href="tel:0800808820" class="phone-btn phone-revealed hidden"
                 >0800 808 820</a
               >
             </div>
@@ -866,8 +864,15 @@
                 required
               />
             </div>
-
-            <!-- Email and Phone -->
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                id="companyName"
+                placeholder="Company Name*"
+                required
+              />
+            </div>
             <div class="col-md-6">
               <input
                 type="email"
@@ -877,6 +882,7 @@
                 required
               />
             </div>
+            <!-- Email and Phone -->
             <div class="col-md-6">
               <input
                 type="tel"
@@ -886,17 +892,223 @@
                 required
               />
             </div>
+            <div class="col-md-6 position-relative">
+              <select
+                class="form-control"
+                id="howCanWeHelp"
+                name="howCanWeHelp"
+                placeholder="How can we help you?*"
+              >
+                <option value="">Select an option*</option>
+                <option value="volvo">New Business Enquiry</option>
+                <option value="saab">Existing Customer Enquiry</option>
+                <option value="fiat">Feedback/Comment</option>
+                <option value="audi">General Enquiry</option>
+              </select>
+              <img
+                src="public/images/ourServices/drop-down.svg"
+                alt="Dropdown"
+                class="dropdown-icon"
+              />
+            </div>
 
-            <!-- Message (full width) -->
+            <!-- Enquiry Details* (full width) -->
             <div class="col-12">
               <textarea
                 class="form-control"
-                id="message"
+                id="enquiryDetails"
                 rows="4"
-                placeholder="Message"
+                placeholder="Enquiry Details*"
               ></textarea>
             </div>
+            <div class="col-md-6 position-relative">
+              <select
+                class="form-control"
+                id="region"
+                name="region"
+                placeholder="Region*"
+              >
+                <option value="">Region*</option>
+                <option value="northland">
+                  Northland (North of Harbour Bridge)
+                </option>
+                <option value="auckland">
+                  Auckland (South of Harbour Bridge)
+                </option>
+                <option value="central-north">Central North Island</option>
+                <option value="lower-north">Lower North Island</option>
+                <option value="south-island">South Island</option>
+              </select>
+              <img
+                src="public/images/ourServices/drop-down.svg"
+                alt="Dropdown"
+                class="dropdown-icon"
+              />
+            </div>
+            <div class="col-md-6 position-relative">
+              <select
+                class="form-control"
+                id="branch"
+                name="branch"
+                placeholder="Branch*"
+              >
+                <option value="">Select Region First*</option>
+                <option value="apparelmaster-whangarei" data-region="northland">
+                  Apparelmaster Whangarei
+                </option>
+                <option value="kaipara-apparelmaster" data-region="northland">
+                  Kaipara Apparelmaster
+                </option>
+                <option value="pryors-apparelmaster" data-region="auckland">
+                  Pryor's Apparelmaster
+                </option>
+                <option value="tcl-apparelmaster" data-region="central-north">
+                  TCL Apparelmaster
+                </option>
+                <option
+                  value="apparelmaster-waikato"
+                  data-region="central-north"
+                >
+                  Apparelmaster Waikato
+                </option>
+                <option
+                  value="sincerity-apparelmaster"
+                  data-region="central-north"
+                >
+                  Sincerity Apparelmaster
+                </option>
+                <option
+                  value="rotorua-apparelmaster"
+                  data-region="central-north"
+                >
+                  Rotorua Apparelmaster
+                </option>
+                <option
+                  value="coastline-apparelmaster"
+                  data-region="central-north"
+                >
+                  Coastline Apparelmaster
+                </option>
+                <option
+                  value="diamond-apparelmaster"
+                  data-region="central-north"
+                >
+                  Diamond Apparelmaster
+                </option>
+                <option
+                  value="gisborne-apparelmaster"
+                  data-region="central-north"
+                >
+                  Gisborne Apparelmaster
+                </option>
+                <option
+                  value="permaclean-apparelmaster"
+                  data-region="central-north"
+                >
+                  Permaclean Apparelmaster
+                </option>
+                <option
+                  value="lanuova-apparelmaster"
+                  data-region="central-north"
+                >
+                  La Nuova Apparelmaster
+                </option>
+                <option
+                  value="lanuova-apparelmaster-lower"
+                  data-region="lower-north"
+                >
+                  La Nuova Apparelmaster
+                </option>
+                <option
+                  value="manawatu-apparelmaster"
+                  data-region="lower-north"
+                >
+                  Manawatu Apparelmaster
+                </option>
+                <option
+                  value="wairarapa-apparelmaster"
+                  data-region="lower-north"
+                >
+                  Wairarapa Apparelmaster
+                </option>
+                <option value="diamond-dry-cleaners" data-region="lower-north">
+                  Diamond Dry Cleaners
+                </option>
+                <option
+                  value="wellington-apparelmaster"
+                  data-region="lower-north"
+                >
+                  Wellington Apparelmaster
+                </option>
+                <option
+                  value="master-valet-apparelmaster"
+                  data-region="south-island"
+                >
+                  Master Valet Apparelmaster
+                </option>
+                <option
+                  value="christchurch-apparelmaster"
+                  data-region="south-island"
+                >
+                  Christchurch Apparelmaster
+                </option>
+                <option
+                  value="wrights-apparelmaster"
+                  data-region="south-island"
+                >
+                  Wrights Apparelmaster
+                </option>
+                <option value="target-apparelmaster" data-region="south-island">
+                  Target Apparelmaster
+                </option>
+                <option value="preens-apparelmaster" data-region="south-island">
+                  Preens Apparelmaster
+                </option>
+                <option
+                  value="newtone-apparelmaster"
+                  data-region="south-island"
+                >
+                  Newtone Apparelmaster
+                </option>
+                <option
+                  value="mccallums-apparelmaster"
+                  data-region="south-island"
+                >
+                  McCallums Apparelmaster
+                </option>
+              </select>
+              <img
+                src="public/images/ourServices/drop-down.svg"
+                alt="Dropdown"
+                class="dropdown-icon"
+              />
+            </div>
+            <div class="col-12 position-relative">
+              <select
+                class="form-control"
+                id="hear-us"
+                name="hear-us"
+                placeholder="How did you hear about us?*"
+              >
+                <option value="">How did you hear about us?*</option>
+                <option value="tv">TV</option>
+                <option value="online-advertising">Online Advertising</option>
+                <option value="online-search">Online Search</option>
+                <option value="kiaora-magazine">Kiaora Magazine</option>
+                <option value="facebook">Facebook</option>
+                <option value="linkedin">Linkedin</option>
+                <option value="youtube">YouTube</option>
+                <option value="word-of-mouth">Word of Mouth</option>
+                <option value="other">Other</option>
+              </select>
+              <img
+                src="public/images/ourServices/drop-down.svg"
+                alt="Dropdown"
+                class="dropdown-icon"
+              />
+            </div>
           </div>
+
           <div
             class="mt-5 d-flex justify-content-center justify-content-md-start"
           >
