@@ -104,9 +104,7 @@
             <div class="nav-actions">
               <a href="/get-a-quote" class="cta-btn">Get a Quote</a>
               <button class="phone-btn">Click for 0800 Number</button>
-              <a
-                href="tel:0800808820"
-                class="phone-btn phone-revealed hidden"
+              <a href="tel:0800808820" class="phone-btn phone-revealed hidden"
                 >0800 808 820</a
               >
             </div>
@@ -830,8 +828,15 @@
                 required
               />
             </div>
-
-            <!-- Email and Phone -->
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                id="companyName"
+                placeholder="Company Name*"
+                required
+              />
+            </div>
             <div class="col-md-6">
               <input
                 type="email"
@@ -841,6 +846,7 @@
                 required
               />
             </div>
+            <!-- Email and Phone -->
             <div class="col-md-6">
               <input
                 type="tel"
@@ -849,6 +855,20 @@
                 placeholder="Phone*"
                 required
               />
+            </div>
+            <div class="col-md-6">
+              <select
+                class="form-control"
+                id="howCanWeHelp"
+                name="howCanWeHelp"
+                placeholder="How can we help you?*"
+              >
+                <option value="">Select an option*</option>
+                <option value="volvo">New Business Enquiry</option>
+                <option value="saab">Existing Customer Enquiry</option>
+                <option value="fiat">Feedback/Comment</option>
+                <option value="audi">General Enquiry</option>
+              </select>
             </div>
 
             <!-- Message (full width) -->
@@ -860,7 +880,50 @@
                 placeholder="Message"
               ></textarea>
             </div>
+            <div class="col-md-6">
+              <select
+                class="form-control"
+                id="region"
+                name="region"
+                placeholder="Region*"
+              >
+                <option value="">Region*</option>
+                <option value="volvo">New Business Enquiry</option>
+                <option value="saab">Existing Customer Enquiry</option>
+                <option value="fiat">Feedback/Comment</option>
+                <option value="audi">General Enquiry</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select
+                class="form-control"
+                id="branch"
+                name="branch"
+                placeholder="Branch*"
+              >
+                <option value="">Select Region First*</option>
+                <option value="volvo">New Business Enquiry</option>
+                <option value="saab">Existing Customer Enquiry</option>
+                <option value="fiat">Feedback/Comment</option>
+                <option value="audi">General Enquiry</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <select
+                class="form-control"
+                id="hear-us"
+                name="hear-us"
+                placeholder="How did you hear about us?*"
+              >
+                <option value="">How did you hear about us?*</option>
+                <option value="volvo">New Business Enquiry</option>
+                <option value="saab">Existing Customer Enquiry</option>
+                <option value="fiat">Feedback/Comment</option>
+                <option value="audi">General Enquiry</option>
+              </select>
+            </div>
           </div>
+
           <div
             class="mt-5 d-flex justify-content-center justify-content-md-start"
           >

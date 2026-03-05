@@ -6820,6 +6820,19 @@ h6 {
     line-height: 42px;
     margin-bottom: 50px;
   }
+
+  /* Sustainability icon sizes for mobile */
+  .max-width-200 {
+    max-width: 200px;
+    width: auto;
+    height: auto;
+  }
+
+  .max-height-177 {
+    max-height: 177px;
+    width: auto;
+    height: auto;
+  }
 }
 
 /* Mobile - 480px and below */
