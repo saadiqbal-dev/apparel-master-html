@@ -806,3 +806,51 @@ $(document).ready(function () {
 
   // Initialize FAQ accordion
   initFaqAccordion();
+
+  // ========================================
+  // REGION-BASED BRANCH FILTERING
+  // ========================================
+
+  /**
+   * Filter branch dropdown based on selected region
+   */
+  var $regionSelect = $("#region");
+  var $branchSelect = $("#branch");
+
+  if ($regionSelect.length && $branchSelect.length) {
+    // Store all branch options on page load
+    var allBranchOptions = $branchSelect.find("option").clone();
+
+    // Handle region change
+    $regionSelect.on("change", function () {
+      var selectedRegion = $(this).val();
+
+      // Clear current branch options except the first (placeholder)
+      $branchSelect.find("option:not(:first)").remove();
+
+      if (selectedRegion) {
+        // Filter and add matching branch options
+        allBranchOptions.each(function () {
+          var $option = $(this);
+          var optionRegion = $option.data("region");
+
+          // Add option if it matches the selected region or is the placeholder
+          if (optionRegion === selectedRegion || $option.val() === "") {
+            $branchSelect.append($option.clone());
+          }
+        });
+
+        // Update placeholder text
+        $branchSelect.find("option:first").text("Select Branch*");
+      } else {
+        // If no region selected, show placeholder message
+        $branchSelect.find("option:first").text("Select Region First*");
+      }
+
+      // Reset branch selection
+      $branchSelect.val("");
+    });
+
+    // Trigger change on page load to set initial state
+    $regionSelect.trigger("change");
+  }
