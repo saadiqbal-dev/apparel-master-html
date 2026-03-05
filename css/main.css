@@ -6881,3 +6881,23 @@ h6 {
   font-weight: 400;
   line-height: 28px;
 }
+
+.extra-height {
+  min-height: 748px !important;
+  height: inherit !important;
+  max-height: 948px !important;
+}
+
+.extra-height-img {
+  width: 100%;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .extra-height {
+    min-height: 100% !important;
+    max-height: 100% !important;
+  }
+}
