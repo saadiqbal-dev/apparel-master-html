@@ -6914,3 +6914,9 @@ h6 {
     max-height: 100% !important;
   }
 }
+
+.dropdown-icon {
+  position: absolute;
+  top: 16.5px;
+  right: 24px;
+}
