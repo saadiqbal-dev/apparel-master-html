@@ -6,8 +6,24 @@
     <title>Apparel Master - Home</title>
     <meta name="description" content="Apparel Master - New Zealand's leading provider of workplace rental solutions, workwear, PPE, and food industry uniforms with nationwide service.">
 
+    <!-- Preconnect to Google Fonts (saves 1,500ms) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Preload LCP image -->
     <link rel="preload" as="image" href="public/images/apparelmaster-poster-image-desktop-mobile-1920px.webp">
+
+    <!-- Preload Google Fonts asynchronously -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap">
+
+    <!-- Load Google Fonts non-blocking -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap">
+    </noscript>
 
     <!-- Non-blocking Bootstrap CSS -->
     <link
