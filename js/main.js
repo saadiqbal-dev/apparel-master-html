@@ -567,71 +567,6 @@ $(document).ready(function () {
   }
 
   // ========================================
-  // LATEST NEWS CAROUSEL (INDEX-2)
-  // ========================================
-
-  var $newsCarousel = $("#newsCarousel");
-
-  if ($newsCarousel.length) {
-    var $prevBtnDesktop = $("#newsCarouselPrev");
-    var $nextBtnDesktop = $("#newsCarouselNext");
-    var $prevBtnMobile = $("#newsCarouselPrevMobile");
-    var $nextBtnMobile = $("#newsCarouselNextMobile");
-
-    /**
-     * Scroll carousel in specified direction
-     */
-    function scrollCarousel(direction) {
-      var scrollAmount = 0;
-      var cardWidth = $newsCarousel.find(".latest-news-card").outerWidth();
-      var viewport = getViewport();
-      var gap = viewport.width >= BREAKPOINTS.desktop ? 50 : 20;
-
-      if (viewport.width < BREAKPOINTS.mobile) {
-        scrollAmount = $newsCarousel.outerWidth() * 0.75;
-      } else if (viewport.width < BREAKPOINTS.tablet) {
-        scrollAmount = $newsCarousel.outerWidth() * 0.5;
-      } else if (viewport.width < BREAKPOINTS.desktop) {
-        scrollAmount = $newsCarousel.outerWidth() * 0.33333;
-      } else {
-        scrollAmount = cardWidth + gap;
-      }
-
-      if (direction === "next") {
-        $newsCarousel.scrollLeft($newsCarousel.scrollLeft() + scrollAmount);
-      } else {
-        $newsCarousel.scrollLeft($newsCarousel.scrollLeft() - scrollAmount);
-      }
-    }
-
-    // Desktop controls
-    if ($prevBtnDesktop.length) {
-      $prevBtnDesktop.on("click", function () {
-        scrollCarousel("prev");
-      });
-    }
-
-    if ($nextBtnDesktop.length) {
-      $nextBtnDesktop.on("click", function () {
-        scrollCarousel("next");
-      });
-    }
-
-    // Mobile controls
-    if ($prevBtnMobile.length) {
-      $prevBtnMobile.on("click", function () {
-        scrollCarousel("prev");
-      });
-    }
-
-    if ($nextBtnMobile.length) {
-      $nextBtnMobile.on("click", function () {
-        scrollCarousel("next");
-      });
-    }
-  }
-
-  // ========================================
   // CLIENT TESTIMONIALS CAROUSEL
   // ========================================
 
@@ -767,115 +702,125 @@ $(document).ready(function () {
   }
 });
 
-  // ========================================
-  // FAQ ACCORDION
-  // ========================================
+// ========================================
+// FAQ ACCORDION
+// ========================================
 
-  /**
-   * Initialize FAQ Accordion
-   */
-  function initFaqAccordion() {
-    var $faqItems = $(".faq-item");
+/**
+ * Initialize FAQ Accordion
+ */
+function initFaqAccordion() {
+  var $faqItems = $(".faq-item");
 
-    // Exit early if no FAQ items exist
-    if (!$faqItems.length) {
-      return;
+  // Exit early if no FAQ items exist
+  if (!$faqItems.length) {
+    return;
+  }
+
+  // Handle FAQ question click (using event delegation for dynamic content)
+  $(".faq-container, .faq-container-base").on(
+    "click",
+    ".faq-question",
+    function () {
+      var $question = $(this);
+      var $faqItem = $question.parent();
+      var isActive = $faqItem.hasClass("active");
+
+      // Close all other FAQ items first
+      $(".faq-item").not($faqItem).removeClass("active");
+
+      // Toggle current FAQ item
+      if (isActive) {
+        $faqItem.removeClass("active");
+      } else {
+        $faqItem.addClass("active");
+      }
+    },
+  );
+}
+
+// Initialize FAQ accordion
+initFaqAccordion();
+
+// ========================================
+// REGION-BASED BRANCH FILTERING
+// ========================================
+
+/**
+ * Filter branch dropdown based on selected region
+ */
+var $regionSelect = $("#region");
+var $branchSelect = $("#branch");
+
+if ($regionSelect.length && $branchSelect.length) {
+  // Store all branch options on page load
+  var allBranchOptions = $branchSelect.find("option").clone();
+
+  // Handle region change
+  $regionSelect.on("change", function () {
+    var selectedRegion = $(this).val();
+
+    // Clear current branch options except the first (placeholder)
+    $branchSelect.find("option:not(:first)").remove();
+
+    if (selectedRegion) {
+      // Filter and add matching branch options
+      allBranchOptions.each(function () {
+        var $option = $(this);
+        var optionRegion = $option.data("region");
+
+        // Add option if it matches the selected region or is the placeholder
+        if (optionRegion === selectedRegion || $option.val() === "") {
+          $branchSelect.append($option.clone());
+        }
+      });
+
+      // Update placeholder text
+      $branchSelect.find("option:first").text("Select Branch*");
+    } else {
+      // If no region selected, show placeholder message
+      $branchSelect.find("option:first").text("Select Region First*");
     }
 
-    // Handle FAQ question click (using event delegation for dynamic content)
-    $(".faq-container, .faq-container-base").on(
-      "click",
-      ".faq-question",
-      function () {
-        var $question = $(this);
-        var $faqItem = $question.parent();
-        var isActive = $faqItem.hasClass("active");
+    // Reset branch selection
+    $branchSelect.val("");
+  });
 
-        // Close all other FAQ items first
-        $(".faq-item").not($faqItem).removeClass("active");
+  // Trigger change on page load to set initial state
+  $regionSelect.trigger("change");
+}
 
-        // Toggle current FAQ item
-        if (isActive) {
-          $faqItem.removeClass("active");
-        } else {
-          $faqItem.addClass("active");
-        }
-      }
-    );
-  }
+// ========================================
+// HERO VIDEO POSTER FADE OUT
+// ========================================
 
-  // Initialize FAQ accordion
-  initFaqAccordion();
+/**
+ * Lazy load video iframe and fade out poster after video loads
+ * PERFORMANCE: Only loads video after page is fully loaded (saves 41MB on initial load)
+ */
+var $heroPoster = $("#heroPoster");
+var $heroVideoIframe = $("#heroVideoIframe");
 
-  // ========================================
-  // REGION-BASED BRANCH FILTERING
-  // ========================================
-
-  /**
-   * Filter branch dropdown based on selected region
-   */
-  var $regionSelect = $("#region");
-  var $branchSelect = $("#branch");
-
-  if ($regionSelect.length && $branchSelect.length) {
-    // Store all branch options on page load
-    var allBranchOptions = $branchSelect.find("option").clone();
-
-    // Handle region change
-    $regionSelect.on("change", function () {
-      var selectedRegion = $(this).val();
-
-      // Clear current branch options except the first (placeholder)
-      $branchSelect.find("option:not(:first)").remove();
-
-      if (selectedRegion) {
-        // Filter and add matching branch options
-        allBranchOptions.each(function () {
-          var $option = $(this);
-          var optionRegion = $option.data("region");
-
-          // Add option if it matches the selected region or is the placeholder
-          if (optionRegion === selectedRegion || $option.val() === "") {
-            $branchSelect.append($option.clone());
-          }
-        });
-
-        // Update placeholder text
-        $branchSelect.find("option:first").text("Select Branch*");
-      } else {
-        // If no region selected, show placeholder message
-        $branchSelect.find("option:first").text("Select Region First*");
+if ($heroPoster.length && $heroVideoIframe.length) {
+  // Wait for the window to fully load
+  $(window).on("load", function () {
+    // Delay video loading by 2 seconds to let page render first
+    setTimeout(function () {
+      // Lazy load the video by setting src from data-src
+      var videoSrc = $heroVideoIframe.attr("data-src");
+      if (videoSrc) {
+        $heroVideoIframe.attr("src", videoSrc);
       }
 
-      // Reset branch selection
-      $branchSelect.val("");
-    });
-
-    // Trigger change on page load to set initial state
-    $regionSelect.trigger("change");
-  }
-
-  // ========================================
-  // HERO VIDEO POSTER FADE OUT
-  // ========================================
-
-  /**
-   * Show video iframe and fade out poster after video loads
-   */
-  var $heroPoster = $("#heroPoster");
-  var $heroVideoIframe = $("#heroVideoIframe");
-
-  if ($heroPoster.length && $heroVideoIframe.length) {
-    // Wait for the window to fully load (including iframes)
-    $(window).on("load", function () {
-      // Show video after page and iframe are fully loaded
+      // Show video after iframe starts loading
       setTimeout(function () {
         $heroVideoIframe.addClass("video-loaded");
       }, 500);
 
-      // Fade out the poster after video is visible and playing
+      // Fade out the poster after video is visible
       setTimeout(function () {
         $heroPoster.addClass("fade-out");
       }, 3000);
-    });
-  }
+    }, 2000); // Wait 2 seconds after page load before loading video
+  });
+}
