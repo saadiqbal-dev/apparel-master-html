@@ -854,3 +854,28 @@ $(document).ready(function () {
     // Trigger change on page load to set initial state
     $regionSelect.trigger("change");
   }
+
+  // ========================================
+  // HERO VIDEO POSTER FADE OUT
+  // ========================================
+
+  /**
+   * Show video iframe and fade out poster after video loads
+   */
+  var $heroPoster = $("#heroPoster");
+  var $heroVideoIframe = $("#heroVideoIframe");
+
+  if ($heroPoster.length && $heroVideoIframe.length) {
+    // Wait for the window to fully load (including iframes)
+    $(window).on("load", function () {
+      // Show video after page and iframe are fully loaded
+      setTimeout(function () {
+        $heroVideoIframe.addClass("video-loaded");
+      }, 500);
+
+      // Fade out the poster after video is visible and playing
+      setTimeout(function () {
+        $heroPoster.addClass("fade-out");
+      }, 3000);
+    });
+  }
