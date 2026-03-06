@@ -1126,16 +1126,16 @@ h6 {
   }
 }
 
-.content-text-2 {
+.light-content {
   text-align: left;
 }
-.content-text-2 h4 {
+.light-content h4 {
   color: #000;
   margin-bottom: 17px;
 }
 
 @media (min-width: 1200px) {
-  .content-text-2 {
+  .light-content {
     max-width: 590px;
   }
   .padding-left-30 {
@@ -1143,20 +1143,20 @@ h6 {
   }
 }
 
-.content-text-2 p {
+.light-content p {
   margin: 0 0 1rem 0;
 }
 
-.content-text-2 p:last-of-type {
+.light-content p:last-of-type {
   margin-bottom: 0;
 }
 
-.content-text-2 .btn-cta {
+.light-content .btn-cta {
   margin-top: 56px;
 }
 
 @media (min-width: 1200px) {
-  .content-text-2 .btn-cta {
+  .light-content .btn-cta {
     margin-top: 67px;
   }
 }
@@ -2740,7 +2740,7 @@ h6 {
 
 /* h5 in content sections - black text, inherits from global h5 */
 .content-text h5,
-.content-text-2 h5 {
+.light-content h5 {
   margin: 0 0 1rem 0;
 }
 
@@ -2802,7 +2802,7 @@ h6 {
 }
 
 /* Max Width 590 - Centered text */
-.content-section.max-width-590 .content-text-2 {
+.content-section.max-width-590 .light-content {
   text-align: left;
   margin: 0 auto;
   max-width: 590px;
@@ -2815,13 +2815,13 @@ h6 {
 }
 
 .content-section.max-width-688 .content-text,
-.content-section.max-width-688 .content-text-2 {
+.content-section.max-width-688 .light-content {
   text-align: left !important;
   max-width: 688px;
 }
 
 .content-section.max-width-688 .content-text p,
-.content-section.max-width-688 .content-text-2 p {
+.content-section.max-width-688 .light-content p {
   font-weight: 400;
 }
 
