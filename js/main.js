@@ -718,7 +718,7 @@ function initFaqAccordion() {
   }
 
   // Handle FAQ question click (using event delegation for dynamic content)
-  $(".faq-container, .faq-container-base").on(
+  $(".faq-container, .faq-contain, .faq-container-base").on(
     "click",
     ".faq-question",
     function () {
