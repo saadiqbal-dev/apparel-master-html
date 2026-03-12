@@ -574,11 +574,26 @@ $(document).ready(function () {
 
   if ($testimonialsCarousel.length) {
     var currentSlide = 0;
-    var $slides = $testimonialsCarousel.find(".testimonial-item");
-    var $dots = $(".testimonials-dot");
+    // Only get direct children to avoid nested testimonial-items
+    var $slides = $testimonialsCarousel.children(".testimonial-item");
+    var $pagination = $(".testimonials-pagination");
     var totalSlides = $slides.length;
     var autoplayInterval;
     var autoplayDelay = 4000;
+
+    // Dynamically generate dots based on number of slides
+    if ($pagination.length && totalSlides > 0) {
+      $pagination.empty();
+      for (var i = 0; i < totalSlides; i++) {
+        var activeClass = i === 0 ? " testimonials-dot-active" : "";
+        $pagination.append(
+          '<span class="testimonials-dot' + activeClass + '" data-slide="' + i + '"></span>'
+        );
+      }
+    }
+
+    // Get the dynamically created dots
+    var $dots = $(".testimonials-dot");
 
     /**
      * Navigate to specific slide
@@ -638,12 +653,11 @@ $(document).ready(function () {
       startAutoplay();
     }
 
-    // Dot click handlers
-    $dots.each(function (index) {
-      $(this).on("click", function () {
-        goToSlide(index);
-        resetAutoplay();
-      });
+    // Dot click handlers (using event delegation for dynamically created dots)
+    $pagination.on("click", ".testimonials-dot", function () {
+      var index = $(this).index();
+      goToSlide(index);
+      resetAutoplay();
     });
 
     // Start autoplay
@@ -707,10 +721,11 @@ $(document).ready(function () {
 // ========================================
 
 /**
- * Initialize FAQ Accordion
+ * Initialize FAQ Accordion with smooth transitions
  */
 function initFaqAccordion() {
   var $faqItems = $(".faq-item");
+  var animationDuration = 300;
 
   // Exit early if no FAQ items exist
   if (!$faqItems.length) {
@@ -724,16 +739,28 @@ function initFaqAccordion() {
     function () {
       var $question = $(this);
       var $faqItem = $question.parent();
+      var $answer = $faqItem.find(".faq-answer");
       var isActive = $faqItem.hasClass("active");
 
-      // Close all other FAQ items first
-      $(".faq-item").not($faqItem).removeClass("active");
+      // Close all other FAQ items with smooth animation
+      $(".faq-item").not($faqItem).each(function () {
+        var $item = $(this);
+        if ($item.hasClass("active")) {
+          $item.removeClass("active");
+          $item.find(".faq-answer").slideUp(animationDuration);
+        }
+      });
 
-      // Toggle current FAQ item
+      // Toggle current FAQ item with smooth animation
       if (isActive) {
         $faqItem.removeClass("active");
+        $answer.slideUp(animationDuration);
       } else {
         $faqItem.addClass("active");
+        $answer.slideDown(animationDuration, function () {
+          // Set display to flex after animation completes for proper layout
+          $(this).css("display", "flex");
+        });
       }
     },
   );
