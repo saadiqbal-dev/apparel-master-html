@@ -5715,7 +5715,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .testimonial-card {
-    margin-right: -250px;
+    margin-right: -80px;
     max-width: 550px;
     padding: 35px 73px 35px 73px;
   }
@@ -5819,7 +5819,17 @@ h6 {
   }
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
+  .testimonial-image {
+    max-width: 891px;
+  }
+} */
+@media (min-width: 1300px) {
+  .testimonial-image {
+    max-width: 750px;
+  }
+}
+@media (min-width: 1600px) {
   .testimonial-image {
     max-width: 891px;
   }
