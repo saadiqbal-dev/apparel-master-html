@@ -4461,6 +4461,15 @@ h6 {
   display: none;
 }
 
+.read-more-item {
+  cursor: pointer;
+}
+
+.read-more-item:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 @media (min-width: 1200px) {
   .read-more-section {
     gap: 46px;
@@ -4478,7 +4487,7 @@ h6 {
     width: 100%;
     background: #fff;
     border-radius: 12px;
-    filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.12));
   }
 
   .read-more-item h5 {
@@ -4508,6 +4517,20 @@ h6 {
   .read-more-item img {
     border-radius: 12px 12px 0 0;
     aspect-ratio: 392 / 186;
+  }
+
+  .read-more-item {
+    cursor: pointer;
+    transition: filter 0.3s ease;
+  }
+
+  .read-more-item:hover {
+    filter: drop-shadow(0 10px 50px rgba(0, 0, 0, 0.24));
+  }
+
+  .read-more-item:hover h3 {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   .news-article {
