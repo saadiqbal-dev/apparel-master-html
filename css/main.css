@@ -1149,6 +1149,16 @@ h6 {
   margin-bottom: 17px;
 }
 
+.light-content h2 {
+  color: #000;
+  font-family: var(--font-family-inter);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 150% */
+  margin-bottom: 16px;
+}
+
 @media (min-width: 1200px) {
   .light-content {
     max-width: 590px;
@@ -2759,7 +2769,15 @@ h6 {
 .content-section-last {
   padding-bottom: 56px !important;
 }
-
+.content-section--alternate + .content-section-last h2 {
+  color: #000;
+  font-family: var(--font-family-inter);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 150% */
+  margin-bottom: 16px;
+}
 @media (min-width: 1200px) {
   .content-section-last {
     padding-bottom: 81px !important;
@@ -2769,6 +2787,16 @@ h6 {
   .content-section--alternate + .content-section-last p {
     max-width: 681px;
     padding-left: 74px;
+  }
+  .content-section--alternate + .content-section-last h2 {
+    color: #000;
+    font-family: var(--font-family-inter);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 150% */
+    padding-left: 74px;
+    margin-bottom: 16px;
   }
 
   .content-section--alternate + .content-section-last .btn-cta-floor-mats {
@@ -4386,7 +4414,7 @@ h6 {
 
 .news-content h6 {
   color: #555353;
-  font-family: "Mona Sans";
+  font-family: var(--font-family-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
