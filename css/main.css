@@ -1960,6 +1960,20 @@ h6 {
   .orange-content-bg.reverse {
     justify-content: flex-start;
   }
+  /* fix 1.0 */
+  .full-width-content-bg.order-xl-0 {
+    justify-content: flex-end;
+  }
+
+  .full-width-content-bg.order-xl-0 .full-width-content-wrapper {
+    justify-content: flex-start;
+  }
+
+  .full-width-content-bg.order-xl-0
+    .full-width-content-wrapper
+    .padding-left-50 {
+    padding-left: 0;
+  }
 }
 
 .orange-content-wrapper {
@@ -2052,10 +2066,12 @@ h6 {
   text-align: left;
 }
 
+/* fix 2.0 */
+
 @media (min-width: 1200px) {
   .accordion-button-custom {
-    font-size: 26px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 30px;
     padding: 20px 0;
   }
 }
@@ -2071,10 +2087,12 @@ h6 {
   height: 20px;
 }
 
+/* fix 3.0 */
+
 @media (min-width: 1200px) {
   .accordion-icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -6601,7 +6619,7 @@ h6 {
 }
 
 .faq-container {
-  max-width: 827px;
+  max-width: 920px; /* updated from 827 to 920px */
   margin: 0 auto;
   padding: 0 100px;
   width: 100%;
@@ -6621,10 +6639,10 @@ h6 {
 .faq-heading-base {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 36px;
+  font-size: 24px; /* updated this */
   font-style: normal;
   font-weight: 700;
-  line-height: 46px;
+  line-height: 36px; /* updated this */
   margin: 0 0 76px 0;
   padding: 0;
   text-align: left;
@@ -6683,6 +6701,8 @@ h6 {
   transition: transform 0.4s ease;
   margin: 0;
   padding: 0;
+  width: 20px;
+  height: 20px;
 }
 
 .faq-icon-plus {
@@ -6915,8 +6935,8 @@ h6 {
 
   .faq-icon-plus,
   .faq-icon-close {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .faq-container-base {
@@ -6970,16 +6990,16 @@ h6 {
   margin: 0 auto;
 }
 .faq-contain {
-  max-width: 1130px;
+  max-width: 920px;
   width: 100%;
 }
 .faq-contain h2 {
   color: #1a1a1a;
   font-family: var(--font-family-inter);
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 28px; /* 100% */
+  line-height: 36px; /* 100% */
   margin-bottom: 74px;
 }
 
@@ -6996,7 +7016,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .faq-question p {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 28px;
   }
 }
