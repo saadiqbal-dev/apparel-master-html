@@ -851,3 +851,29 @@ if ($heroPoster.length && $heroVideoIframe.length) {
     }, 2000); // Wait 2 seconds after page load before loading video
   });
 }
+
+// ========================================
+// KIWI HERITAGE VIDEO POSTER FADE OUT
+// ========================================
+
+var $kiwiHeritagePoster = $("#kiwiHeritagePoster");
+var $kiwiHeritageIframe = $("#kiwiHeritageIframe");
+
+if ($kiwiHeritagePoster.length && $kiwiHeritageIframe.length) {
+  $(window).on("load", function () {
+    setTimeout(function () {
+      var videoSrc = $kiwiHeritageIframe.attr("data-src");
+      if (videoSrc) {
+        $kiwiHeritageIframe.attr("src", videoSrc);
+      }
+
+      setTimeout(function () {
+        $kiwiHeritageIframe.addClass("video-loaded");
+      }, 500);
+
+      setTimeout(function () {
+        $kiwiHeritagePoster.addClass("fade-out");
+      }, 3000);
+    }, 2000);
+  });
+}
