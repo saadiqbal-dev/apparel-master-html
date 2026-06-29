@@ -587,7 +587,11 @@ $(document).ready(function () {
       for (var i = 0; i < totalSlides; i++) {
         var activeClass = i === 0 ? " testimonials-dot-active" : "";
         $pagination.append(
-          '<span class="testimonials-dot' + activeClass + '" data-slide="' + i + '"></span>'
+          '<span class="testimonials-dot' +
+            activeClass +
+            '" data-slide="' +
+            i +
+            '"></span>',
         );
       }
     }
@@ -743,13 +747,15 @@ function initFaqAccordion() {
       var isActive = $faqItem.hasClass("active");
 
       // Close all other FAQ items with smooth animation
-      $(".faq-item").not($faqItem).each(function () {
-        var $item = $(this);
-        if ($item.hasClass("active")) {
-          $item.removeClass("active");
-          $item.find(".faq-answer").slideUp(animationDuration);
-        }
-      });
+      $(".faq-item")
+        .not($faqItem)
+        .each(function () {
+          var $item = $(this);
+          if ($item.hasClass("active")) {
+            $item.removeClass("active");
+            $item.find(".faq-answer").slideUp(animationDuration);
+          }
+        });
 
       // Toggle current FAQ item with smooth animation
       if (isActive) {
@@ -821,59 +827,42 @@ if ($regionSelect.length && $branchSelect.length) {
 // HERO VIDEO POSTER FADE OUT
 // ========================================
 
-/**
- * Lazy load video iframe and fade out poster after video loads
- * PERFORMANCE: Only loads video after page is fully loaded (saves 41MB on initial load)
- */
-var $heroPoster = $("#heroPoster");
-var $heroVideoIframe = $("#heroVideoIframe");
+var VIDEO_REVEAL_MIN_SECONDS = 0.2; // hold poster until video is a few frames in
 
-if ($heroPoster.length && $heroVideoIframe.length) {
-  // Wait for the window to fully load
+function initHeroVideoFade(posterId, iframeId) {
+  var $poster = $("#" + posterId),
+    $iframe = $("#" + iframeId);
+  if (!$poster.length || !$iframe.length) return;
+
   $(window).on("load", function () {
-    // Delay video loading by 2 seconds to let page render first
     setTimeout(function () {
-      // Lazy load the video by setting src from data-src
-      var videoSrc = $heroVideoIframe.attr("data-src");
-      if (videoSrc) {
-        $heroVideoIframe.attr("src", videoSrc);
+      $iframe.attr("src", $iframe.attr("data-src"));
+
+      var revealed = false;
+      function reveal() {
+        if (revealed) return;
+        revealed = true;
+        $iframe.addClass("video-loaded"); // fade video in under the poster...
+        setTimeout(function () {
+          $poster.addClass("fade-out"); // ...then fade poster out (no black gap)
+        }, 600);
       }
 
-      // Show video after iframe starts loading
-      setTimeout(function () {
-        $heroVideoIframe.addClass("video-loaded");
-      }, 500);
-
-      // Fade out the poster after video is visible
-      setTimeout(function () {
-        $heroPoster.addClass("fade-out");
-      }, 3000);
-    }, 2000); // Wait 2 seconds after page load before loading video
+      if (window.Vimeo && Vimeo.Player) {
+        try {
+          new Vimeo.Player($iframe[0]).on("timeupdate", function (d) {
+            if (!d || d.seconds >= VIDEO_REVEAL_MIN_SECONDS) reveal();
+          });
+        } catch (e) {}
+      }
+      setTimeout(reveal, 8000); // fallback if the Vimeo API never reports playback
+    }, 2000); // let the page render before loading the video
   });
 }
+initHeroVideoFade("heroPoster", "heroVideoIframe");
 
 // ========================================
 // KIWI HERITAGE VIDEO POSTER FADE OUT
 // ========================================
 
-var $kiwiHeritagePoster = $("#kiwiHeritagePoster");
-var $kiwiHeritageIframe = $("#kiwiHeritageIframe");
-
-if ($kiwiHeritagePoster.length && $kiwiHeritageIframe.length) {
-  $(window).on("load", function () {
-    setTimeout(function () {
-      var videoSrc = $kiwiHeritageIframe.attr("data-src");
-      if (videoSrc) {
-        $kiwiHeritageIframe.attr("src", videoSrc);
-      }
-
-      setTimeout(function () {
-        $kiwiHeritageIframe.addClass("video-loaded");
-      }, 500);
-
-      setTimeout(function () {
-        $kiwiHeritagePoster.addClass("fade-out");
-      }, 3000);
-    }, 2000);
-  });
-}
+initHeroVideoFade("kiwiHeritagePoster", "kiwiHeritageIframe");
