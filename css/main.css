@@ -3583,6 +3583,21 @@ h6 {
   border: 1px solid #000;
 }
 
+.btn-cta-gray {
+  border-radius: 27px;
+  background: #b0b0b0;
+  color: white;
+  border: transparent;
+  min-width: 243px;
+  display: flex;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  justify-content: center !important;
+  align-items: center;
+}
+
 /* .diamond-content-image {
   width: 100%;
   height: auto;
