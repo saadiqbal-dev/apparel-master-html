@@ -567,6 +567,33 @@ $(document).ready(function () {
   }
 
   // ========================================
+  // LATEST NEWS CAROUSEL
+  // ========================================
+
+  var $newsCarousel = $("#newsCarousel");
+
+  if ($newsCarousel.length) {
+    var newsTrack = $newsCarousel[0];
+
+    // Scroll by one card (card width + flex gap) per arrow click.
+    function newsScrollStep() {
+      var $card = $newsCarousel.children(".latest-news-card").first();
+      if (!$card.length) return newsTrack.clientWidth;
+      var gap = parseFloat($newsCarousel.css("column-gap")) || 0;
+      return $card.outerWidth() + gap;
+    }
+
+    // Both desktop and mobile arrow pairs share these handlers.
+    $("#newsCarouselNext, #newsCarouselNextMobile").on("click", function () {
+      newsTrack.scrollBy({ left: newsScrollStep(), behavior: "smooth" });
+    });
+
+    $("#newsCarouselPrev, #newsCarouselPrevMobile").on("click", function () {
+      newsTrack.scrollBy({ left: -newsScrollStep(), behavior: "smooth" });
+    });
+  }
+
+  // ========================================
   // CLIENT TESTIMONIALS CAROUSEL
   // ========================================
 
