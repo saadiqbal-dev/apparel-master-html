@@ -830,6 +830,28 @@
         </div>
       </div>
     </section>
+    <section
+      class="d-flex flex-column flex-xl-row justify-content-xl-between align-items-start align-items-xl-center w-100 reviews-section"
+    >
+      <div class="reviews-info d-flex flex-column gap-4">
+        <h4>Our Reviews</h4>
+        <div class="reviews-badges">
+          <img
+            src="https://embedsocial.com/api/source_image_badges/badge-1-g/en/google/6351"
+            alt="Google Reviews"
+          />
+        </div>
+        <a href="https://maps.app.goo.gl/LFpaQFLBeRK5JyV4A" target="_blank">
+          Give Us a Review
+        </a>
+      </div>
+      <div
+        class="embedsocial-reviews"
+        data-ref="28b8bd61bc4da8bbb6c7b1818684c4a03d06120c"
+      >
+        &nbsp;
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1147,5 +1169,17 @@
 
     <!-- Custom JS -->
     <script defer src="js/main.js"></script>
+    <script>
+      (function (d, s, id) {
+        var js;
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://embedsocial.com/embedscript/ri.js";
+        d.getElementsByTagName("head")[0].appendChild(js);
+      })(document, "script", "EmbedSocialReviewsScript");
+    </script>
   </body>
 </html>

@@ -349,7 +349,6 @@ h6 {
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  /* 20px at 1200px viewport → 40px at 1400px, linear in between */
   gap: clamp(20px, 10vw - 100px, 40px);
   list-style: none;
   margin: 0;
@@ -7122,5 +7121,53 @@ h6 {
   .faq-question p {
     font-size: 20px;
     line-height: 28px;
+  }
+}
+
+.reviews-section {
+  max-width: 1720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 56px 20px;
+}
+.reviews-section .reviews-info,
+.reviews-section .embedsocial-reviews {
+  width: 100%;
+}
+
+.reviews-section h4 {
+  color: black;
+}
+
+.reviews-section a {
+  color: white !important;
+  background: #e9510e;
+  width: fit-content;
+  padding: 10px 36px;
+  min-width: 300px;
+}
+.reviews-section a:hover {
+  color: white;
+  background: black;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .reviews-section {
+    padding: 100px 60px;
+  }
+
+  .reviews-section .reviews-info {
+    width: 25%;
+  }
+  .reviews-section .embedsocial-reviews {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .reviews-section {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
