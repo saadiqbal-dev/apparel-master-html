@@ -827,8 +827,6 @@ if ($regionSelect.length && $branchSelect.length) {
 // HERO VIDEO POSTER FADE OUT
 // ========================================
 
-var VIDEO_REVEAL_MIN_SECONDS = 0.2; // hold poster until video is a few frames in
-
 function initHeroVideoFade(posterId, iframeId) {
   var $poster = $("#" + posterId),
     $iframe = $("#" + iframeId);
@@ -837,25 +835,19 @@ function initHeroVideoFade(posterId, iframeId) {
   $(window).on("load", function () {
     setTimeout(function () {
       $iframe.attr("src", $iframe.attr("data-src"));
-
-      var revealed = false;
       function reveal() {
-        if (revealed) return;
-        revealed = true;
-        $iframe.addClass("video-loaded"); // fade video in under the poster...
+        $iframe.addClass("video-loaded"); // fade video in, then poster out (no black gap)
         setTimeout(function () {
-          $poster.addClass("fade-out"); // ...then fade poster out (no black gap)
-        }, 600);
+          $poster.addClass("fade-out");
+        }, 300);
       }
-
-      if (window.Vimeo && Vimeo.Player) {
-        try {
-          new Vimeo.Player($iframe[0]).on("timeupdate", function (d) {
-            if (!d || d.seconds >= VIDEO_REVEAL_MIN_SECONDS) reveal();
-          });
-        } catch (e) {}
-      }
-      setTimeout(reveal, 8000); // fallback if the Vimeo API never reports playback
+      setTimeout(reveal, 8000); // fallback if Vimeo never reports playback
+      try {
+        var p = new Vimeo.Player($iframe[0]);
+        p.on("timeupdate", function (d) {
+          if (d.seconds >= 0.1) (p.off("timeupdate"), reveal()); // a few frames in
+        });
+      } catch (e) {}
     }, 2000); // let the page render before loading the video
   });
 }
