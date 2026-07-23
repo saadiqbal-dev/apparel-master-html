@@ -274,7 +274,7 @@ h6 {
 
 @media (min-width: 1600px) {
   .header-content {
-    padding: 0 16px;
+    padding: 0 35px;
     gap: 0;
   }
 }
@@ -592,7 +592,7 @@ h6 {
 @media (min-width: 1600px) {
   .megamenu .container {
     max-width: 1752px;
-    padding: 48px 16px 50px;
+    padding: 48px 36px 50px;
   }
   .megamenu-grid {
     display: grid;
@@ -1839,8 +1839,8 @@ h6 {
 @media (min-width: 1200px) {
   .full-width-content-wrapper {
     max-width: 850px;
-    justify-content: center;
-    padding: 60px 20px;
+    justify-content: flex-start;
+    padding: 60px 20px 60px 60px;
   }
 
   .about-orange-first .full-width-content-wrapper {
@@ -4656,6 +4656,7 @@ h6 {
   margin-bottom: 40px;
   transition: all 0.3s ease;
   max-width: fit-content;
+  min-width: 318px;
 }
 
 .contact-info-section a:hover {
@@ -4711,6 +4712,7 @@ h6 {
   margin: 0 !important;
   transition: all 0.3s ease;
   max-width: fit-content;
+  min-width: 318px;
 }
 
 .contact-buttons > .contact-buttons-div:last-child > a {
