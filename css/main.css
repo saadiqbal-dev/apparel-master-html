@@ -4693,7 +4693,7 @@ h6 {
 .contact-buttons-div {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 10px;
 }
 
 .contact-buttons-div p {
@@ -4719,10 +4719,10 @@ h6 {
   margin: 0 !important;
   transition: all 0.3s ease;
   max-width: fit-content;
-  min-width: 318px;
+  min-width: 213px;
 }
 
-.contact-buttons > .contact-buttons-div:last-child > a {
+/* .contact-buttons > .contact-buttons-div:last-child > a {
   border-radius: 27px;
   background: #b0b0b0;
   border: 1.5px solid #b0b0b0;
@@ -4734,7 +4734,7 @@ h6 {
   background: black;
   border: 1.5px solid black;
   color: white;
-}
+} */
 
 .contact-buttons-div a:hover {
   background: black;
@@ -7183,5 +7183,117 @@ h6 {
   .reviews-section {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.col-content {
+  padding: 70px 100px;
+  background: #f5f4f4;
+  align-items: start;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .col-content {
+    padding: 50px 20px;
+  }
+  .row-content {
+    gap: 20px;
+  }
+}
+.row-content {
+  width: 100%;
+  max-width: 1920px;
+}
+.col-content h6 {
+  color: #e9510e;
+}
+
+.col-content p {
+  margin: 0;
+}
+
+.awards-content {
+  max-width: 912px;
+  padding: 85px 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .awards-content {
+    padding: 50px 20px;
+  }
+}
+
+.awards-content h5 {
+  color: #000;
+}
+.awards-content span {
+  color: #292929;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0;
+}
+
+.core-values-grid {
+  max-width: 1920px;
+}
+
+.core-values-item {
+  max-width: 480px;
+}
+
+.core-values-icon {
+  width: 118px;
+  height: 118px;
+  margin-bottom: 45px;
+}
+
+.core-values-row + .core-values-row {
+  margin-top: 85px;
+}
+
+.core-values-item h5 {
+  margin-bottom: 10px;
+}
+
+.core-values-item p {
+  margin-bottom: 0;
+}
+
+.core-values-section {
+  padding-top: 115px;
+  padding-bottom: 115px;
+}
+
+@media (max-width: 991.98px) {
+  .core-values-section {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .core-values-icon {
+    margin-bottom: 30px;
+  }
+
+  .core-values-row {
+    row-gap: 30px;
+  }
+
+  .core-values-row + .core-values-row {
+    margin-top: 30px;
+  }
+}
+
+.core-values-testimonial {
+  background: #f5f4f4;
+}
+
+@media (min-width: 1200px) {
+  .core-values-testimonial .testimonial-content {
+    background: #fff;
   }
 }
