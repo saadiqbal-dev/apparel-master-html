@@ -13,6 +13,13 @@
   box-sizing: border-box;
 }
 
+html {
+  /* Stop iOS Safari from auto-inflating text (it can jump ~200% when a
+     horizontally-scrolled block changes layout, e.g. the news carousel). */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
@@ -5566,7 +5573,11 @@ h6 {
   gap: 1.25rem;
   overflow-x: auto;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  /* NOTE: -webkit-overflow-scrolling: touch removed on purpose. It forces a
+     separate compositing layer on iOS Safari that fails to repaint when you
+     fling past the last card, leaving the section's dark background visible
+     as a "black screen". Momentum scrolling is native since iOS 13. */
+  overscroll-behavior-x: contain;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-left: 1.25rem;
@@ -5580,7 +5591,7 @@ h6 {
 @media (min-width: 1200px) {
   .latest-news-carousel {
     gap: 3.125rem;
-    padding-left: -3.125rem;
+    padding-left: 3.125rem;
     padding-right: 0;
   }
 }
@@ -6302,7 +6313,8 @@ h6 {
   gap: 0;
   overflow-x: auto;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  /* See .latest-news-carousel — same iOS repaint issue. */
+  overscroll-behavior-x: contain;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 0;

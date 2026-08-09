@@ -583,13 +583,28 @@ $(document).ready(function () {
       return $card.outerWidth() + gap;
     }
 
+    // Scroll one step in `dir` (1 = next, -1 = prev), CLAMPED to the track's
+    // bounds. Clamping matters on iOS Safari: an unclamped scrollBy past the
+    // last card triggers a rubber-band overscroll whose compositing layer
+    // fails to repaint, leaving the dark section background as a blank screen.
+    // Tapping at the edge is a no-op instead of pushing past it.
+    function scrollNews(dir) {
+      var max = newsTrack.scrollWidth - newsTrack.clientWidth;
+      var target = Math.max(
+        0,
+        Math.min(newsTrack.scrollLeft + dir * newsScrollStep(), max),
+      );
+      if (Math.abs(target - newsTrack.scrollLeft) < 1) return; // already at edge
+      newsTrack.scrollTo({ left: target, behavior: "smooth" });
+    }
+
     // Both desktop and mobile arrow pairs share these handlers.
     $("#newsCarouselNext, #newsCarouselNextMobile").on("click", function () {
-      newsTrack.scrollBy({ left: newsScrollStep(), behavior: "smooth" });
+      scrollNews(1);
     });
 
     $("#newsCarouselPrev, #newsCarouselPrevMobile").on("click", function () {
-      newsTrack.scrollBy({ left: -newsScrollStep(), behavior: "smooth" });
+      scrollNews(-1);
     });
   }
 

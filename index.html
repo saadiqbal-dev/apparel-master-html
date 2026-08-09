@@ -1439,6 +1439,48 @@
       <!-- Carousel Wrapper -->
       <div class="latest-news-carousel-wrapper">
         <div class="latest-news-carousel" id="newsCarousel">
+          <!--
+            ============================================================
+            LATEST NEWS — BACKEND LOOP
+            Render one <a class="latest-news-card"> per article.
+            Loop over the articles collection between BEGIN/END below.
+
+            Field mapping (per card):
+              a href              -> article permalink / URL
+              img src             -> article thumbnail (webp preferred)
+              img width & height  -> intrinsic image size (keep to avoid
+                                     layout shift; values are px, no unit)
+              img alt             -> article title (for accessibility)
+              1st <p>             -> category label (e.g. "Awards")
+              <h3>                -> article title
+              2nd <p>             -> static CTA text, always "Read more"
+
+            Template (swap {{ }} for your engine — Blade/Twig/EJS/etc.):
+
+            {{#each articles}}
+            <a href="{{ this.url }}" class="latest-news-card">
+              <img
+                src="{{ this.image }}"
+                width="{{ this.image_width }}"
+                height="{{ this.image_height }}"
+                alt="{{ this.title }}"
+                class="latest-news-card-image"
+              />
+              <div class="latest-news-card-content">
+                <p>{{ this.category }}</p>
+                <h3>{{ this.title }}</h3>
+                <p>Read more</p>
+              </div>
+            </a>
+            {{/each}}
+
+            The cards below are STATIC SEED DATA for design preview.
+            Replace them with the loop output above once wired up.
+            ============================================================
+          -->
+
+          <!-- BEGIN: news cards (static seed — replace with backend loop) -->
+
           <!-- News Card 1 -->
           <a href="#" class="latest-news-card">
             <img
@@ -1514,20 +1556,23 @@
           <!-- News Card 5 -->
           <a href="#" class="latest-news-card">
             <img
-              src="public/images/news/news-1.webp"
-              width="900"
-              height="450"
-              alt="Pryors Apparelmaster Reign Supreme at Nelson Awards Night"
+              src="public/images/latest-news/new-5.webp"
+              width="1000"
+              height="667"
+              alt="Apparelmaster Group Donates $10K to Evergreen Foundation for Cyclone Relief Fund"
               class="latest-news-card-image"
             />
             <div class="latest-news-card-content">
-              <p>Awards</p>
+              <p>Company News</p>
               <h3>
-                Pryors Apparelmaster Reign Supreme at Nelson Awards Night.
+                Apparelmaster Group Donates $10K to Evergreen Foundation for
+                Cyclone Relief Fund.
               </h3>
               <p>Read more</p>
             </div>
           </a>
+
+          <!-- END: news cards -->
         </div>
       </div>
 
