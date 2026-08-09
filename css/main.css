@@ -4714,7 +4714,7 @@ h6 {
   gap: 13px;
   color: white;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   margin: 0 !important;
   transition: all 0.3s ease;
@@ -7208,6 +7208,7 @@ h6 {
 }
 .col-content h6 {
   color: #e9510e;
+  font-weight: 700;
 }
 
 .col-content p {
