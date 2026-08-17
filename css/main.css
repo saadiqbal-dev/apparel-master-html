@@ -7187,17 +7187,35 @@ h6 {
 }
 
 .col-content {
-  padding: 70px 100px;
+  /* padding: 70px 100px; */
   background: #f5f4f4;
   align-items: start;
   justify-content: center;
   display: flex;
 }
 
-@media (max-width: 768px) {
-  .col-content {
-    padding: 50px 20px;
+.contact-column {
+  padding: 50px 20px;
+  max-width: 1920px;
+}
+@media (min-width: 1200px) {
+  .contact-column {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0 auto;
   }
+}
+
+@media (min-width: 1820px) {
+  .contact-column {
+    padding: 70px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .col-content {
+    padding: 50px 20px;
+  } */
   .row-content {
     gap: 20px;
   }
