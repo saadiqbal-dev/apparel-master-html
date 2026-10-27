@@ -7316,3 +7316,166 @@ h6 {
     background: #fff;
   }
 }
+
+/* ========================================
+   ESKO WORKWEAR PAGE
+   Scoped to .esko-page so shared styles stay unchanged
+   ======================================== */
+
+.esko-page .content-bar {
+  background: #e2201b;
+}
+
+.esko-page .content-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.esko-page .content-image {
+  border-radius: 12px;
+}
+
+.esko-page .content-text p + p {
+  margin-top: 1rem;
+}
+
+.esko-page .light-content h2 {
+  margin-bottom: 0;
+}
+
+.esko-page .product-code {
+  margin-bottom: 12px;
+}
+
+.esko-page .product-code p {
+  margin: 0;
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.esko-page .navy-cta {
+  background: #1f2d67;
+  padding: 76px 26px;
+}
+
+.esko-page .navy-cta h2 {
+  margin: 0 0 32px;
+  max-width: 1212px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.esko-page .navy-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 215px;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 27px;
+  background: #fff;
+  color: #324286;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.esko-page .navy-cta a:hover {
+  background: #324286;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .esko-page .hero-workwear h1 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .esko-page .hero-workwear-img {
+    width: 120.16%;
+    height: 132.11%;
+    left: -9.57%;
+    top: -16.05%;
+    max-width: none;
+    object-fit: fill;
+  }
+
+  .esko-page .content-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .esko-page .content-text p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .esko-page .content-text p + p {
+    margin-top: 30px;
+  }
+
+  .esko-page .light-content p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .esko-page .light-content p + p {
+    margin-top: 28px;
+  }
+
+  .esko-page .product-code {
+    margin-bottom: 31px;
+  }
+
+  .esko-page .product-code p {
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  .esko-page .light-content .btn-cta {
+    width: 234px;
+    margin-top: 40px;
+    background: #fff;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .esko-page .navy-cta {
+    height: 450px;
+    margin-top: 147px;
+    padding: 0 40px;
+  }
+
+  .esko-page .navy-cta h2 {
+    margin-bottom: 38px;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .esko-page .navy-cta a {
+    width: 215px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .esko-page .product-block .content-text-col {
+    justify-content: flex-start;
+  }
+
+  .esko-page .product-block .content-text-col .light-content {
+    margin-left: 149px;
+  }
+}
