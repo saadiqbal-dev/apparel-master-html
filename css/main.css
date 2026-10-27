@@ -7319,35 +7319,35 @@ h6 {
 
 /* ========================================
    ESKO WORKWEAR PAGE
-   Scoped to .esko-page so shared styles stay unchanged
+   New classes only. Shared template rules are unchanged.
    ======================================== */
 
-.esko-page .content-bar {
+.red-bar {
   background: #e2201b;
 }
 
-.esko-page .content-section {
+.split-pad {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-.esko-page .content-image {
+.round-img {
   border-radius: 12px;
 }
 
-.esko-page .content-text p + p {
+.intro-copy p + p {
   margin-top: 1rem;
 }
 
-.esko-page .light-content h2 {
+.product-copy h2 {
   margin-bottom: 0;
 }
 
-.esko-page .product-code {
+.product-code {
   margin-bottom: 12px;
 }
 
-.esko-page .product-code p {
+.product-code p {
   margin: 0;
   color: #000;
   font-weight: 400;
@@ -7355,12 +7355,12 @@ h6 {
   line-height: 22px;
 }
 
-.esko-page .navy-cta {
+.navy-cta {
   background: #1f2d67;
   padding: 76px 26px;
 }
 
-.esko-page .navy-cta h2 {
+.navy-cta h2 {
   margin: 0 0 32px;
   max-width: 1212px;
   color: #fff;
@@ -7370,7 +7370,7 @@ h6 {
   line-height: 34px;
 }
 
-.esko-page .navy-cta a {
+.navy-cta a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7387,19 +7387,19 @@ h6 {
   text-decoration: none;
 }
 
-.esko-page .navy-cta a:hover {
+.navy-cta a:hover {
   background: #324286;
   color: #fff;
 }
 
 @media (min-width: 1200px) {
-  .esko-page .hero-workwear h1 {
+  .hero-frame h1 {
     font-size: 48px;
     font-weight: 400;
     line-height: normal;
   }
 
-  .esko-page .hero-workwear-img {
+  .hero-frame .hero-workwear-img {
     width: 120.16%;
     height: 132.11%;
     left: -9.57%;
@@ -7408,43 +7408,43 @@ h6 {
     object-fit: fill;
   }
 
-  .esko-page .content-section {
+  .split-pad {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
-  .esko-page .content-text p {
+  .intro-copy p {
     margin: 0;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
   }
 
-  .esko-page .content-text p + p {
+  .intro-copy p + p {
     margin-top: 30px;
   }
 
-  .esko-page .light-content p {
+  .product-copy p {
     margin: 0;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
   }
 
-  .esko-page .light-content p + p {
+  .product-copy p + p {
     margin-top: 28px;
   }
 
-  .esko-page .product-code {
+  .product-code {
     margin-bottom: 31px;
   }
 
-  .esko-page .product-code p {
+  .product-code p {
     font-size: 16px;
     line-height: 36px;
   }
 
-  .esko-page .light-content .btn-cta {
+  .product-copy .btn-cta {
     width: 234px;
     margin-top: 40px;
     background: #fff;
@@ -7452,30 +7452,30 @@ h6 {
     line-height: 32px;
   }
 
-  .esko-page .navy-cta {
+  .navy-cta {
     height: 450px;
     margin-top: 147px;
     padding: 0 40px;
   }
 
-  .esko-page .navy-cta h2 {
+  .navy-cta h2 {
     margin-bottom: 38px;
     font-size: 36px;
     line-height: 48px;
   }
 
-  .esko-page .navy-cta a {
+  .navy-cta a {
     width: 215px;
     font-size: 18px;
   }
 }
 
 @media (min-width: 1920px) {
-  .esko-page .product-block .content-text-col {
+  .product-block .content-text-col {
     justify-content: flex-start;
   }
 
-  .esko-page .product-block .content-text-col .light-content {
+  .product-block .content-text-col .light-content {
     margin-left: 149px;
   }
 }
