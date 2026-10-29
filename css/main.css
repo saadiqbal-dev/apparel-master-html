@@ -7396,6 +7396,7 @@ h6 {
   height: 50px;
   padding: 0 24px;
   border-radius: 27px;
+  border: 1px solid transparent;
   background: #fff;
   color: #324286;
   font-family: "Inter", sans-serif;
@@ -7406,8 +7407,9 @@ h6 {
 }
 
 .navy-cta a:hover {
-  background: #324286;
+  background: transparent;
   color: #fff;
+  border-color: #fff;
 }
 
 @media (min-width: 1200px) {
