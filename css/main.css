@@ -7490,6 +7490,11 @@ h6 {
 }
 
 @media (max-width: 1199.98px) {
+  .split-pad {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .product-block .row {
     --bs-gutter-x: 0px;
     --bs-gutter-y: 31px;
